@@ -10,13 +10,13 @@ const DATA = [
         }
     },
     {
-        id: '1',
-        name: 'Ricuras La Fé',
+        id: '2',
+        name: 'Pac Burger',
         category: "Comidas Rapídas",
-        images: 'images/1.jpeg',
+        images: 'images/2.jpeg',
         contact: {
-            instgram: "https://www.instagram.com/ricuraslafe/",
-            phoneNum: "https://wa.link/4xaebs"
+            instgram: "https://www.instagram.com/pacburguer.fv/",
+            phoneNum: "wa.me/message/6ZWRQBCAWSNEI1"
         }
     }
 ]

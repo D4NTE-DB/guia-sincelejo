@@ -6,10 +6,10 @@ const AppNavBar = () => {
         <div>
             <Navbar bg="light" expand="lg">
       <Container>
-        <Navbar.Brand href="#home">Guia-Sincelejo</Navbar.Brand>
+        <Navbar.Brand style={{right: '300px'}} href="#home">Guia-Sincelejo</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
+          {/* <Nav className="me-auto">
             <Nav.Link href="#home">Home</Nav.Link>
             <Nav.Link href="#link">Link</Nav.Link>
             <NavDropdown title="Dropdown" id="basic-nav-dropdown">
@@ -23,7 +23,7 @@ const AppNavBar = () => {
                 Separated link
               </NavDropdown.Item>
             </NavDropdown>
-          </Nav>
+          </Nav> */}
         </Navbar.Collapse>
       </Container>
     </Navbar>

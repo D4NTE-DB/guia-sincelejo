@@ -75,3 +75,12 @@
   background-color: lightblue;
   border-radius: 10px;
 }
+@media (max-width: 600px) {
+  .card{    
+    /* width: 10rem;
+    position: fixed;
+    right: -1%;
+    top: 50%;
+    z-index: 1000; */
+  }
+}

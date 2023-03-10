@@ -58,14 +58,14 @@ function App() {
          
         </Card.Body>
       </div>
-      <Card style={{
+      <Card className='contact-box' style={{
         width: '10rem',
           position: "fixed",
-          right: "46%",
-    top: "79%",
+          right: "23%",
+    top: "46%",
           zIndex: 1000
         }}>
-      <Card.Body >
+      <Card.Body className='contact'>
       <Card.Title style={{
             fontSize: '14px',
             width: '100px',

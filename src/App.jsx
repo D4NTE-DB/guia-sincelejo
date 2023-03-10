@@ -71,8 +71,8 @@ function App() {
             width: '100px',
             position: 'relative',
             top: '-19px',
-            textAlign: 'center'
-
+            textAlign: 'center',
+            color: '#322929'
           }}>Contactanos para agregar tu negocio</Card.Title>
           <Card.Link href="https://forms.gle/6wbM7ZSYyrMixYy87">
             <img style={{

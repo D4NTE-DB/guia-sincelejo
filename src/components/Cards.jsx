@@ -23,10 +23,10 @@ const Cards = () => {
                     <Card.Body style={{margin: 'auto', position: 'relative', right: '10px', top: '-8px'}}>
                         <Card.Title style={{fontSize: '14px'}}>Contactanos</Card.Title>
                         <Card.Link href={data.contact?.phoneNum}>
-                            <box-icon type='logo' name='whatsapp'></box-icon>
+                        <img style={{width: '35px', position: 'absolute', top: '52px'}} src='images/whatsapp.png' alt="" />
                         </Card.Link>
                         <Card.Link href={data.contact?.instgram}>
-                            <box-icon type='logo' name='instagram'></box-icon>
+                            <img style={{width: '35px', position: 'absolute', right: '20px', top: '52px'}} src='images/instagram.png' alt="" />
                         </Card.Link>
                     </Card.Body>
                 </Card>

@@ -16,7 +16,7 @@ const DATA = [
         images: 'images/2.jpeg',
         contact: {
             instgram: "https://www.instagram.com/pacburguer.fv/",
-            phoneNum: "https://api.whatsapp.com/message/6ZWRQBCAWSNEI1?autoload=1&app_absent=0"
+            phoneNum: "https://wa.link/xkc8vk"
         }
     },
     {

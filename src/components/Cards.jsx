@@ -9,17 +9,17 @@ const Cards = () => {
 
     return (
         DATA.map((data) => (
-            <div>
-                <Card key={data.id} style={{ width: '18rem' }}>
-                    <Card.Img variant="top" src={data.images} />
+            <div key={data.id} className='card-item'> 
+                <Card  style={{ width: '10rem', height: '25rem' }}>
+                    <Card.Img style={{width: '160px', height: '160px'}}  variant="top" src={data.images} />
                     <Card.Body>
                         <Card.Title>{data.name}</Card.Title>
                         {/* <Card.Text>
                             Some quick example text to build on the card title and make up the
                             bulk of the card's content.
                         </Card.Text> */}
-                        <Card style={{ width: '8rem' }}>
-                    <Card.Body>
+                        <Card style={{ width: '8rem' , position: 'relative', right: '14px'}}>
+                    <Card.Body style={{margin: 'auto', position: 'relative', right: '10px'}}>
                         <Card.Title style={{fontSize: '14px'}}>Contactanos</Card.Title>
                         <Card.Link href={data.contact?.phoneNum}>
                             <box-icon type='logo' name='whatsapp'></box-icon>

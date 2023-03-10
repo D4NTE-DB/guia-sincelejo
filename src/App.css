@@ -3,3 +3,19 @@
   box-sizing: border-box;
 
 }
+
+.App > .div-need{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: start;
+  justify-content: right;
+  gap: 2rem;
+  margin: 1rem;
+  gap: 1rem;
+}
+
+.card-name{
+  width: 160px;
+  height: 350px;
+}

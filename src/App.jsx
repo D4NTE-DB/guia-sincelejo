@@ -10,7 +10,8 @@ function App() {
   return (
     <div className="App">
       {<AppNavBar />}
-      {<Cards />}
+      <div className='div-need'>{<Cards />}</div>
+      
     </div>
   )
 }

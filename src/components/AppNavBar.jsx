@@ -6,10 +6,11 @@ const AppNavBar = () => {
         <div>
             <Navbar bg="light" expand="lg">
       <Container>
-        <Navbar.Brand style={{right: '300px'}} href="#home">Guia-Sincelejo</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          {/* <Nav className="me-auto">
+        <img style={{width: '30px', margin: 0}} src="images/icon.jpeg" alt="" />
+        <Navbar.Brand style={{right: '300px', margin: 'initial'}} href="#home">Guía de Comidas Sincelejo</Navbar.Brand>
+        {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
+        {/* <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
             <Nav.Link href="#home">Home</Nav.Link>
             <Nav.Link href="#link">Link</Nav.Link>
             <NavDropdown title="Dropdown" id="basic-nav-dropdown">
@@ -23,8 +24,8 @@ const AppNavBar = () => {
                 Separated link
               </NavDropdown.Item>
             </NavDropdown>
-          </Nav> */}
-        </Navbar.Collapse>
+          </Nav>
+        </Navbar.Collapse> */}
       </Container>
     </Navbar>
         </div>

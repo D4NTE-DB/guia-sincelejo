@@ -74,13 +74,13 @@ function App() {
             textAlign: 'center'
 
           }}>Contactanos para agregar tu negocio</Card.Title>
-          <Card.Link href="">
+          <Card.Link href="https://forms.gle/s6PJJhQB67gNRgXEA">
             <img style={{
               width: '35px',
               position: 'absolute',
               right: '120px',
               top: '80px'
-            }} src='images/whatsapp.png' alt="" />
+            }} src='images/formulario.png' alt="" />
           </Card.Link>
           <Card.Link href="https://www.instagram.com/foodguiasincelejo/">
             <img style={{

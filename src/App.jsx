@@ -74,7 +74,7 @@ function App() {
             textAlign: 'center'
 
           }}>Contactanos para agregar tu negocio</Card.Title>
-          <Card.Link href="https://forms.gle/s6PJJhQB67gNRgXEA">
+          <Card.Link href="https://forms.gle/6wbM7ZSYyrMixYy87">
             <img style={{
               width: '35px',
               position: 'absolute',

@@ -1,4 +1,16 @@
 const DATA = [
+
+    {
+        id: '0',
+        name: 'Mr.Limón',
+        category: "Comidas Rápidas",
+        images: 'images/4.jpg',
+        contact: {
+            instgram: "https://www.instagram.com/fonda_mrlimon/",
+            phoneNum: "https://wa.link/qpxehq"
+        }   
+    },
+
     {
         id: '1',
         name: 'Benedetto Pizza',
@@ -30,7 +42,7 @@ const DATA = [
         }
     },
    
-  
+   
 
 ]
 

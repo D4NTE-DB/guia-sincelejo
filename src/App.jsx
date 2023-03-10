@@ -61,7 +61,7 @@ function App() {
       <Card className='contact-box' style={{
         width: '10rem',
           position: "fixed",
-          right: "23%",
+          right: "-.2%",
     top: "46%",
           zIndex: 1000
         }}>

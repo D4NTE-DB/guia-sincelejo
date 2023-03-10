@@ -86,7 +86,7 @@ function App() {
             <img style={{
               width: '35px',
               position: 'absolute',
-              right: "61px",
+              right: "80px",
               top: "81px"
             }} src='images/instagram.png' alt="" />
           </Card.Link>
@@ -94,7 +94,7 @@ function App() {
             <img style={{
               width: '35px',
               position: 'absolute',
-              right: "3px",
+              right: "40px",
               top: "80px"
             }} src='images/facebook.png' alt="" />
           </Card.Link>

@@ -28,7 +28,7 @@ function App() {
       <div style={{ position: 'fixed', width: '100%', zIndex: '2000', top: '-10px' }}>
         {<AppNavBar />}
       </div>
-      <Dropdown style={{ position: 'relative', zIndex: '30000', textAlign: 'center', top: '75px' }}>
+      {/* <Dropdown style={{ position: 'relative', zIndex: '30000', textAlign: 'center', top: '75px' }}>
         <Dropdown.Toggle variant="success" id="dropdown-basic">
           Categorias
         </Dropdown.Toggle>
@@ -45,7 +45,7 @@ function App() {
             ))
           }
         </Dropdown.Menu>
-      </Dropdown>
+      </Dropdown> */}
       <Card className='contact-box' style={{
         width: '10rem',
         height: '130px',

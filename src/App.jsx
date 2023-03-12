@@ -5,6 +5,8 @@ import AppNavBar from './components/AppNavBar'
 import Cards from './components/Cards'
 import DATA from './images'
 import { Button, Card, Dropdown } from 'react-bootstrap'
+import { HashRouter, Route, Routes } from 'react-router-dom'
+import AboutMe from './components/AboutMe'
 
 
 function App() {
@@ -23,12 +25,12 @@ function App() {
   const filteredData = selectedCategory ? DATA.filter(item => item.category === selectedCategory) : DATA;
 
   return (
-    <div className="App">
-
-      <div style={{ position: 'fixed', width: '100%', zIndex: '2000', top: '-10px' }}>
-        {<AppNavBar />}
-      </div>
-      {/* <Dropdown style={{ position: 'relative', zIndex: '30000', textAlign: 'center', top: '75px' }}>
+    <HashRouter>
+      <div className="App">
+        <div style={{ position: 'fixed', width: '100%', zIndex: '2000', top: '-10px' }}>
+          {<AppNavBar />}
+        </div>
+        {/* <Dropdown style={{ position: 'relative', zIndex: '30000', textAlign: 'center', top: '75px' }}>
         <Dropdown.Toggle variant="success" id="dropdown-basic">
           Categorias
         </Dropdown.Toggle>
@@ -46,55 +48,63 @@ function App() {
           }
         </Dropdown.Menu>
       </Dropdown> */}
-      <Card className='contact-box' style={{
-        width: '10rem',
-        height: '130px',
-        position: "fixed",
-        right: "-.9%",
-        top: "46%",
-        zIndex: 1000
-      }}>
-        <Card.Body className='contact'>
-          <Card.Title style={{
-            fontSize: '14px',
-            width: '100px',
-            position: 'relative',
-            top: '5px',
-            textAlign: 'center',
-            color: '#322929'
-          }}>¡Contactanos para agregar a tu restaurante!</Card.Title>
-          <div style={{ position: 'relative', top: '-75px', right: '-30px' }}>
-            <Card.Link href="https://forms.gle/y5BLA3eu2XFSVXNy5">
-              <img style={{
-                width: '35px',
-                position: 'absolute',
-                right: '120px',
-                top: '80px'
-              }} src='images/formulario.png' alt="" />
-            </Card.Link>
-            <Card.Link href="https://www.instagram.com/foodguiasincelejo/">
-              <img style={{
-                width: '35px',
-                position: 'absolute',
-                right: "80px",
-                top: "81px"
-              }} src='images/instagram.png' alt="" />
-            </Card.Link>
-            <Card.Link href="https://www.facebook.com/profile.php?id=100090631706684">
-              <img style={{
-                width: '35px',
-                position: 'absolute',
-                right: "40px",
-                top: "80px"
-              }} src='images/facebook.png' alt="" />
-            </Card.Link>
-          </div>
-        </Card.Body>
-      </Card>
-      <div className='div-need' style={{ position: 'relative', top: '80px' }}>{<Cards data={filteredData} />}
+        <Card className='contact-box' style={{
+          width: '10rem',
+          height: '130px',
+          position: "fixed",
+          right: "-.9%",
+          top: "46%",
+          zIndex: 1000
+        }}>
+          <Card.Body className='contact'>
+            <Card.Title style={{
+              fontSize: '14px',
+              width: '100px',
+              position: 'relative',
+              top: '5px',
+              textAlign: 'center',
+              color: '#322929'
+            }}>¡Contactanos para agregar a tu restaurante!</Card.Title>
+            <div style={{ position: 'relative', top: '-75px', right: '-30px' }}>
+              <Card.Link href="https://forms.gle/y5BLA3eu2XFSVXNy5">
+                <img style={{
+                  width: '35px',
+                  position: 'absolute',
+                  right: '120px',
+                  top: '80px'
+                }} src='images/formulario.png' alt="" />
+              </Card.Link>
+              <Card.Link href="https://www.instagram.com/foodguiasincelejo/">
+                <img style={{
+                  width: '35px',
+                  position: 'absolute',
+                  right: "80px",
+                  top: "81px"
+                }} src='images/instagram.png' alt="" />
+              </Card.Link>
+              <Card.Link href="https://www.facebook.com/profile.php?id=100090631706684">
+                <img style={{
+                  width: '35px',
+                  position: 'absolute',
+                  right: "40px",
+                  top: "80px"
+                }} src='images/facebook.png' alt="" />
+              </Card.Link>
+            </div>
+          </Card.Body>
+        </Card>
+       
+        <Routes>
+        <Route path='/' element={
+        <div className='div-need' style={{ position: 'relative', top: '80px' }}>
+          {<Cards data={filteredData} />}
+        </div>}/>
+        
+          {/* <Link>character</Link> */}
+          <Route path='/about-us' element={<AboutMe />} />
+        </Routes>
       </div>
-
-    </div>
+    </HashRouter>
   )
 }
 

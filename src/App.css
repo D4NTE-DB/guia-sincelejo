@@ -94,3 +94,9 @@
  position: 'relative';
  z-index: '30000';
 }
+
+.all-info{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}

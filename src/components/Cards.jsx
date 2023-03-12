@@ -21,7 +21,7 @@ const Cards = () => {
                         <Card style={{ width: '8rem' , position: 'relative', right: '15px',
     height: '95px', top: '5px'}}>
                     <Card.Body style={{margin: 'auto', position: 'relative', right: '10px', top: '-8px'}}>
-                        <Card.Title style={{fontSize: '14px'}}>Contactanos</Card.Title>
+                        <Card.Title style={{fontSize: '14px'}}>Contáctanos</Card.Title>
                         <Card.Link href={data.contact?.phoneNum}>
                         <img style={{width: '35px', position: 'absolute', top: '52px'}} src='images/whatsapp.png' alt="" />
                         </Card.Link>

@@ -74,7 +74,7 @@ function App() {
             textAlign: 'center',
             color: '#322929'
           }}>!Contactanos para agregar a tu restaurante!</Card.Title>
-          <Card.Link href="https://forms.gle/6wbM7ZSYyrMixYy87">
+          <Card.Link href="https://forms.gle/qpjhNojqVwq8WxTo7">
             <img style={{
               width: '35px',
               position: 'absolute',

@@ -49,7 +49,7 @@ const DATA = [
         images: 'images/6.jpg',
         contact: {
             instgram: "instagram.com/_labbh_/",
-            phoneNum: "wa.me/message/KHTKAOVZVZV3M1"
+            phoneNum: "https://wa.me/message/KHTKAOVZVZV3M1"
         }
     },
     {
@@ -89,7 +89,7 @@ const DATA = [
         images: 'images/10.jpg',
         contact: {
             instgram: "instagram.com/lamondiu.burger/",
-            phoneNum: "bio.site/lamondiu"
+            phoneNum: "https://bio.site/lamondiu"
         }
     },
 
@@ -143,6 +143,26 @@ const DATA = [
         contact: {
             instgram:  "https://www.instagram.com/gastroolab/",
             phoneNum: "https://linktr.ee/gastroolab"
+        }
+    }, 
+    {
+        id: '14',
+        name: 'Beer Station',
+        category: "Comidas Rápidas",
+        images: 'images/16.png',
+        contact: {
+            instgram:  "https://www.instagram.com/beerstationguacari/",
+            phoneNum: "https://wa.link/inq8a1"
+        }
+    }, 
+    {
+        id: '15',
+        name: 'Grato by Bennedetto',
+        category: "Comidas Rápidas",
+        images: 'images/17.jfif',
+        contact: {
+            instgram:  "instagram.com/grato.bybenedetto/",
+            phoneNum: "https://linktr.ee/grato.bybenedetto"
         }
     }, 
 ]

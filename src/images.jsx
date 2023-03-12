@@ -21,26 +21,6 @@ const DATA = [
             phoneNum: "https://linktr.ee/benedettopizza"
         }
     },
-    {
-        id: '2',
-        name: 'Pac Burger',
-        category: "Comidas Variada",
-        images: 'images/2.jpeg',
-        contact: {
-            instgram: "https://www.instagram.com/pacburguer.fv/",
-            phoneNum: "https://wa.link/xkc8vk"
-        }
-    },
-    {
-        id: '3',
-        name: 'Ricuras La Fé',
-        category: "Comidas Variada",
-        images: 'images/1.jpeg',
-        contact: {
-            instgram: "https://www.instagram.com/ricuraslafe/",
-            phoneNum: "https://wa.link/4xaebs"
-        }
-    },
 
     {
         id: '4',
@@ -62,14 +42,15 @@ const DATA = [
             phoneNum: "https://linkbe.me/tacoychela.co"
         }
     },
+    
     {
-        id: '6',
-        name: 'KFV',
-        category: "Comidas Rápidas",
-        images: 'images/8.jfif',
+        id: '10',
+        name: 'Pepitos',
+        category: "Comida Rápida",
+        images: 'images/12.png',
         contact: {
-            instgram: "https://www.instagram.com/kfvrestaurante/",
-            phoneNum: "https://wa.link/47em9zhttps://wa.link/47em9z"
+            instgram: "https://www.instagram.com/pepitos_xpress/",
+            phoneNum: "https://pepitos-xpress.cluvi.co/branch-without-service"
         }
     },
     {
@@ -104,16 +85,6 @@ const DATA = [
         }
     },
 
-    {
-        id: '10',
-        name: 'Pepitos',
-        category: "Comida Rápida",
-        images: 'images/12.png',
-        contact: {
-            instgram: "https://www.instagram.com/pepitos_xpress/",
-            phoneNum: "https://pepitos-xpress.cluvi.co/branch-without-service"
-        }
-    },
     {
         id: '11',
         name: 'Hunter & Butcher',
@@ -165,6 +136,38 @@ const DATA = [
             phoneNum: "https://linktr.ee/grato.bybenedetto"
         }
     }, 
+    
+    {
+        id: '6',
+        name: 'KFV',
+        category: "Comidas Rápidas",
+        images: 'images/8.jfif',
+        contact: {
+            instgram: "https://www.instagram.com/kfvrestaurante/",
+            phoneNum: "https://wa.link/47em9zhttps://wa.link/47em9z"
+        }
+    }
+    ,
+    {
+        id: '2',
+        name: 'Pac Burger',
+        category: "Comidas Variada",
+        images: 'images/2.jpeg',
+        contact: {
+            instgram: "https://www.instagram.com/pacburguer.fv/",
+            phoneNum: "https://wa.link/xkc8vk"
+        }
+    },
+    {
+        id: '3',
+        name: 'Ricuras La Fé',
+        category: "Comidas Variada",
+        images: 'images/1.jpeg',
+        contact: {
+            instgram: "https://www.instagram.com/ricuraslafe/",
+            phoneNum: "https://wa.link/4xaebs"
+        }
+    },
 ]
 
 

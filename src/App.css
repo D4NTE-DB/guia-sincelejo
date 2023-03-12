@@ -100,3 +100,10 @@
   flex-direction: row;
   flex-wrap: wrap;
 }
+
+@media (max-width: 600px) {
+  .about-us-info{
+    position: fixed;
+    top: -1000px;
+  }
+}

@@ -9,7 +9,7 @@ const AppNavBar = () => {
       <Container>
         <img style={{width: '30px', margin: 0}} src="images/icon.jpeg" alt="" />
         <Navbar.Brand style={{right: '300px', margin: 'initial'}} as={Link} to='/'>Guía de Comidas Sincelejo</Navbar.Brand>
-        <Nav>
+        <Nav className='about-us-info'>
           <Nav.Link as={Link} to='/about-us'>
             <u>Mas Información</u>
           </Nav.Link>

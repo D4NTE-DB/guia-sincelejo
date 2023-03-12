@@ -63,7 +63,7 @@ function App() {
         width: '10rem',
         height: '130px',
         position: "fixed",
-        right: "-.2%",
+        right: "-.9%",
         top: "46%",
         zIndex: 1000
       }}>

@@ -48,7 +48,7 @@ const DATA = [
         category: "Comida Rápida",
         images: 'images/6.jpg',
         contact: {
-            instgram: "instagram.com/_labbh_/",
+            instgram: "https://www.instagram.com/_labbh_/",
             phoneNum: "https://wa.me/message/KHTKAOVZVZV3M1"
         }
     },
@@ -59,7 +59,7 @@ const DATA = [
         images: 'images/5.jpeg',
         contact: {
             instgram: "https://www.instagram.com/tacoychela.co/",
-            phoneNum: "linkbe.me/tacoychela.co"
+            phoneNum: "https://linkbe.me/tacoychela.co"
         }
     },
     {
@@ -88,7 +88,7 @@ const DATA = [
         category: "Comida Rápida",
         images: 'images/10.jpg',
         contact: {
-            instgram: "instagram.com/lamondiu.burger/",
+            instgram: "https://www.instagram.com/lamondiu.burger/",
             phoneNum: "https://bio.site/lamondiu"
         }
     },
@@ -161,7 +161,7 @@ const DATA = [
         category: "Comidas Rápidas",
         images: 'images/17.jfif',
         contact: {
-            instgram:  "instagram.com/grato.bybenedetto/",
+            instgram:  "https://www.instagram.com/grato.bybenedetto/",
             phoneNum: "https://linktr.ee/grato.bybenedetto"
         }
     }, 

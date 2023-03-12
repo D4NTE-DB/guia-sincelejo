@@ -28,6 +28,7 @@ const AppNavBar = () => {
         </Navbar.Collapse> */}
       </Container>
     </Navbar>
+    
         </div>
     );
 };

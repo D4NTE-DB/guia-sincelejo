@@ -17,25 +17,43 @@ const Cards = () => {
                     <option >{data.category.toUpperCase()}</option>
                 </select> */}
                 <Card style={{ width: '10rem', height: '25rem' }}>
-                    <Card.Img style={{ width: '160px', height: '160px' }} variant="top" src={data.images} />
+                    <Card.Img style={{
+                        width: '160px',
+                        height: '160px'
+                    }}
+                        variant="top"
+                        src={data.images} />
                     <Card.Body>
-                        <Card.Title style={{ width: '128px', height: '50px', }}>{data.name}</Card.Title>
+                        <Card.Title style={{
+                            width: '128px',
+                            height: '50px',
+                        }}>{data.name}</Card.Title>
                         {/* <Card.Text>
                             Some quick example text to build on the card title and make up the
                             bulk of the card's content.
                         </Card.Text> */}
                         <Card style={{
-                            width: '8rem', position: 'relative', right: '15px',
-                            height: '95px', top: '5px'
+                            width: '8rem',
+                            position: 'relative',
+                            height: '95px',
+                            top: '5px'
                         }}>
-                            <Card.Body style={{ margin: 'auto', position: 'relative', right: '10px', top: '-8px' }}>
-                                <Card.Title style={{ fontSize: '14px' }}>Contáctanos</Card.Title>
+                            <Card.Body style={{
+                                margin: 'auto', position: 'relative',
+                                right: '10px',
+                                top: '-8px'
+                            }}>
+                                
+                                <Card.Title style={{position: 'relative', top: '15px' , fontSize: '14px', right: '-11px' }}>Contáctanos</Card.Title>
+                                <div style={{position: 'relative', right: '14px', top: '-40px'}}>
                                 <Card.Link href={data.contact?.instgram}>
                                     <img style={{ width: '35px', position: 'absolute', top: '52px' }} src='images/instagram.png' alt="" />
                                 </Card.Link>
                                 <Card.Link href={data.contact?.phoneNum}>
-                                    <img style={{ width: '35px', position: 'absolute', right: '20px', top: '52px' }} src='images/whatsapp.png' alt="" />
+                                    <img style={{ width: '35px', position: 'absolute', right: '-23px', top: '52px' }} src='images/whatsapp.png' alt="" />
+                                    
                                 </Card.Link>
+                                </div>
                             </Card.Body>
                         </Card>
                     </Card.Body>

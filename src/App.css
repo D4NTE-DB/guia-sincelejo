@@ -84,3 +84,8 @@
     z-index: 1000; */
   }
 }
+
+.card-body{
+  padding: 0 !important;
+  text-align: center;
+}

@@ -11,11 +11,11 @@ const Cards = () => {
         DATA.map((data) => (
 
             <div key={data.id} className='card-item'>
-                <button >Search</button>
+                {/* <button >Search</button>
                 <select >
                     <option value="">Elige un tipo</option>
                     <option >{data.category.toUpperCase()}</option>
-                </select>
+                </select> */}
                 <Card style={{ width: '10rem', height: '25rem' }}>
                     <Card.Img style={{ width: '160px', height: '160px' }} variant="top" src={data.images} />
                     <Card.Body>

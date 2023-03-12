@@ -3,7 +3,7 @@ const DATA = [
     {
         id: '0',
         name: 'Mr.Limón',
-        category: "Comidas Rápidas",
+        category: "Comida Rápida",
         images: 'images/4.jpg',
         contact: {
             instgram: "https://www.instagram.com/fonda_mrlimon/",
@@ -109,7 +109,7 @@ const DATA = [
     {
         id: '13',
         name: 'Gastro Lab',
-        category: "Comidas Rápidas",
+        category: "Comida Rápida",
         images: 'images/15.jfif',
         contact: {
             instgram:  "https://www.instagram.com/gastroolab/",
@@ -119,7 +119,7 @@ const DATA = [
     {
         id: '14',
         name: 'Beer Station',
-        category: "Comidas Rápidas",
+        category: "Comida Rápida",
         images: 'images/16.png',
         contact: {
             instgram:  "https://www.instagram.com/beerstationguacari/",
@@ -129,7 +129,7 @@ const DATA = [
     {
         id: '15',
         name: 'Grato by Bennedetto',
-        category: "Comidas Rápidas",
+        category: "Comida Rápida",
         images: 'images/17.jfif',
         contact: {
             instgram:  "https://www.instagram.com/grato.bybenedetto/",
@@ -140,7 +140,7 @@ const DATA = [
     {
         id: '6',
         name: 'KFV',
-        category: "Comidas Rápidas",
+        category: "Comida Rápida",
         images: 'images/8.jfif',
         contact: {
             instgram: "https://www.instagram.com/kfvrestaurante/",
@@ -151,7 +151,7 @@ const DATA = [
     {
         id: '2',
         name: 'Pac Burger',
-        category: "Comidas Variada",
+        category: "Comida Variada",
         images: 'images/2.jpeg',
         contact: {
             instgram: "https://www.instagram.com/pacburguer.fv/",
@@ -161,7 +161,7 @@ const DATA = [
     {
         id: '3',
         name: 'Ricuras La Fé',
-        category: "Comidas Variada",
+        category: "Comida Variada",
         images: 'images/1.jpeg',
         contact: {
             instgram: "https://www.instagram.com/ricuraslafe/",

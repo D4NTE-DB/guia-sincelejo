@@ -3,9 +3,20 @@ import { Button, Card } from 'react-bootstrap';
 import DATA from '../images'
 import 'boxicons'
 
-const Cards = () => {
+const Cards = ({props}) => {
 
-    console.log(DATA)
+    console.log(props)
+
+     
+    // useEffect(() => {
+    //     axios.get(`${url}`)
+    //     .then(res => {
+    //         setPokemon(res.data)
+    //         if (res.data.types[0].type.name.includes(selectedType) || res.data.types[1]?.type.name.includes(selectedType) ) {
+    //         }
+            
+    //     });
+    // }, [])
 
     return (
         DATA.map((data) => (
@@ -16,7 +27,7 @@ const Cards = () => {
                     <option value="">Elige un tipo</option>
                     <option >{data.category.toUpperCase()}</option>
                 </select> */}
-                <Card style={{ width: '10rem', height: '25rem' }}>
+                <Card style={{ width: '10rem', height: '21rem' }}>
                     <Card.Img style={{
                         width: '160px',
                         height: '160px'
@@ -27,6 +38,8 @@ const Cards = () => {
                         <Card.Title style={{
                             width: '128px',
                             height: '50px',
+                            position: 'relative',
+                            top: '10px'
                         }}>{data.name}</Card.Title>
                         {/* <Card.Text>
                             Some quick example text to build on the card title and make up the

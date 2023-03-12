@@ -4,61 +4,48 @@ import './App.css'
 import AppNavBar from './components/AppNavBar'
 import Cards from './components/Cards'
 import DATA from './images'
-import { Card } from 'react-bootstrap'
+import { Button, Card, Dropdown } from 'react-bootstrap'
 
 
 function App() {
   const [count, setCount] = useState(0)
-  const [searchId, SetSearchId] = useState("");
-  const [locationsSuggestions, setLocationsSuggestions] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState(null);
 
 
   useEffect(() => {
     setCount(DATA)
   }, [])
 
-  const SearchI = () => {
-    setCount(DATA.searchId);
-  }
+  const uniqueData = DATA.filter((item, index) => {
+    return DATA.findIndex(obj => obj.category === item.category) === index;
+  });
 
-  const selectSuggestion = suggestion => {
-    setCount(suggestion);
-    SetSearchId("");
-  }
-
-
-  useEffect(() => {
-    if (searchId) {
-      setLocationsSuggestions(DATA.searchId);
-    } else setLocationsSuggestions([]);
-  }, [searchId])
+  const filteredData = selectedCategory ? DATA.filter(item => item.category === selectedCategory) : DATA;
 
   return (
     <div className="App">
+
       <div style={{ position: 'fixed', width: '100%', zIndex: '2000', top: '-10px' }}>
         {<AppNavBar />}
       </div>
-      {/* <div className="search">
-          <input type="text"
-            placeholder="Set a Location"
-            value={searchId}
-            onChange={e => SetSearchId(e.target.value)}
+      <Dropdown style={{ position: 'relative', zIndex: '30000', textAlign: 'center', top: '75px' }}>
+        <Dropdown.Toggle variant="success" id="dropdown-basic">
+          Categorias
+        </Dropdown.Toggle>
 
-          />
-
-          <button onClick={SearchI} >Search</button>
-          <ul className="suggestions-list">
-          {locationsSuggestions?.map(suggestion => (
-            <h5 onClick={() => selectSuggestion(suggestion)}>{suggestion.name}</h5>
-          ))}
-        </ul>
-        </div> */}
-
-      <div className='contact-us' style={{ background: 'red' }}>
-        <Card.Body >
-
-        </Card.Body>
-      </div>
+        <Dropdown.Menu>
+          {
+            uniqueData.map((data) => (
+              <Dropdown.Item
+                key={data.id}
+                onClick={() => setSelectedCategory(data.category)}
+              >
+                {data.category.toUpperCase()}
+              </Dropdown.Item>
+            ))
+          }
+        </Dropdown.Menu>
+      </Dropdown>
       <Card className='contact-box' style={{
         width: '10rem',
         height: '130px',
@@ -104,7 +91,8 @@ function App() {
           </div>
         </Card.Body>
       </Card>
-      <div className='div-need' style={{ position: 'relative', top: '80px' }}>{<Cards />}</div>
+      <div className='div-need' style={{ position: 'relative', top: '80px' }}>{<Cards data={filteredData} />}
+      </div>
 
     </div>
   )

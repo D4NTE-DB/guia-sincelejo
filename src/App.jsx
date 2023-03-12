@@ -35,8 +35,9 @@ function App() {
 
   return (
     <div className="App">
-
+      <div style={{position: 'fixed', width: '100%', zIndex: '2000', top: '-10px'}}>
       {<AppNavBar />}
+      </div>
       {/* <div className="search">
           <input type="text"
             placeholder="Set a Location"
@@ -100,7 +101,7 @@ function App() {
           </Card.Link>
       </Card.Body>
     </Card>
-      <div className='div-need'>{<Cards />}</div>
+      <div className='div-need' style={{position: 'relative' ,top: '80px'}}>{<Cards />}</div>
 
     </div>
   )

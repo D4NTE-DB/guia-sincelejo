@@ -24,30 +24,45 @@ function App() {
 
   const filteredData = selectedCategory ? DATA.filter(item => item.category === selectedCategory) : DATA;
 
+  console.log(selectedCategory)
+  console.log(filteredData)
   return (
     <HashRouter>
       <div className="App">
         <div style={{ position: 'fixed', width: '100%', zIndex: '2000', top: '-10px' }}>
           {<AppNavBar />}
         </div>
-        {/* <Dropdown style={{ position: 'relative', zIndex: '30000', textAlign: 'center', top: '75px' }}>
-        <Dropdown.Toggle variant="success" id="dropdown-basic">
-          Categorias
-        </Dropdown.Toggle>
+        <Dropdown style={{ display: 'flex', justifyContent: 'center', gap: '1rem', position: 'relative', zIndex: '30000', textAlign: 'center', top: '75px' }}>
+          {/* <Button variant="success">
+            <box-icon name='sort-a-z' style={{ fill: 'white' }}></box-icon>
+          </Button> */}
+          <Dropdown.Toggle variant="success" id="dropdown-basic">
+            Categorias
+          </Dropdown.Toggle>
+          <Dropdown.Menu>
+            <Dropdown.Item
+              style={{ textAlign: 'center' }}
+              onClick={() => setSelectedCategory(null)}
+            >
+              Todas
+            </Dropdown.Item>
+            {
+              uniqueData.map((data) => (
 
-        <Dropdown.Menu>
-          {
-            uniqueData.map((data) => (
-              <Dropdown.Item
-                key={data.id}
-                onClick={() => setSelectedCategory(data.category)}
-              >
-                {data.category.toUpperCase()}
-              </Dropdown.Item>
-            ))
-          }
-        </Dropdown.Menu>
-      </Dropdown> */}
+                <Dropdown.Item
+                  key={data.id}
+                  onClick={() => setSelectedCategory(data.category)}
+                  style={{ textAlign: 'center' }}
+                >
+                  {data.category}
+                </Dropdown.Item>
+
+
+              ))
+            }
+
+          </Dropdown.Menu>
+        </Dropdown>
         <Card className='contact-box' style={{
           width: '10rem',
           height: '130px',
@@ -93,18 +108,18 @@ function App() {
             </div>
           </Card.Body>
         </Card>
-       
+
         <Routes>
-        <Route path='/' element={
-        <div className='div-need' style={{ position: 'relative', top: '80px' }}>
-          
-          <Link className='info-aboutme' as={Link} to='/about-us'>
-          <box-icon name='info-circle' size='md'></box-icon>
-          </Link>
-          
-          {<Cards data={filteredData} />}
-        </div>}/>
-        
+          <Route path='/' element={
+            <div className='div-need' style={{ position: 'relative', top: '80px' }}>
+
+              <Link className='info-aboutme' as={Link} to='/about-us'>
+                <box-icon name='info-circle' size='md'></box-icon>
+              </Link>
+
+              {<Cards data={filteredData} />}
+            </div>} />
+
           {/* <Link>character</Link> */}
           <Route path='/about-us' element={<AboutMe />} />
         </Routes>

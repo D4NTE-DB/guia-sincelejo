@@ -3,9 +3,9 @@ import { Button, Card } from 'react-bootstrap';
 import DATA from '../images'
 import 'boxicons'
 
-const Cards = ({props}) => {
+const Cards = ({data}) => {
 
-    console.log(props)
+    // console.log(props)
 
      
     // useEffect(() => {
@@ -19,7 +19,7 @@ const Cards = ({props}) => {
     // }, [])
 
     return (
-        DATA.map((data) => (
+        data.map((data) => (
 
             <div key={data.id} className='card-item'>
                 {/* <button >Search</button>

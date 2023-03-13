@@ -1,7 +1,5 @@
 const DATA = [
 
-   
-
     {
         id: '1',
         name: 'Benedetto Pizza',
@@ -16,7 +14,7 @@ const DATA = [
     {
         id: '17',
         name: 'ROUKA GASTROBAR',
-        category: "Comida Rápida",
+        category: "Hamburguesas",
         images: 'images/19.jpg',
         contact: {
             instgram: "https://www.instagram.com/rouka_gastrobar/",
@@ -27,7 +25,7 @@ const DATA = [
     {
         id: '4',
         name: 'La BBH',
-        category: "Comida Rápida",
+        category: "Hamburguesas",
         images: 'images/6.jpg',
         contact: {
             instgram: "https://www.instagram.com/_labbh_/",
@@ -39,7 +37,7 @@ const DATA = [
     {
         id: '8',
         name: 'La Mondiu Burger',
-        category: "Comida Rápida",
+        category: "Hamburguesas",
         images: 'images/10.jpg',
         contact: {
             instgram: "https://www.instagram.com/lamondiu.burger/",
@@ -83,7 +81,7 @@ const DATA = [
     {
         id: '9',
         name: 'Mr.Burger',
-        category: "Comida Rápida",
+        category: "Hamburguesas",
         images: 'images/11.enc',
         contact: {
             instgram: "https://www.instagram.com/mrburgersjo/",
@@ -94,7 +92,7 @@ const DATA = [
     {
         id: '5',
         name: 'Taco y Chela',
-        category: " Comida Mexicana",
+        category: "Comida Mexicana",
         images: 'images/5.jpeg',
         contact: {
             instgram: "https://www.instagram.com/tacoychela.co/",
@@ -116,7 +114,7 @@ const DATA = [
     {
         id: '0',
         name: 'Mr.Limón',
-        category: "Comida Rápida",
+        category: "Sándwiches",
         images: 'images/4.jpg',
         contact: {
             instgram: "https://www.instagram.com/fonda_mrlimon/",
@@ -157,7 +155,7 @@ const DATA = [
     {
         id: '15',
         name: 'Grato by Bennedetto',
-        category: "Comida Rápida",
+        category: "Comida Gourmet",
         images: 'images/17.jfif',
         contact: {
             instgram:  "https://www.instagram.com/grato.bybenedetto/",
@@ -179,7 +177,7 @@ const DATA = [
     {
         id: '2',
         name: 'Pac Burger',
-        category: "Comida Variada",
+        category: "Comida Rápida",
         images: 'images/2.jpeg',
         contact: {
             instgram: "https://www.instagram.com/pacburguer.fv/",
@@ -189,7 +187,7 @@ const DATA = [
     {
         id: '3',
         name: 'Ricuras La Fé',
-        category: "Comida Variada",
+        category: "Comida Rápida",
         images: 'images/1.jpeg',
         contact: {
             instgram: "https://www.instagram.com/ricuraslafe/",

@@ -8,7 +8,7 @@ const AboutMe = () => {
     height: "90%", padding: '2rem' }}>
                 <Card.Img style={{ width: '20%' }} variant="top" src="images/info.png" />
                 <Card.Body>
-                    <Card.Title>Hola Soy el Creador de esta página web</Card.Title>
+                    <Card.Title>¡Hola! Soy el Creador de esta página web</Card.Title>
                     <Card.Text style={{ textAlign: 'left' }}>
                     ¡Hola a todos! 👋 Soy un programador Full Stack con experiencia en:
                         <ul>
@@ -21,7 +21,7 @@ const AboutMe = () => {
                             <li>Node.js</li>
                         </ul>
                         He creado un directorio completo de restaurantes locales en la ciudad de Sincelejo con sus cuentas de Instagram y WhatsApp en un solo lugar 📱📲. Además, puedo ayudarte a crear una página web personalizada para tu negocio o proyecto. Me aseguraré de que tu sitio web sea 100% personalizado para satisfacer tus necesidades y requisitos. Si estás interesado en mi servicio de desarrollo web, contáctame para que podamos discutir más detalles. También estoy abierto a propuestas laborales en el área de desarrollo de software.  
-                        <h6>¡así que no dudes en contactarme si estás buscando un programador full stack con habilidades en las tecnologías mencionadas anteriormente!</h6>
+                        <h6>¡así que no dudes en contactarme si estás buscando un programador Full Stack con habilidades en las tecnologías mencionadas anteriormente!</h6>
                     </Card.Text>
                     <div>
                     <section className="contacts" id="contacts">

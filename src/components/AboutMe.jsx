@@ -8,7 +8,7 @@ const AboutMe = () => {
     height: "90%", padding: '2rem' }}>
                 <Card.Img style={{ width: '20%' }} variant="top" src="images/info.png" />
                 <Card.Body>
-                    <Card.Title>Diseñador Web FullStack</Card.Title>
+                    <Card.Title>Hola Soy el Creador de esta página web</Card.Title>
                     <Card.Text style={{ textAlign: 'left' }}>
                     ¡Hola a todos! 👋 Soy un programador Full Stack con experiencia en:
                         <ul>

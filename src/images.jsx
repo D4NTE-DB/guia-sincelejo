@@ -168,6 +168,16 @@ const DATA = [
             phoneNum: "https://wa.link/4xaebs"
         }
     },
+    {
+        id: '16',
+        name: 'Hot Dog la Bendición',
+        category: "Comida Rápida",
+        images: 'images/18.jpg',
+        contact: {
+            instgram: "https://www.instagram.com/hot_dog_la_bendicion/",
+            phoneNum: "https://wa.me/message/ZAIIWXKNJCXIH1"
+        }
+    },
 ]
 
 

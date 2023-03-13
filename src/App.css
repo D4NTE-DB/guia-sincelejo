@@ -121,7 +121,7 @@
   .info-aboutme{
    position: fixed;
     z-index: 5000;
-    top: 54%;
+    top: 56%;
     right: -1% !important;
     fill: goldenrod;
   }

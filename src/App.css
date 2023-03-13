@@ -101,6 +101,15 @@
   flex-wrap: wrap;
 }
 
+.info-aboutme{
+  position: fixed;
+   z-index: 5000;
+   top: 55%;
+   right: 130%;
+   fill: goldenrod;
+ }
+
+
 @media (max-width: 600px) {
   .about-us-info{
     position: fixed;
@@ -112,7 +121,7 @@
   .info-aboutme{
    position: fixed;
     z-index: 5000;
-    top: 55%;
+    top: 54%;
     right: -1% !important;
     fill: goldenrod;
   }
@@ -120,14 +129,7 @@
 
 /* para que no se vea en escritorio */
 
- .info-aboutme{
-   position: fixed;
-    z-index: 5000;
-    top: 42%;
-    right: 130%;
-    fill: goldenrod;
-  }
-
+ 
 /* test */
 
 .contact-box.card{

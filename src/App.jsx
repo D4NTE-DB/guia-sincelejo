@@ -5,7 +5,7 @@ import AppNavBar from './components/AppNavBar'
 import Cards from './components/Cards'
 import DATA from './images'
 import { Button, Card, Dropdown } from 'react-bootstrap'
-import { HashRouter, Route, Routes } from 'react-router-dom'
+import { HashRouter, Link, Route, Routes } from 'react-router-dom'
 import AboutMe from './components/AboutMe'
 
 
@@ -97,6 +97,11 @@ function App() {
         <Routes>
         <Route path='/' element={
         <div className='div-need' style={{ position: 'relative', top: '80px' }}>
+          
+          <Link className='info-aboutme' as={Link} to='/about-us'>
+          <box-icon name='info-circle' size='md'></box-icon>
+          </Link>
+          
           {<Cards data={filteredData} />}
         </div>}/>
         

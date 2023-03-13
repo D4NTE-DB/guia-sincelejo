@@ -106,4 +106,24 @@
     position: fixed;
     top: -1000px;
   }
+  .info-aboutme{
+   position: fixed;
+    z-index: 5000;
+    top: 42%;
+    right: 7% !important;
+    fill: goldenrod;
+  }
 }
+
+ .info-aboutme{
+   position: fixed;
+    z-index: 5000;
+    top: 42%;
+    right: 130%;
+    fill: goldenrod;
+  }
+.contact-box.card{
+  position: fixed !important;
+  /* right: 700px !important; */
+}
+

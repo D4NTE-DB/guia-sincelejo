@@ -14,6 +14,17 @@ const DATA = [
     },
 
     {
+        id: '17',
+        name: 'ROUKA GASTROBAR',
+        category: "Comida Rápida",
+        images: 'images/19.jpg',
+        contact: {
+            instgram: "https://www.instagram.com/rouka_gastrobar/",
+            phoneNum: "https://wa.me//+573205576898"
+        }
+    },
+
+    {
         id: '4',
         name: 'La BBH',
         category: "Comida Rápida",

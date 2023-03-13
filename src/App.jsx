@@ -81,7 +81,7 @@ function App() {
               color: '#322929'
             }}>¡Contactanos para agregar a tu restaurante!</Card.Title>
             <div style={{ position: 'relative', top: '-75px', right: '-30px' }}>
-              <Card.Link href="https://forms.gle/y5BLA3eu2XFSVXNy5">
+              <Card.Link href="https://forms.gle/sFyGSV3ieQqFUhUx8">
                 <img style={{
                   width: '35px',
                   position: 'absolute',

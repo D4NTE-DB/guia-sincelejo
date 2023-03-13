@@ -1,15 +1,6 @@
 const DATA = [
 
-    {
-        id: '0',
-        name: 'Mr.Limón',
-        category: "Comida Rápida",
-        images: 'images/4.jpg',
-        contact: {
-            instgram: "https://www.instagram.com/fonda_mrlimon/",
-            phoneNum: "https://wa.link/qpxehq"
-        }
-    },
+   
 
     {
         id: '1',
@@ -32,14 +23,16 @@ const DATA = [
             phoneNum: "https://wa.me/message/KHTKAOVZVZV3M1"
         }
     },
+   
+    
     {
-        id: '5',
-        name: 'Taco y Chela',
-        category: " Comida Mexicana",
-        images: 'images/5.jpeg',
+        id: '8',
+        name: 'La Mondiu Burger',
+        category: "Comida Rápida",
+        images: 'images/10.jpg',
         contact: {
-            instgram: "https://www.instagram.com/tacoychela.co/",
-            phoneNum: "https://linkbe.me/tacoychela.co"
+            instgram: "https://www.instagram.com/lamondiu.burger/",
+            phoneNum: "https://bio.site/lamondiu"
         }
     },
     
@@ -63,16 +56,18 @@ const DATA = [
             phoneNum: "https://wa.link/voi51s"
         }
     },
+
     {
-        id: '8',
-        name: 'La Mondiu Burger',
+        id: '16',
+        name: 'Hot Dog la Bendición',
         category: "Comida Rápida",
-        images: 'images/10.jpg',
+        images: 'images/18.jpg',
         contact: {
-            instgram: "https://www.instagram.com/lamondiu.burger/",
-            phoneNum: "https://bio.site/lamondiu"
+            instgram: "https://www.instagram.com/hot_dog_la_bendicion/",
+            phoneNum: "https://wa.me/message/ZAIIWXKNJCXIH1"
         }
     },
+
 
     {
         id: '9',
@@ -86,6 +81,17 @@ const DATA = [
     },
 
     {
+        id: '5',
+        name: 'Taco y Chela',
+        category: " Comida Mexicana",
+        images: 'images/5.jpeg',
+        contact: {
+            instgram: "https://www.instagram.com/tacoychela.co/",
+            phoneNum: "https://linkbe.me/tacoychela.co"
+        }
+    },
+
+    {
         id: '11',
         name: 'Hunter & Butcher',
         category: "Hamburguesas",
@@ -95,6 +101,17 @@ const DATA = [
             phoneNum: "https://linktr.ee/hunterbutcher"
         }
     }, 
+
+    {
+        id: '0',
+        name: 'Mr.Limón',
+        category: "Comida Rápida",
+        images: 'images/4.jpg',
+        contact: {
+            instgram: "https://www.instagram.com/fonda_mrlimon/",
+            phoneNum: "https://wa.link/qpxehq"
+        }
+    },
     
     {
         id: '12',
@@ -168,16 +185,7 @@ const DATA = [
             phoneNum: "https://wa.link/4xaebs"
         }
     },
-    {
-        id: '16',
-        name: 'Hot Dog la Bendición',
-        category: "Comida Rápida",
-        images: 'images/18.jpg',
-        contact: {
-            instgram: "https://www.instagram.com/hot_dog_la_bendicion/",
-            phoneNum: "https://wa.me/message/ZAIIWXKNJCXIH1"
-        }
-    },
+   
 ]
 
 

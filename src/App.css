@@ -106,14 +106,19 @@
     position: fixed;
     top: -1000px;
   }
+
+  /* icono encima de contactanos */
+
   .info-aboutme{
    position: fixed;
     z-index: 5000;
-    top: 42%;
-    right: 7% !important;
+    top: 55%;
+    right: -1% !important;
     fill: goldenrod;
   }
 }
+
+/* para que no se vea en escritorio */
 
  .info-aboutme{
    position: fixed;
@@ -122,6 +127,9 @@
     right: 130%;
     fill: goldenrod;
   }
+
+/* test */
+
 .contact-box.card{
   position: fixed !important;
   /* right: 700px !important; */

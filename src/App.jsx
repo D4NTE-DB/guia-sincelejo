@@ -41,7 +41,7 @@ function App() {
           </Dropdown.Toggle>
           <Dropdown.Menu>
             <Dropdown.Item
-              style={{ textAlign: 'center' }}
+              style={{ textAlign: 'center', color: 'black' }}
               onClick={() => setSelectedCategory(null)}
             >
               Todas
@@ -52,7 +52,7 @@ function App() {
                 <Dropdown.Item
                   key={data.id}
                   onClick={() => setSelectedCategory(data.category)}
-                  style={{ textAlign: 'center' }}
+                  style={{ textAlign: 'center', color: 'black'  }}
                 >
                   {data.category}
                 </Dropdown.Item>

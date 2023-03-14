@@ -32,7 +32,7 @@ function App() {
         <div style={{ position: 'fixed', width: '100%', zIndex: '2000', top: '-10px' }}>
           {<AppNavBar />}
         </div>
-        <Dropdown style={{ display: 'flex', justifyContent: 'center', gap: '1rem', position: 'relative', zIndex: '30000', textAlign: 'center', top: '75px' }}>
+        <Dropdown style={{ display: 'flex', justifyContent: 'center', gap: '1rem', position: 'relative', zIndex: '-1', textAlign: 'center', top: '75px' }}>
           {/* <Button variant="success">
             <box-icon name='sort-a-z' style={{ fill: 'white' }}></box-icon>
           </Button> */}

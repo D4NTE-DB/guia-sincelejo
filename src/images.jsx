@@ -24,7 +24,7 @@ const DATA = [
 
     {
         id: '4',
-        name: 'La BBH',
+        name: 'BBH',
         category: "Hamburguesas",
         images: 'images/6.jpg',
         contact: {

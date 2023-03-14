@@ -69,7 +69,7 @@ function App() {
           position: "fixed",
           right: "-.9%",
           top: "46%",
-          zIndex: 1000
+          zIndex: 800
         }}>
           <Card.Body className='contact'>
             <Card.Title style={{

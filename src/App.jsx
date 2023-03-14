@@ -12,20 +12,26 @@ import AboutMe from './components/AboutMe'
 function App() {
   const [count, setCount] = useState(0)
   const [selectedCategory, setSelectedCategory] = useState(null);
-
+  const [sortedData, setSortedData] = useState(DATA);
+  const [isSorted, setIsSorted] = useState(false);
 
   useEffect(() => {
-    setCount(DATA)
-  }, [])
+    if (isSorted) {
+      setSortedData([...sortedData].sort((a, b) => a.name.localeCompare(b.name)));
+    } else {
+      setSortedData(DATA);
+    }
+  }, [isSorted]);
 
   const uniqueData = DATA.filter((item, index) => {
     return DATA.findIndex(obj => obj.category === item.category) === index;
   });
 
-  const filteredData = selectedCategory ? DATA.filter(item => item.category === selectedCategory) : DATA;
+  const filteredData = selectedCategory ? DATA.filter(item => item.category === selectedCategory) : sortedData;
+  
 
-  console.log(selectedCategory)
-  console.log(filteredData)
+  console.log(sortedData)
+  // console.log(filteredData)
   return (
     <HashRouter>
       <div className="App">
@@ -33,9 +39,12 @@ function App() {
           {<AppNavBar />}
         </div>
         <Dropdown style={{ display: 'flex', justifyContent: 'center', gap: '1rem', position: 'relative', zIndex: '900', textAlign: 'center', top: '75px' }}>
-          {/* <Button variant="success">
+        <button 
+            className={`btn btn-${isSorted ? 'secondary' : 'success'}`}
+            onClick={() => setIsSorted(!isSorted)}
+            >
             <box-icon name='sort-a-z' style={{ fill: 'white' }}></box-icon>
-          </Button> */}
+          </button>
           <Dropdown.Toggle variant="success" id="dropdown-basic">
             Categorias
           </Dropdown.Toggle>
@@ -60,8 +69,15 @@ function App() {
 
               ))
             }
-
+  
           </Dropdown.Menu>
+          <button  
+            className='btn btn-success'
+            style={{fill: 'white'}}
+            onClick={() => setSortedData([...sortedData].sort(() => Math.random() - 0.5))}
+            >
+            <box-icon name='shuffle' animation='tada' ></box-icon>
+          </button>
         </Dropdown>
         <Card className='contact-box' style={{
           width: '10rem',

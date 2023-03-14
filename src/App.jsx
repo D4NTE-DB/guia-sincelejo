@@ -68,7 +68,7 @@ function App() {
           height: '130px',
           position: "fixed",
           right: "-.9%",
-          top: "46%",
+          top: "60%",
           zIndex: 800
         }}>
           <Card.Body className='contact'>

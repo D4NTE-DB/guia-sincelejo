@@ -194,6 +194,16 @@ const DATA = [
             phoneNum: "https://wa.link/4xaebs"
         }
     },
+    // {
+    //     id: '18',
+    //     name: 'Janne & Nasser',
+    //     category: "Comida Rápida",
+    //     images: 'images/20.png',
+    //     contact: {
+    //         instgram: "https://www.instagram.com/janne.nasser/",
+    //         phoneNum: "https://linktr.ee/jannenasser"
+    //     }
+    // },
    
 ]
 

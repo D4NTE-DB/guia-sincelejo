@@ -113,7 +113,7 @@ function App() {
                   top: "81px"
                 }} src='images/instagram.png' alt="" />
               </Card.Link>
-              <Card.Link href="https://www.facebook.com/profile.php?id=100090631706684">
+              <Card.Link href="https://www.facebook.com/foodguiasincelejo/">
                 <img style={{
                   width: '35px',
                   position: 'absolute',

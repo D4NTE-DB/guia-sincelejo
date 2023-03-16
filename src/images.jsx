@@ -194,17 +194,50 @@ const DATA = [
             phoneNum: "https://wa.link/4xaebs"
         }
     },
-    // {
-    //     id: '18',
-    //     name: 'Janne & Nasser',
-    //     category: "Comida Rápida",
-    //     images: 'images/20.png',
-    //     contact: {
-    //         instgram: "https://www.instagram.com/janne.nasser/",
-    //         phoneNum: "https://linktr.ee/jannenasser"
-    //     }
-    // },
-   
+    {
+        id: '18',
+        name: 'Janne & Nasser',
+        category: "Comida Árabe",
+        images: 'images/20.png',
+        contact: {
+            instgram: "https://www.instagram.com/janne.nasser/",
+            phoneNum: "https://linktr.ee/jannenasser"
+        }
+    },
+
+    {
+        id: '19',
+        name: 'La Casita Gastrobar',
+        category: "Comida Rápida",
+        images: 'images/21.jfif',
+        contact: {
+            instgram: "https://www.instagram.com/la_casita.gastrobar/",
+            phoneNum: "https://linktr.ee/lacasitagastrobar"
+        }
+    },
+
+    {
+        id: '20',
+        name: 'Seiko Sushi',
+        category: "Sushi",
+        images: 'images/22.png',
+        contact: {
+            instgram: "https://www.instagram.com/seikosushi/",
+            phoneNum: "https://wa.link/0qg9kt"
+        }
+    },
+
+    {
+        id: '21',
+        name: 'Teriyaki Fusion Gong',
+        category: "Sushi",
+        images: 'images/23.png',
+        contact: {
+            instgram: "https://www.instagram.com/teriyaki_fusion_gong/",
+            phoneNum: "https://linktr.ee/teriyaki_fusion_gong"
+        }
+    },
+
 ]
 
 

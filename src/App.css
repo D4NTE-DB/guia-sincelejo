@@ -118,6 +118,20 @@
 
   /* icono encima de contactanos */
 
+  /* TITULO CONTACTANOS */
+
+  .info-title{
+    font-size: 14px !important;
+    width: 100px;
+    position: relative;
+    top: 5px;
+    text-align: center;
+    color: black;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+
   .info-aboutme{
    position: fixed;
     z-index: 5000;
@@ -137,3 +151,37 @@
   /* right: 700px !important; */
 }
 
+ 
+/* GLOW FOR FONTS */
+/* CLASS FOR THE CATEGORY CONFIG */
+.category-f {
+  text-align: center !important;
+  font-size: 16px;
+  color: black!important;
+  font-weight: bold !important;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
+
+
+.dropdown-cat{
+  display: flex !important; 
+  align: center;
+  justify-content: center; 
+  gap: 1rem; 
+  position: relative; 
+  z-index: 900; 
+  text-align: center; 
+  top: 75px;
+}

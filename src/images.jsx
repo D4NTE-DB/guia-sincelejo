@@ -238,6 +238,17 @@ const DATA = [
         }
     },
 
+    {
+        id: '22',
+        name: 'Buona Pizza',
+        category: "Pizzas",
+        images: 'images/24.jpg',
+        contact: {
+            instgram: "https://www.instagram.com/buonapizzasincelejo/",
+            phoneNum: "https://bit.ly/DomiciliosBuonapizza"
+        }
+    },
+
 ]
 
 

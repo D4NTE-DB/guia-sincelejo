@@ -28,7 +28,7 @@ function App() {
   });
 
   const filteredData = selectedCategory ? DATA.filter(item => item.category === selectedCategory) : sortedData;
-  
+
 
   console.log(sortedData)
   // console.log(filteredData)
@@ -38,11 +38,14 @@ function App() {
         <div style={{ position: 'fixed', width: '100%', zIndex: '2000', top: '-10px' }}>
           {<AppNavBar />}
         </div>
-        <Dropdown style={{ display: 'flex', justifyContent: 'center', gap: '1rem', position: 'relative', zIndex: '900', textAlign: 'center', top: '75px' }}>
-        <button 
+        <Dropdown
+          className='dropdown-cat'
+          drop='down-centered'
+        >
+          <button
             className={`btn btn-${isSorted ? 'secondary' : 'success'}`}
             onClick={() => setIsSorted(!isSorted)}
-            >
+          >
             <box-icon name='sort-a-z' style={{ fill: 'white' }}></box-icon>
           </button>
           <Dropdown.Toggle variant="success" id="dropdown-basic">
@@ -50,7 +53,7 @@ function App() {
           </Dropdown.Toggle>
           <Dropdown.Menu>
             <Dropdown.Item
-              style={{ textAlign: 'center', color: 'black' }}
+              className='category-f'
               onClick={() => setSelectedCategory(null)}
             >
               Todas
@@ -59,9 +62,9 @@ function App() {
               uniqueData.map((data) => (
 
                 <Dropdown.Item
+                  className='category-f'
                   key={data.id}
                   onClick={() => setSelectedCategory(data.category)}
-                  style={{ textAlign: 'center', color: 'black'  }}
                 >
                   {data.category}
                 </Dropdown.Item>
@@ -69,13 +72,13 @@ function App() {
 
               ))
             }
-  
+
           </Dropdown.Menu>
-          <button  
+          <button
             className='btn btn-success'
-            style={{fill: 'white'}}
+            style={{ fill: 'white' }}
             onClick={() => setSortedData([...sortedData].sort(() => Math.random() - 0.5))}
-            >
+          >
             <box-icon name='shuffle' animation='tada' ></box-icon>
           </button>
         </Dropdown>
@@ -88,14 +91,12 @@ function App() {
           zIndex: 800
         }}>
           <Card.Body className='contact'>
-            <Card.Title style={{
-              fontSize: '14px',
-              width: '100px',
-              position: 'relative',
-              top: '5px',
-              textAlign: 'center',
-              color: '#322929'
-            }}>¡Contactanos para agregar a tu restaurante!</Card.Title>
+            <Card.Title
+              className='info-title'
+              style={{
+               
+              }}
+            >¡Contactanos para agregar a tu restaurante!</Card.Title>
             <div style={{ position: 'relative', top: '-75px', right: '-30px' }}>
               <Card.Link href="https://forms.gle/sFyGSV3ieQqFUhUx8">
                 <img style={{

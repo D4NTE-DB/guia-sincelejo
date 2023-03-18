@@ -128,8 +128,8 @@
     text-align: center;
     color: black;
     -webkit-animation: glow 1s ease-in-out infinite alternate;
-    -moz-animation: glow 1s ease-in-out infinite alternate;
-    animation: glow 1s ease-in-out infinite alternate;
+    /* -moz-animation: glow 1s ease-in-out infinite alternate; */
+    /* animation: glow 1s ease-in-out infinite alternate; */
   }
 
   .info-aboutme{
@@ -160,9 +160,9 @@
   color: black!important;
   font-weight: bold !important;
   text-align: center;
-  /* -webkit-animation: glow 1s ease-in-out infinite alternate; */
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
   /* -moz-animation: glow 1s ease-in-out infinite alternate; */
-  animation: glow 1s ease-in-out infinite alternate;
+  /* animation: glow 1s ease-in-out infinite alternate; */
 }
 
 @-webkit-keyframes glow {

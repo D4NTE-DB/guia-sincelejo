@@ -92,7 +92,7 @@ function App() {
         }}>
           <Card.Body className='contact'>
             <Card.Title
-              className='info-title'
+              // className='info-title'
               style={{
                
               }}

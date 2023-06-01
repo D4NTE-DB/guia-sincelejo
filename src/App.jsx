@@ -82,45 +82,22 @@ function App() {
             <box-icon name='shuffle' animation='tada' ></box-icon>
           </button>
         </Dropdown>
-        <Card className='contact-box' style={{
-          width: '10rem',
-          height: '130px',
-          position: "fixed",
-          right: "-.9%",
-          top: "60%",
-          zIndex: 800
-        }}>
+        <Card className='contact-box'>
           <Card.Body className='contact'>
-            <Card.Title
+            {/* <Card.Title
               className='info-title'
-              style={{
-               
-              }}
-            >¡Contactanos para agregar a tu restaurante!</Card.Title>
-            <div style={{ position: 'relative', top: '-75px', right: '-30px' }}>
-              <Card.Link href="https://forms.gle/sFyGSV3ieQqFUhUx8">
-                <img style={{
-                  width: '35px',
-                  position: 'absolute',
-                  right: '120px',
-                  top: '80px'
-                }} src='images/formulario.png' alt="" />
+            >¡Contactanos para agregar a tu restaurante!</Card.Title> */}
+            <div className='div-socials' >
+            <box-icon name='info-circle' size='md'></box-icon>
+
+              <Card.Link className='socials-items' href="https://forms.gle/sFyGSV3ieQqFUhUx8">
+                <img  src='images/formulario.png' alt="" />
               </Card.Link>
-              <Card.Link href="https://www.instagram.com/foodguiasincelejo/">
-                <img style={{
-                  width: '35px',
-                  position: 'absolute',
-                  right: "80px",
-                  top: "81px"
-                }} src='images/instagram.png' alt="" />
+              <Card.Link className='socials-items' href="https://www.instagram.com/foodguiasincelejo/">
+                <img  src='images/instagram.png' alt="" />
               </Card.Link>
-              <Card.Link href="https://www.facebook.com/foodguiasincelejo/">
-                <img style={{
-                  width: '35px',
-                  position: 'absolute',
-                  right: "40px",
-                  top: "80px"
-                }} src='images/facebook.png' alt="" />
+              <Card.Link className='socials-items' href="https://www.facebook.com/foodguiasincelejo/">
+                <img src='images/facebook.png' alt="" />
               </Card.Link>
             </div>
           </Card.Body>

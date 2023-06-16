@@ -34,10 +34,12 @@ function App() {
   // console.log(filteredData)
   return (
     <HashRouter>
+     
       <div className="App">
         <div style={{ position: 'fixed', width: '100%', zIndex: '2000', top: '-10px' }}>
           {<AppNavBar />}
         </div>
+       
         <Dropdown
           className='dropdown-cat'
           drop='down-centered'

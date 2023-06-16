@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button, Card } from 'react-bootstrap';
 import DATA from '../images'
 import 'boxicons'
-import ModalFeature from './ModalFeature';
 import Swal from 'sweetalert2'
+import ModalFeature from './ModalFeature';
 
 
 
@@ -22,16 +22,15 @@ const Cards = ({ data }) => {
     //     });
     // }, [])
 
-    const modal = () => {
-        Swal.fire('Any fool can use a computer')
-    }
+    const [show, setShow] = useState(false);
 
     return (
         data.map((data) => (
 
 
             <div key={data.id} className='card-item'>
-                <button onClick={() => modal()}>probando</button>
+                <ModalFeature show={show} setShow={setShow} />
+                
                 {/* <button >Search</button>
                 <select >
                     <option value="">Elige un tipo</option>

@@ -7,6 +7,7 @@ import DATA from './images'
 import { Button, Card, Dropdown } from 'react-bootstrap'
 import { HashRouter, Link, Route, Routes } from 'react-router-dom'
 import AboutMe from './components/AboutMe'
+import ModalFeature from './components/ModalFeature'
 
 
 function App() {
@@ -14,6 +15,8 @@ function App() {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [sortedData, setSortedData] = useState(DATA);
   const [isSorted, setIsSorted] = useState(false);
+
+  const [show, setShow] = useState(true);
 
   useEffect(() => {
     if (isSorted) {
@@ -34,12 +37,13 @@ function App() {
   // console.log(filteredData)
   return (
     <HashRouter>
-     
+      
       <div className="App">
-        <div style={{ position: 'fixed', width: '100%', zIndex: '2000', top: '-10px' }}>
+      <ModalFeature show={show} setShow={setShow} />
+        <div style={{ position: 'fixed', width: '100%', zIndex: '10', top: '-10px' }}>
           {<AppNavBar />}
         </div>
-       
+
         <Dropdown
           className='dropdown-cat'
           drop='down-centered'
@@ -90,13 +94,13 @@ function App() {
               className='info-title'
             >¡Contactanos para agregar a tu restaurante!</Card.Title> */}
             <div className='div-socials' >
-            <box-icon name='info-circle' size='md'></box-icon>
+              <box-icon name='info-circle' size='md'></box-icon>
 
               <Card.Link className='socials-items' href="https://forms.gle/sFyGSV3ieQqFUhUx8">
-                <img  src='images/formulario.png' alt="" />
+                <img src='images/formulario.png' alt="" />
               </Card.Link>
               <Card.Link className='socials-items' href="https://www.instagram.com/foodguiasincelejo/">
-                <img  src='images/instagram.png' alt="" />
+                <img src='images/instagram.png' alt="" />
               </Card.Link>
               <Card.Link className='socials-items' href="https://www.facebook.com/foodguiasincelejo/">
                 <img src='images/facebook.png' alt="" />

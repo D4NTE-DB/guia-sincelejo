@@ -39,7 +39,7 @@ function App() {
     <HashRouter>
       
       <div className="App">
-      <ModalFeature show={show} setShow={setShow} />
+      {/* <ModalFeature show={show} setShow={setShow} /> */}
         <div style={{ position: 'fixed', width: '100%', zIndex: '10', top: '-10px' }}>
           {<AppNavBar />}
         </div>

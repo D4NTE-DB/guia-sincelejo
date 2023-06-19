@@ -1,11 +1,11 @@
 import React from 'react';
-import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { Container, Nav, Navbar, NavDropdown, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const AppNavBar = () => {
     return (
         <div>
-            <Navbar bg="light" expand="lg">
+            <Navbar bg="success" expand="lg">
       <Container>
         <img as={Link} to='/' style={{width: '30px', margin: 0}} src="images/icon.jpeg" alt="" />
         <Navbar.Brand style={{right: '300px', margin: 'initial'}} as={Link} to='/'>Food Guía Sincelejo</Navbar.Brand>
@@ -14,6 +14,7 @@ const AppNavBar = () => {
             <u>Mas Información</u>
           </Nav.Link>
         </Nav>
+        <Button>Promos</Button>
       </Container>
     </Navbar>
     

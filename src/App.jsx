@@ -40,7 +40,7 @@ function App() {
       
       <div className="App">
       {/* <ModalFeature show={show} setShow={setShow} /> */}
-        <div style={{ position: 'fixed', width: '100%', zIndex: '10', top: '-10px' }}>
+        <div style={{ position: 'fixed', width: '100%', zIndex: '100000', top: '-10px' }}>
           {<AppNavBar />}
         </div>
 

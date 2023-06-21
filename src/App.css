@@ -154,9 +154,9 @@
 
   .info-aboutme {
     position: fixed;
-    z-index: 5000;
+    z-index: 1000;
     top: 1%;
-    right: 50% !important;
+    right: 5% !important;
     fill: goldenrod;
   }
 }

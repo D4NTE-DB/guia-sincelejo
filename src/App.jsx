@@ -37,10 +37,10 @@ function App() {
   // console.log(filteredData)
   return (
     <HashRouter>
-      
+
       <div className="App">
-      {/* <ModalFeature show={show} setShow={setShow} /> */}
-        <div style={{ position: 'fixed', width: '100%', zIndex: '100000', top: '-10px' }}>
+        <ModalFeature show={show} setShow={setShow} />
+        <div style={{ position: 'fixed', width: '100%', zIndex: '1000', top: '-10px' }}>
           {<AppNavBar />}
         </div>
 
@@ -54,7 +54,11 @@ function App() {
           >
             <box-icon name='sort-a-z' style={{ fill: 'white' }}></box-icon>
           </button>
-          <Dropdown.Toggle variant="success" id="dropdown-basic">
+          <Dropdown.Toggle 
+          variant="success" 
+          id="dropdown-basic"
+          style={{zIndex: '10'}}
+          >
             Categorias
           </Dropdown.Toggle>
           <Dropdown.Menu>
@@ -82,9 +86,8 @@ function App() {
           </Dropdown.Menu>
           <button
             className='btn btn-success'
-            style={{ fill: 'white' }}
-            onClick={() => setSortedData([...sortedData].sort(() => Math.random() - 0.5))}
-          >
+            style={{ fill: 'white', zIndex: '2' }}
+            onClick={() => setSortedData([...sortedData].sort(() => Math.random() - 0.5))}>
             <box-icon name='shuffle' animation='tada' ></box-icon>
           </button>
         </Dropdown>
@@ -94,14 +97,16 @@ function App() {
               className='info-title'
             >¡Contactanos para agregar a tu restaurante!</Card.Title> */}
             <div className='div-socials' >
+              <Card.Link>
               <box-icon name='info-circle' size='md'></box-icon>
-
+              </Card.Link>
               <Card.Link className='socials-items' href="https://forms.gle/sFyGSV3ieQqFUhUx8">
                 <img src='images/formulario.png' alt="" />
               </Card.Link>
               <Card.Link className='socials-items' href="https://www.instagram.com/foodguiasincelejo/">
                 <img src='images/instagram.png' alt="" />
               </Card.Link>
+              
               <Card.Link className='socials-items' href="https://www.facebook.com/foodguiasincelejo/">
                 <img src='images/facebook.png' alt="" />
               </Card.Link>

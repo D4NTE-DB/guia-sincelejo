@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { Container, Nav, Navbar, NavDropdown, Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import promo from "../assets/icons/promo.png"
 import style from "../CSS/appNavBar.module.css"
@@ -11,7 +11,9 @@ import ModalFeature from './ModalFeature';
 const AppNavBar = () => {
     return (
         <div>
-            <Navbar bg="light" expand="lg">
+           
+    <Card>
+    <Navbar bg="" expand="lg">
       <Container>
         <img as={Link} to='/' style={{width: '30px', margin: 0}} src="images/icon.jpeg" alt="" />
         <Navbar.Brand style={{right: '300px', margin: 'initial'}} as={Link} to='/'>Food Guía Sincelejo</Navbar.Brand>
@@ -22,7 +24,7 @@ const AppNavBar = () => {
         </Nav>
       </Container>
     </Navbar>
-    
+    </Card>
         </div>
     );
 };

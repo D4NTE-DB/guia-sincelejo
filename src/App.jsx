@@ -8,6 +8,7 @@ import { Button, Card, Dropdown } from 'react-bootstrap'
 import { HashRouter, Link, Route, Routes } from 'react-router-dom'
 import AboutMe from './components/AboutMe'
 import ModalFeature from './components/ModalFeature'
+import MyVerticallyCenteredModal from './components/MyVerticallyCenteredModal'
 
 
 function App() {
@@ -16,7 +17,10 @@ function App() {
   const [sortedData, setSortedData] = useState(DATA);
   const [isSorted, setIsSorted] = useState(false);
 
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(true);
+  const [info, setInfo] = useState(true);
+  const [modalShow, setModalShow] = useState(false);
+
 
   useEffect(() => {
     if (isSorted) {
@@ -39,6 +43,10 @@ function App() {
     <HashRouter>
 
       <div className="App">
+      <MyVerticallyCenteredModal
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+      />
         <ModalFeature show={show} setShow={setShow} />
         <div style={{ position: 'fixed', width: '100%', zIndex: '1000', top: '-10px' }}>
           {<AppNavBar />}
@@ -54,10 +62,10 @@ function App() {
           >
             <box-icon name='sort-a-z' style={{ fill: 'white' }}></box-icon>
           </button>
-          <Dropdown.Toggle 
-          variant="success" 
-          id="dropdown-basic"
-          style={{zIndex: '10'}}
+          <Dropdown.Toggle
+            variant="success"
+            id="dropdown-basic"
+            style={{ zIndex: '10' }}
           >
             Categorias
           </Dropdown.Toggle>
@@ -97,8 +105,8 @@ function App() {
               className='info-title'
             >¡Contactanos para agregar a tu restaurante!</Card.Title> */}
             <div className='div-socials' >
-              <Card.Link>
-              <box-icon name='info-circle' size='md'></box-icon>
+              <Card.Link onClick={() => setModalShow(true)} >
+                  <box-icon name='info-circle' size='md'></box-icon>
               </Card.Link>
               <Card.Link className='socials-items' href="https://forms.gle/sFyGSV3ieQqFUhUx8">
                 <img src='images/formulario.png' alt="" />
@@ -106,7 +114,7 @@ function App() {
               <Card.Link className='socials-items' href="https://www.instagram.com/foodguiasincelejo/">
                 <img src='images/instagram.png' alt="" />
               </Card.Link>
-              
+
               <Card.Link className='socials-items' href="https://www.facebook.com/foodguiasincelejo/">
                 <img src='images/facebook.png' alt="" />
               </Card.Link>

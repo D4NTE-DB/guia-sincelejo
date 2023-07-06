@@ -17,7 +17,7 @@ function App() {
   const [sortedData, setSortedData] = useState(DATA);
   const [isSorted, setIsSorted] = useState(false);
 
-  const [show, setShow] = useState(true);
+  const [show, setShow] = useState(false);
   const [info, setInfo] = useState(true);
   const [modalShow, setModalShow] = useState(false);
 

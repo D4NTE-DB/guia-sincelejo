@@ -4,12 +4,13 @@ import './App.css'
 import AppNavBar from './components/AppNavBar'
 import Cards from './components/Cards'
 import DATA from './images'
-import { Button, Card, Dropdown } from 'react-bootstrap'
+import { Button, Card, Dropdown, Pagination } from 'react-bootstrap'
 import { HashRouter, Link, Route, Routes } from 'react-router-dom'
 import AboutMe from './components/AboutMe'
 import ModalFeature from './components/ModalFeature'
 import MyVerticallyCenteredModal from './components/MyVerticallyCenteredModal'
 
+const initialPage = 1 
 
 function App() {
   const [count, setCount] = useState(0)
@@ -20,33 +21,44 @@ function App() {
   const [show, setShow] = useState(false);
   const [info, setInfo] = useState(true);
   const [modalShow, setModalShow] = useState(false);
+  const [page, setPage] = useState(initialPage)
 
 
   useEffect(() => {
     if (isSorted) {
+      // setPage(1)
       setSortedData([...sortedData].sort((a, b) => a.name.localeCompare(b.name)));
     } else {
+      // setPage(1)
       setSortedData(DATA);
+      
     }
   }, [isSorted]);
+
+  useEffect(() => {
+    setPage(initialPage)
+  }, [selectedCategory])
 
   const uniqueData = DATA.filter((item, index) => {
     return DATA.findIndex(obj => obj.category === item.category) === index;
   });
 
-  const filteredData = selectedCategory ? DATA.filter(item => item.category === selectedCategory) : sortedData;
+  const filteredData = selectedCategory ? DATA.filter(item => (item.category === selectedCategory))  : sortedData;
+
+  const totalPages = Math.ceil(Object.keys(filteredData).length / 6);
 
 
   console.log(sortedData)
+  console.log(Object.keys(sortedData).length + "ss" + page);
   // console.log(filteredData)
   return (
     <HashRouter>
 
       <div className="App">
-      <MyVerticallyCenteredModal
-        show={modalShow}
-        onHide={() => setModalShow(false)}
-      />
+        <MyVerticallyCenteredModal
+          show={modalShow}
+          onHide={() => setModalShow(false)}
+        />
         <ModalFeature show={show} setShow={setShow} />
         <div style={{ position: 'fixed', width: '100%', zIndex: '1000', top: '-10px' }}>
           {<AppNavBar />}
@@ -82,6 +94,7 @@ function App() {
                 <Dropdown.Item
                   className='category-f'
                   key={data.id}
+                  onClick={() => setPage(1)}
                   onClick={() => setSelectedCategory(data.category)}
                 >
                   {data.category}
@@ -99,6 +112,19 @@ function App() {
             <box-icon name='shuffle' animation='tada' ></box-icon>
           </button>
         </Dropdown>
+        <div className='pag-item'>
+        <Pagination>
+            {Array.from({ length: totalPages }).map((_, index) => (
+              <Pagination.Item
+                key={index + 1}
+                active={page === index + 1}
+                onClick={() => setPage(index + 1)}
+              >
+                {index + 1}
+              </Pagination.Item>
+            ))}
+          </Pagination>
+        </div>
         <Card className='contact-box'>
           <Card.Body className='contact'>
             {/* <Card.Title
@@ -106,7 +132,7 @@ function App() {
             >¡Contactanos para agregar a tu restaurante!</Card.Title> */}
             <div className='div-socials' >
               <Card.Link onClick={() => setModalShow(true)} >
-                  <box-icon name='info-circle' size='md'></box-icon>
+                <box-icon name='info-circle' animation="tada" size='md'></box-icon>
               </Card.Link>
               <Card.Link className='socials-items' href="https://forms.gle/sFyGSV3ieQqFUhUx8">
                 <img src='images/formulario.png' alt="" />
@@ -130,7 +156,7 @@ function App() {
                 <box-icon name='info-circle' size='md'></box-icon>
               </Link>
 
-              {<Cards data={filteredData} />}
+              {<Cards data={filteredData} pag={page} />}
             </div>} />
 
           {/* <Link>character</Link> */}

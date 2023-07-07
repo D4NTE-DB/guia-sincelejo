@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button, Card } from 'react-bootstrap';
 import DATA from '../images'
 import 'boxicons'
@@ -7,10 +7,19 @@ import ModalFeature from './ModalFeature';
 
 
 
-const Cards = ({ data }) => {
+const Cards = ({ data, pag }) => {
 
     // console.log(props)
+    let page = 6;
 
+    const [filteredData, setFilteredData] = useState([]);
+
+    useEffect(() => {
+        const adjustedPag = pag < 1 ? 1 : pag
+        const newData = data?.slice(page * (adjustedPag - 1), page * adjustedPag);
+        setFilteredData(newData);
+       
+    }, [data, pag]);
 
     // useEffect(() => {
     //     axios.get(`${url}`)
@@ -21,14 +30,16 @@ const Cards = ({ data }) => {
 
     //     });
     // }, [])
+    
+    console.log(page)
 
     const [show, setShow] = useState(false);
 
     return (
-        data.map((data) => (
+        filteredData.map?.((data) => (
 
 
-            <div key={data.id} className='card-item'>
+            <div key={data?.id} className='card-item'>
                 <ModalFeature show={show} setShow={setShow} />
                 
                 {/* <button >Search</button>

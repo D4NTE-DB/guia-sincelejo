@@ -129,6 +129,12 @@
 
 }
 
+.pag-item{
+  position: relative;
+  display: flex;
+  top: -300px;
+}
+
 @media (max-width: 600px) {
   .about-us-info {
     position: fixed;
@@ -159,6 +165,13 @@
     right: 5% !important;
     fill: goldenrod;
   }
+
+  .pag-item{
+    position: relative;
+    display: flex;
+    top: 90px;
+  }
+
 }
 
 /* para que no se vea en escritorio */
@@ -219,3 +232,4 @@
   background-color: #ffffff6e;
   backdrop-filter: blur(5px);
 }
+

@@ -9,6 +9,7 @@ import { HashRouter, Link, Route, Routes } from 'react-router-dom'
 import AboutMe from './components/AboutMe'
 import ModalFeature from './components/ModalFeature'
 import MyVerticallyCenteredModal from './components/MyVerticallyCenteredModal'
+import ModalRandom from './components/ModalRandom'
 
 const initialPage = 1 
 
@@ -19,7 +20,7 @@ function App() {
   const [isSorted, setIsSorted] = useState(false);
 
   const [show, setShow] = useState(false);
-  const [info, setInfo] = useState(true);
+  const [random, setRandom] = useState(false);
   const [modalShow, setModalShow] = useState(false);
   const [page, setPage] = useState(initialPage)
 
@@ -71,6 +72,11 @@ function App() {
 
   const totalPages = Math.ceil(Object.keys(filteredData).length / 6);
 
+  const handleRandom = () => {
+    console.log("perras")
+    setSortedData([...sortedData].sort(() => Math.random() - 0.5))
+    setRandom(true)
+  }
 
   console.log(sortedData)
   console.log(Object.keys(sortedData).length + "ss" + page);
@@ -87,7 +93,7 @@ function App() {
         <div style={{ position: 'fixed', width: '100%', zIndex: '1000', top: '-10px' }}>
           {<AppNavBar />}
         </div>
-
+        <ModalRandom data={sortedData} show={random} onHide={() => setRandom(false)} />
         <Dropdown
           className='dropdown-cat'
           drop='down-centered'
@@ -132,8 +138,9 @@ function App() {
           <button
             className='btn btn-success'
             style={{ fill: 'white', zIndex: '2' }}
-            onClick={() => setSortedData([...sortedData].sort(() => Math.random() - 0.5))}>
-            <box-icon name='shuffle' animation='tada' ></box-icon>
+            onClick={handleRandom}
+            >
+            <box-icon name='shuffle' animation='' ></box-icon>
           </button>
         </Dropdown>
         <div className='pag-item'>
@@ -156,7 +163,7 @@ function App() {
             >¡Contactanos para agregar a tu restaurante!</Card.Title> */}
             <div className='div-socials' >
               <Card.Link onClick={() => setModalShow(true)} >
-                <box-icon name='info-circle' animation="tada" size='md'></box-icon>
+                <box-icon name='info-circle' animation="" size='md'></box-icon>
               </Card.Link>
               <Card.Link className='socials-items' href="https://forms.gle/sFyGSV3ieQqFUhUx8">
                 <img src='images/formulario.png' alt="" />

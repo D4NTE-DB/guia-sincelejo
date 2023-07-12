@@ -23,6 +23,30 @@ function App() {
   const [modalShow, setModalShow] = useState(false);
   const [page, setPage] = useState(initialPage)
 
+  const [pantallaPequena, setPantallaPequena] = useState(false);
+
+  // const dDATA = DATA.slice(0,6)
+
+  useEffect(() => {
+    function verificarTamanoPantalla() {
+      setPantallaPequena(window.innerWidth < 768); // Define el punto de corte para considerar una pantalla pequeña
+      // const dDATA = DATA.slice(0,6)
+     }
+
+    // Verificar el tamaño de la pantalla al cargar el componente
+    verificarTamanoPantalla();
+
+    // Agregar un event listener para verificar el tamaño de la pantalla cuando cambie
+    window.addEventListener('resize', verificarTamanoPantalla);
+
+    // Limpiar el event listener al desmontar el componente
+    return () => {
+      window.removeEventListener('resize', verificarTamanoPantalla);
+    };
+    // setPage(1)
+  }, []);
+
+
 
   useEffect(() => {
     if (isSorted) {
@@ -156,7 +180,7 @@ function App() {
                 <box-icon name='info-circle' size='md'></box-icon>
               </Link>
 
-              {<Cards data={filteredData} pag={page} />}
+              {<Cards data={filteredData} pag={page} view={pantallaPequena} />}
             </div>} />
 
           {/* <Link>character</Link> */}

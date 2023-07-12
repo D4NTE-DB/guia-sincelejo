@@ -135,7 +135,7 @@
   top: -300px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .about-us-info {
     position: fixed;
     top: -1000px;

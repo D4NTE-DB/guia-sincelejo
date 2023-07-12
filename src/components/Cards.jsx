@@ -7,19 +7,34 @@ import ModalFeature from './ModalFeature';
 
 
 
-const Cards = ({ data, pag }) => {
+const Cards = ({ data, pag, view }) => {
 
     // console.log(props)
     let page = 6;
 
-    const [filteredData, setFilteredData] = useState([]);
+    const [filteredData, setFilteredData] = useState(data.slice(0,6));
+
+    console.log("ssss" + view)
+
+    
 
     useEffect(() => {
-        const adjustedPag = pag < 1 ? 1 : pag
-        const newData = data?.slice(page * (adjustedPag - 1), page * adjustedPag);
-        setFilteredData(newData);
-       
+        
+        if (view) {
+            const adjustedPag = pag = 0 ? 1 : pag
+            const newData = data?.slice(page * (adjustedPag - 1), page * adjustedPag);
+            setFilteredData(newData);
+        } else{
+
+            if (window.innerWidth > 768) {
+            setFilteredData(data)
+        }
+
+        }
+        
     }, [data, pag]);
+
+
 
     // useEffect(() => {
     //     axios.get(`${url}`)
@@ -30,7 +45,7 @@ const Cards = ({ data, pag }) => {
 
     //     });
     // }, [])
-    
+
     console.log(page)
 
     const [show, setShow] = useState(false);
@@ -41,7 +56,7 @@ const Cards = ({ data, pag }) => {
 
             <div key={data?.id} className='card-item'>
                 <ModalFeature show={show} setShow={setShow} />
-                
+
                 {/* <button >Search</button>
                 <select >
                     <option value="">Elige un tipo</option>

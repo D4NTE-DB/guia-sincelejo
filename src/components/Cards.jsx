@@ -14,7 +14,7 @@ const Cards = ({ data, pag, view }) => {
 
     const [filteredData, setFilteredData] = useState(data.slice(0,6));
 
-    console.log("ssss" + view)
+    // console.log("ssss" + view)
 
     
 
@@ -46,7 +46,7 @@ const Cards = ({ data, pag, view }) => {
     //     });
     // }, [])
 
-    console.log(page)
+    // console.log(page)
 
     const [show, setShow] = useState(false);
 

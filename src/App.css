@@ -142,6 +142,16 @@
   }
 
 
+  .contact-box.card {
+    position: fixed !important;
+    width: 4rem;
+    height: 250px;
+    /* position: fixed; */
+    right: -3% !important;
+    top: 61%;
+    z-index: 800;
+    /* right: 700px !important; */
+  }
   /* icono encima de contactanos */
 
   /* TITULO CONTACTANOS */
@@ -184,7 +194,7 @@
   width: 4rem;
   height: 250px;
   /* position: fixed; */
-  right: -2%;
+  right: -1%;
   top: 61%;
   z-index: 800;
   /* right: 700px !important; */

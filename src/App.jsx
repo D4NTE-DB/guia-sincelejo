@@ -73,13 +73,13 @@ function App() {
   const totalPages = Math.ceil(Object.keys(filteredData).length / 6);
 
   const handleRandom = () => {
-    console.log("perras")
+    // console.log("perras")
     setSortedData([...sortedData].sort(() => Math.random() - 0.5))
     setRandom(true)
   }
 
-  console.log(sortedData)
-  console.log(Object.keys(sortedData).length + "ss" + page);
+  // console.log(sortedData)
+  // console.log(Object.keys(sortedData).length + "ss" + page);
   // console.log(filteredData)
   return (
     <HashRouter>

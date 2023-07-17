@@ -70,7 +70,7 @@ function App() {
 
   const filteredData = selectedCategory ? DATA.filter(item => (item.category === selectedCategory))  : sortedData;
 
-  const totalPages = Math.ceil(Object.keys(filteredData).length / 6);
+  const totalPages = Math.ceil(Object.keys(filteredData).length / 8);
 
   const handleRandom = () => {
     // console.log("perras")
@@ -109,7 +109,7 @@ function App() {
             id="dropdown-basic"
             style={{ zIndex: '10' }}
           >
-            Categorias
+            {selectedCategory ? selectedCategory : 'Categoría'}
           </Dropdown.Toggle>
           <Dropdown.Menu>
             <Dropdown.Item
@@ -124,7 +124,7 @@ function App() {
                 <Dropdown.Item
                   className='category-f'
                   key={data.id}
-                  onClick={() => setPage(1)}
+                  // onClick={() => setPage(1)}
                   onClick={() => setSelectedCategory(data.category)}
                 >
                   {data.category}

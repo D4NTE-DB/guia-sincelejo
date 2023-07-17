@@ -10,9 +10,9 @@ import ModalFeature from './ModalFeature';
 const Cards = ({ data, pag, view }) => {
 
     // console.log(props)
-    let page = 6;
+    let page = 8;
 
-    const [filteredData, setFilteredData] = useState(data.slice(0,6));
+    const [filteredData, setFilteredData] = useState(data.slice(0,8));
 
     // console.log("ssss" + view)
 

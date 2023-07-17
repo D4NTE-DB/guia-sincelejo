@@ -248,6 +248,17 @@ const DATA = [
             phoneNum: "https://bit.ly/DomiciliosBuonapizza"
         }
     },
+    {
+        id: '23',
+        name: 'Buona Pizza',
+        category: "Comida Regional",
+        images: 'images/24.jpg',
+        contact: {
+            instgram: "https://www.instagram.com/buonapizzasincelejo/",
+            phoneNum: "https://bit.ly/DomiciliosBuonapizza"
+        }
+    },
+
 
 ]
 

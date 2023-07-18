@@ -1,6 +1,17 @@
 const DATA = [
 
     {
+        id: '23',
+        name: 'Buona Pizza',
+        category: "Comida Regional",
+        images: 'images/24.jpg',
+        contact: {
+            instgram: "https://www.instagram.com/buonapizzasincelejo/",
+            phoneNum: "https://bit.ly/DomiciliosBuonapizza"
+        }
+    },
+
+    {
         id: '1',
         name: 'Benedetto Pizza',
         category: "Pizzas",
@@ -10,7 +21,7 @@ const DATA = [
             phoneNum: "https://linktr.ee/benedettopizza"
         }
     },
-
+   
     {
         id: '17',
         name: 'ROUKA GASTROBAR',
@@ -247,17 +258,7 @@ const DATA = [
             instgram: "https://www.instagram.com/buonapizzasincelejo/",
             phoneNum: "https://bit.ly/DomiciliosBuonapizza"
         }
-    },
-    {
-        id: '23',
-        name: 'Buona Pizza',
-        category: "Comida Regional",
-        images: 'images/24.jpg',
-        contact: {
-            instgram: "https://www.instagram.com/buonapizzasincelejo/",
-            phoneNum: "https://bit.ly/DomiciliosBuonapizza"
-        }
-    },
+    }
 
 
 ]

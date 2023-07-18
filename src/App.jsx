@@ -11,7 +11,7 @@ import ModalFeature from './components/ModalFeature'
 import MyVerticallyCenteredModal from './components/MyVerticallyCenteredModal'
 import ModalRandom from './components/ModalRandom'
 
-const initialPage = 1 
+const initialPage = 1
 
 function App() {
   const [count, setCount] = useState(0)
@@ -32,7 +32,7 @@ function App() {
     function verificarTamanoPantalla() {
       setPantallaPequena(window.innerWidth < 768); // Define el punto de corte para considerar una pantalla pequeña
       // const dDATA = DATA.slice(0,6)
-     }
+    }
 
     // Verificar el tamaño de la pantalla al cargar el componente
     verificarTamanoPantalla();
@@ -56,7 +56,7 @@ function App() {
     } else {
       // setPage(1)
       setSortedData(DATA);
-      
+
     }
   }, [isSorted]);
 
@@ -65,16 +65,16 @@ function App() {
   }, [selectedCategory])
 
   const uniqueData = DATA.filter((item, index) => {
-    return DATA.findIndex(obj => obj.category === item.category) === index;
+    return DATA.findIndex(obj => obj?.category === item.category) === index;
   });
 
-  const filteredData = selectedCategory ? DATA.filter(item => (item.category === selectedCategory))  : sortedData;
+  const filteredData = selectedCategory ? DATA.filter(item => (item.category === selectedCategory)) : sortedData;
 
   const totalPages = Math.ceil(Object.keys(filteredData).length / 8);
 
   const handleRandom = () => {
     // console.log("perras")
-    setSortedData([...sortedData].sort(() => Math.random() - 0.5))
+    setSortedData([...filteredData].sort(() => Math.random() - 0.5))
     setRandom(true)
   }
 
@@ -139,12 +139,12 @@ function App() {
             className='btn btn-success'
             style={{ fill: 'white', zIndex: '2' }}
             onClick={handleRandom}
-            >
+          >
             <box-icon name='shuffle' animation='' ></box-icon>
           </button>
         </Dropdown>
         <div className='pag-item'>
-        <Pagination>
+          <Pagination>
             {Array.from({ length: totalPages }).map((_, index) => (
               <Pagination.Item
                 key={index + 1}
@@ -178,7 +178,6 @@ function App() {
             </div>
           </Card.Body>
         </Card>
-
         <Routes>
           <Route path='/' element={
             <div className='div-need' style={{ position: 'relative', top: '80px' }}>
@@ -189,10 +188,23 @@ function App() {
 
               {<Cards data={filteredData} pag={page} view={pantallaPequena} />}
             </div>} />
-
-          {/* <Link>character</Link> */}
+      
           <Route path='/about-us' element={<AboutMe />} />
+
         </Routes>
+        <div className="pag-item">
+            <Pagination>
+              {Array.from({ length: totalPages }).map((_, index) => (
+                <Pagination.Item
+                  key={index + 1}
+                  active={page === index + 1}
+                  onClick={() => setPage(index + 1)}
+                >
+                  {index + 1}
+                </Pagination.Item>
+              ))}
+            </Pagination>
+          </div>
       </div>
     </HashRouter>
   )

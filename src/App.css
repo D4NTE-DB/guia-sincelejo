@@ -118,8 +118,12 @@
   position: relative;
   gap: 20px;
   top: 5px;
-  right: 26px;
-  width: 100px;
+  right: 5px;
+  /* width: 100px; */
+}
+
+.div-socials > a {
+  margin: 0 !important;
 }
 
 .socials-items>img {
@@ -200,6 +204,9 @@
   /* right: 700px !important; */
 }
 
+.contact-box.card {
+  margin: 0;
+}
 
 /* GLOW FOR FONTS */
 /* CLASS FOR THE CATEGORY CONFIG */

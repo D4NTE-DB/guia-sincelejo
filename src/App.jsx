@@ -17,7 +17,7 @@ function App() {
   const [count, setCount] = useState(0)
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [sortedData, setSortedData] = useState(DATA);
-  const [isSorted, setIsSorted] = useState(false);
+  const [isSorted, setIsSorted] = useState(DATA);
 
   const [show, setShow] = useState(false);
   const [random, setRandom] = useState(false);

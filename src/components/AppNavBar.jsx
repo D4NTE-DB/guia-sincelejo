@@ -19,7 +19,7 @@ const AppNavBar = () => {
         <Navbar.Brand style={{right: '300px', margin: 'initial'}} as={Link} to='/'>Food Guía Sincelejo</Navbar.Brand>
         <Nav className='about-us-info'>
           <Nav.Link as={Link} to='/about-us'>
-            <u>Mas Información</u>
+            <u>Más Información</u>
           </Nav.Link>
         </Nav>
       </Container>

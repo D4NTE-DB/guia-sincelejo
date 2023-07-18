@@ -20,7 +20,7 @@ const ModalRandom = (props) => {
         </Modal.Title>
         
       </Modal.Header>
-      <p style={{ padding: '0 30px' }}>El recomendado aleartorío del día en la categoría de {props.data[20]?.name ? 'todas' : props.data[randomIndex].category.toLowerCase()} es: </p>
+      <p style={{ padding: '0 30px' }}>El recomendado aleatorío del día en la categoría de {props.data[20]?.name ? 'todas' : props.data[randomIndex].category.toLowerCase()} es: </p>
 
       <Modal.Body style={{ textAlign: "center", padding: '0', marginBottom: '15px' }}>
         <h4>{props.data[randomIndex].name}</h4>

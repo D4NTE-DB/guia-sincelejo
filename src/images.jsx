@@ -2,12 +2,188 @@ const DATA = [
 
     {
         id: '23',
-        name: 'Buona Pizza',
+        name: 'Llanera La 31',
         category: "Comida Regional",
-        images: 'images/24.jpg',
+        images: 'images/25.jpg',
         contact: {
-            instgram: "https://www.instagram.com/buonapizzasincelejo/",
-            phoneNum: "https://bit.ly/DomiciliosBuonapizza"
+            instgram: "https://www.instagram.com/llanerala31/?hl=es",
+            phoneNum: "https://api.whatsapp.com/send?phone=573015120013&text=++"
+        }
+    },
+
+    {
+        id: '24',
+        name: `T y Cuchara e' Palo`,
+        category: "Comida Regional",
+        images: 'images/26.jpg',
+        contact: {
+            instgram: "https://www.instagram.com/totumacucharaepalo/?hl=es",
+            phoneNum: "https://api.whatsapp.com/send?phone=573002231879&text=Buenas%2C%20Totuma%20y%20cuchara%20e%27%20palo.%0A%C2%BFQu%C3%A9%20men%C3%BA%20tiene%20para%20hoy%3F%20"
+        }
+    },
+
+    {
+        id: '26',
+        name: `Scooby Pizzas`,
+        category: "Pizzas",
+        images: 'images/27.jpg',
+        contact: {
+            instgram: "https://www.instagram.com/scoobypizzas/?hl=es",
+            phoneNum: "https://api.whatsapp.com/send?phone=573014137770"
+        }
+    },
+
+    {
+        id: '27',
+        name: `WOK Sabanero`,
+        category: "Comida Regional",
+        images: 'images/29.jpg',
+        contact: {
+            instgram: "https://www.instagram.com/wok_sabanero/?hl=es",
+            phoneNum: "https://linktr.ee/woksabanero"
+        }
+    },
+
+    {
+        id: '28',
+        name: `La B Hamburgers`,
+        category: "Hamburguesas",
+        images: 'images/28.jpg',
+        contact: {
+            instgram: "https://www.instagram.com/labhamburgers/?hl=es",
+            phoneNum: "https://linktr.ee/la.b.hamburgers.sincelejo"
+        }
+    },
+
+    {
+        id: '29',
+        name: `Wepa Express`,
+        category: "Arepas",
+        images: 'images/30.jpg',
+        contact: {
+            instgram: "https://www.instagram.com/wepaexpress/?hl=es",
+            phoneNum: "https://api.whatsapp.com/send?phone=573245679516&text=Hola%F0%9F%96%90Wepa%20Express%20%2C%20Deseo%20ordenar%20%E2%80%A6."
+        }
+    },
+
+    {
+        id: '30',
+        name: `Curramba Express`,
+        category: "Comida Rápida",
+        images: 'images/31.jpg',
+        contact: {
+            instgram: "https://www.instagram.com/currambaexpress/?hl=es",
+            phoneNum: "https://api.whatsapp.com/send/?phone=573016158966&text&type=phone_number&app_absent=0"
+        }
+    },
+
+    {
+        id: '31',
+        name: `Sierra Nevado`,
+        category: "Repostería y Heladería",
+        images: 'images/32.jpg',
+        contact: {
+            instgram: "https://www.instagram.com/sierra_nevado/?hl=es",
+            phoneNum: "https://api.whatsapp.com/message/Z7WH33UZEH35G1?autoload=1&app_absent=0"
+        }
+    },
+
+    {
+        id: '32',
+        name: `Helados Campo`,
+        category: "Repostería y Heladería",
+        images: 'images/33.jpg',
+        contact: {
+            instgram: "https://www.instagram.com/campofinesticecream/?hl=es",
+            phoneNum: "https://linktr.ee/Campofinesticecream"
+        }
+    },
+
+    {
+        id: '33',
+        name: `La Browniseria`,
+        category: "Repostería y Heladería",
+        images: 'images/35.jpg',
+        contact: {
+            instgram: "https://www.instagram.com/la_browniseria/?hl=es",
+            phoneNum: "https://api.whatsapp.com/send/?phone=573012818655&text&type=phone_number&app_absent=0"
+        }
+    },
+
+    {
+        id: '34',
+        name: `Winsy Repostería`,
+        category: "Repostería y Heladería",
+        images: 'images/34.jpg',
+        contact: {
+            instgram: "https://www.instagram.com/winsy_reposteria/?hl=es",
+            phoneNum: "https://api.whatsapp.com/send?phone=573123133640"
+        }
+    },
+
+    {
+        id: '35',
+        name: `Basan Al Disco`,
+        category: "Comida Gourmet",
+        images: 'images/36.jpg',
+        contact: {
+            instgram: "https://www.instagram.com/basan_aldisco/?hl=es",
+            phoneNum: "https://linktr.ee/basanaldisco"
+        }
+    },
+
+    {
+        id: '36',
+        name: `Casa Bonita 1921`,
+        category: "Comida Gourmet",
+        images: 'images/37.jpg',
+        contact: {
+            instgram: "https://www.instagram.com/basan_aldisco/?hl=es",
+            phoneNum: "https://linktr.ee/mariabonitapanaderia?fbclid=IwAR3rbCHsrnVUFQoLuDNaHFLW4rZRtwau7Sok4K81AN2_JJSsRTOx3pqJihU"
+        }
+    },
+
+    {
+        id: '37',
+        name: `La Baguette Gourmet`,
+        category: "Sándwiches",
+        images: 'images/39.jpg',
+        contact: {
+            instgram: "https://www.instagram.com/la_baguette_gourmet/?hl=es",
+            phoneNum: "https://api.whatsapp.com/send/?phone=573113570648&text=Hola%2C+Quiero+hacer+un+pedido+%21&type=phone_number&app_absent=0"
+        }
+    },
+
+    {
+        id: '38',
+        name: `El Palacio Fastfood`,
+        category: "Comida Rápida",
+        images: 'images/38.jpg',
+        contact: {
+            instgram: "https://www.instagram.com/elpalaciofastfood/?hl=es",
+            phoneNum: "https://linktr.ee/mariabonitapanaderia?fbclid=IwAR3rbCHsrnVUFQoLuDNaHFLW4rZRtwau7Sok4K81AN2_JJSsRTOx3pqJihU"
+        }
+    },
+
+    {
+        id: '39',
+        name: `Gordo Lindo Restaurante`,
+        category: "Comida Rápida",
+        images: 'images/40.jpg',
+        contact: {
+            instgram: "https://www.instagram.com/gordolindorestaurante/?hl=es",
+            phoneNum: "https://wa.link/h419jq"
+        }
+    },
+
+    {
+        id: '40',
+        name: `La Cosa Nostra`,
+        category: "Pizzas",
+        images: 'images/41.jpg',
+        contact: {
+            instgram: "https://www.instagram.com/lacosanostra_sincelejo/?hl=es",
+            phoneNum: "https://api.whatsapp.com/send?phone=573178943575"
         }
     },
 

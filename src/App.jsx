@@ -192,7 +192,7 @@ function App() {
           <Route path='/about-us' element={<AboutMe />} />
 
         </Routes>
-        <div className="pag-item">
+        <div className="pag-item" style={{ zIndex: '-1' }}>
             <Pagination>
               {Array.from({ length: totalPages }).map((_, index) => (
                 <Pagination.Item

@@ -68,7 +68,7 @@ const Cards = ({ data, pag, view }) => {
                         height: '160px'
                     }}
                         variant="top"
-                        src={data.images} />
+                        src={data?.images} />
                     <Card.Body>
                         <Card.Title style={{
                             width: '128px',

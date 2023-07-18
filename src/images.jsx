@@ -188,6 +188,39 @@ const DATA = [
     },
 
     {
+        id: '41',
+        name: `Pollos Pombo`,
+        category: "Pollo",
+        images: 'images/42.jpg',
+        contact: {
+            instgram: "https://www.instagram.com/pollospombo/?hl=es",
+            phoneNum: "https://api.whatsapp.com/message/PU3LJWZLC3EVN1?autoload=1&app_absent=0"
+        }
+    },
+
+    {
+        id: '42',
+        name: `Deli Broaster`,
+        category: "Pollo",
+        images: 'images/43.jpg',
+        contact: {
+            instgram: "https://www.instagram.com/delibroastersincelejo/?hl=es",
+            phoneNum: "https://linktr.ee/DeliBroaster"
+        }
+    },
+
+    {
+        id: '43',
+        name: `Diverso`,
+        category: "Comida Gourmet",
+        images: 'images/44.jpg',
+        contact: {
+            instgram: "https://www.instagram.com/restaurantediverso/?hl=es",
+            phoneNum: "https://linktr.ee/DiversoGastroBar"
+        }
+    },
+
+    {
         id: '1',
         name: 'Benedetto Pizza',
         category: "Pizzas",

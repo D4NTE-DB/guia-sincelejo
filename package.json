@@ -16,6 +16,7 @@
     "bootstrap": "^5.2.3",
     "bootswatch": "^5.2.3",
     "boxicons": "^2.1.4",
+    "firebase": "^10.3.0",
     "framer-motion": "^10.12.16",
     "gatsby-plugin-image": "^3.11.0",
     "gatsby-plugin-sharp": "^5.11.0",

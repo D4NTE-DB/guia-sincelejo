@@ -10,6 +10,7 @@ import AboutMe from './components/AboutMe'
 import ModalFeature from './components/ModalFeature'
 import MyVerticallyCenteredModal from './components/MyVerticallyCenteredModal'
 import ModalRandom from './components/ModalRandom'
+import InitialModal from './components/InitialModal'
 
 const initialPage = 1
 
@@ -22,6 +23,8 @@ function App() {
   const [show, setShow] = useState(false);
   const [random, setRandom] = useState(false);
   const [modalShow, setModalShow] = useState(false);
+  const [modalShow1, setModalShow1] = useState(true);
+
   const [page, setPage] = useState(initialPage)
 
   const [pantallaPequena, setPantallaPequena] = useState(false);
@@ -89,6 +92,11 @@ function App() {
           show={modalShow}
           onHide={() => setModalShow(false)}
         />
+        {/* <InitialModal
+          show={modalShow1}
+          data={DATA}
+          onHide={() => setModalShow1(false)}
+        /> */}
         <ModalFeature show={show} setShow={setShow} />
         <div style={{ position: 'fixed', width: '100%', zIndex: '1000', top: '-10px' }}>
           {<AppNavBar />}

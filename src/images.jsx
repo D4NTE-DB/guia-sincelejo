@@ -467,6 +467,17 @@ const DATA = [
             instgram: "https://www.instagram.com/buonapizzasincelejo/",
             phoneNum: "https://bit.ly/DomiciliosBuonapizza"
         }
+    },
+
+    {
+        id: '44',
+        name: 'PizzaBrosa',
+        category: "Pizzas",
+        images: 'images/24.jpg',
+        contact: {
+            instgram: "https://www.instagram.com/buonapizzasincelejo/",
+            phoneNum: "https://bit.ly/DomiciliosBuonapizza"
+        }
     }
 
 

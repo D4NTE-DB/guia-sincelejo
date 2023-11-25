@@ -1,35 +1,26 @@
 import { useEffect, useState } from 'react'
-import reactLogo from './assets/react.svg'
 import './App.css'
 import AppNavBar from './components/AppNavBar'
 import Cards from './components/Cards'
-import DATA from './images'
-import { Button, Card, Dropdown, Pagination } from 'react-bootstrap'
+import DATA from './DATA'
+import { Card, Dropdown, Pagination } from 'react-bootstrap'
 import { HashRouter, Link, Route, Routes } from 'react-router-dom'
 import AboutMe from './components/AboutMe'
 import ModalFeature from './components/ModalFeature'
 import MyVerticallyCenteredModal from './components/MyVerticallyCenteredModal'
 import ModalRandom from './components/ModalRandom'
-import InitialModal from './components/InitialModal'
 
 const initialPage = 1
 
 function App() {
-  const [count, setCount] = useState(0)
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [sortedData, setSortedData] = useState(DATA);
   const [isSorted, setIsSorted] = useState(DATA);
-
   const [show, setShow] = useState(false);
   const [random, setRandom] = useState(false);
   const [modalShow, setModalShow] = useState(false);
-  const [modalShow1, setModalShow1] = useState(true);
-
   const [page, setPage] = useState(initialPage)
-
   const [pantallaPequena, setPantallaPequena] = useState(false);
-
-  // const dDATA = DATA.slice(0,6)
 
   useEffect(() => {
     function verificarTamanoPantalla() {
@@ -50,8 +41,6 @@ function App() {
     // setPage(1)
   }, []);
 
-
-
   useEffect(() => {
     if (isSorted) {
       // setPage(1)
@@ -59,7 +48,6 @@ function App() {
     } else {
       // setPage(1)
       setSortedData(DATA);
-
     }
   }, [isSorted]);
 
@@ -76,14 +64,10 @@ function App() {
   const totalPages = Math.ceil(Object.keys(filteredData).length / 8);
 
   const handleRandom = () => {
-    // console.log("perras")
     setSortedData([...filteredData].sort(() => Math.random() - 0.5))
     setRandom(true)
   }
 
-  // console.log(sortedData)
-  // console.log(Object.keys(sortedData).length + "ss" + page);
-  // console.log(filteredData)
   return (
     <HashRouter>
 
@@ -92,11 +76,6 @@ function App() {
           show={modalShow}
           onHide={() => setModalShow(false)}
         />
-        {/* <InitialModal
-          show={modalShow1}
-          data={DATA}
-          onHide={() => setModalShow1(false)}
-        /> */}
         <ModalFeature show={show} setShow={setShow} />
         <div style={{ position: 'fixed', width: '100%', zIndex: '1000', top: '-10px' }}>
           {<AppNavBar />}
@@ -167,8 +146,8 @@ function App() {
         <Card className='contact-box'>
           <Card.Body className='contact'>
             {/* <Card.Title
-              className='info-title'
-            >¡Contactanos para agregar a tu restaurante!</Card.Title> */}
+            className='info-title'
+          >¡Contactanos para agregar a tu restaurante!</Card.Title> */}
             <div className='div-socials' >
               <Card.Link onClick={() => setModalShow(true)} >
                 <box-icon name='info-circle' animation="" size='md'></box-icon>
@@ -196,26 +175,26 @@ function App() {
 
               {<Cards data={filteredData} pag={page} view={pantallaPequena} />}
             </div>} />
-      
+
           <Route path='/about-us' element={<AboutMe />} />
 
         </Routes>
         <div className="pag-item" style={{ zIndex: '-1' }}>
-            <Pagination>
-              {Array.from({ length: totalPages }).map((_, index) => (
-                <Pagination.Item
-                  key={index + 1}
-                  active={page === index + 1}
-                  onClick={() => setPage(index + 1)}
-                >
-                  {index + 1}
-                </Pagination.Item>
-              ))}
-            </Pagination>
-          </div>
+          <Pagination>
+            {Array.from({ length: totalPages }).map((_, index) => (
+              <Pagination.Item
+                key={index + 1}
+                active={page === index + 1}
+                onClick={() => setPage(index + 1)}
+              >
+                {index + 1}
+              </Pagination.Item>
+            ))}
+          </Pagination>
+        </div>
       </div>
     </HashRouter>
   )
 }
 
-export default App
+export default App;

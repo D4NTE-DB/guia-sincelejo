@@ -1,67 +1,37 @@
 import React, { useState, useEffect } from 'react';
-import { Button, Card } from 'react-bootstrap';
-import DATA from '../images'
+import { Card } from 'react-bootstrap';
 import 'boxicons'
-import Swal from 'sweetalert2'
 import ModalFeature from './ModalFeature';
 
 
 
 const Cards = ({ data, pag, view }) => {
-
-    // console.log(props)
     let page = 8;
-
-    const [filteredData, setFilteredData] = useState(data.slice(0,8));
-
+    const [filteredData, setFilteredData] = useState(data.slice(0, 8));
     // console.log("ssss" + view)
 
-    
-
     useEffect(() => {
-        
+
         if (view) {
             const adjustedPag = pag = 0 ? 1 : pag
             const newData = data?.slice(page * (adjustedPag - 1), page * adjustedPag);
             setFilteredData(newData);
-        } else{
+        } else {
 
             if (window.innerWidth > 768) {
-            setFilteredData(data)
-        }
+                setFilteredData(data)
+            }
 
         }
-        
+
     }, [data, pag]);
-
-
-
-    // useEffect(() => {
-    //     axios.get(`${url}`)
-    //     .then(res => {
-    //         setPokemon(res.data)
-    //         if (res.data.types[0].type.name.includes(selectedType) || res.data.types[1]?.type.name.includes(selectedType) ) {
-    //         }
-
-    //     });
-    // }, [])
-
-    // console.log(page)
 
     const [show, setShow] = useState(false);
 
     return (
         filteredData.map?.((data) => (
-
-
             <div key={data?.id} className='card-item'>
                 <ModalFeature show={show} setShow={setShow} />
-
-                {/* <button >Search</button>
-                <select >
-                    <option value="">Elige un tipo</option>
-                    <option >{data.category.toUpperCase()}</option>
-                </select> */}
                 <Card style={{ width: '10rem', height: '21rem' }}>
                     <Card.Img style={{
                         width: '160px',

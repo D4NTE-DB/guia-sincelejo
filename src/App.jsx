@@ -1,16 +1,16 @@
-import { useEffect, useState } from 'react'
-import './App.css'
-import AppNavBar from './components/AppNavBar'
-import Cards from './components/Cards'
-import DATA from './DATA'
-import { Card, Dropdown, Pagination } from 'react-bootstrap'
-import { HashRouter, Link, Route, Routes } from 'react-router-dom'
-import AboutMe from './components/AboutMe'
-import ModalFeature from './components/ModalFeature'
-import MyVerticallyCenteredModal from './components/MyVerticallyCenteredModal'
-import ModalRandom from './components/ModalRandom'
+import { useEffect, useState } from "react";
+import "./App.css";
+import AppNavBar from "./components/AppNavBar";
+import Cards from "./components/Cards";
+import DATA from "./DATA";
+import { Card, Dropdown, Pagination } from "react-bootstrap";
+import { HashRouter, Link, Route, Routes } from "react-router-dom";
+import AboutMe from "./components/AboutMe";
+import ModalFeature from "./components/ModalFeature";
+import MyVerticallyCenteredModal from "./components/MyVerticallyCenteredModal";
+import ModalRandom from "./components/ModalRandom";
 
-const initialPage = 1
+const initialPage = 1;
 
 function App() {
   const [selectedCategory, setSelectedCategory] = useState(null);
@@ -19,7 +19,7 @@ function App() {
   const [show, setShow] = useState(false);
   const [random, setRandom] = useState(false);
   const [modalShow, setModalShow] = useState(false);
-  const [page, setPage] = useState(initialPage)
+  const [page, setPage] = useState(initialPage);
   const [pantallaPequena, setPantallaPequena] = useState(false);
 
   useEffect(() => {
@@ -32,11 +32,11 @@ function App() {
     verificarTamanoPantalla();
 
     // Agregar un event listener para verificar el tamaño de la pantalla cuando cambie
-    window.addEventListener('resize', verificarTamanoPantalla);
+    window.addEventListener("resize", verificarTamanoPantalla);
 
     // Limpiar el event listener al desmontar el componente
     return () => {
-      window.removeEventListener('resize', verificarTamanoPantalla);
+      window.removeEventListener("resize", verificarTamanoPantalla);
     };
     // setPage(1)
   }, []);
@@ -44,7 +44,9 @@ function App() {
   useEffect(() => {
     if (isSorted) {
       // setPage(1)
-      setSortedData([...sortedData].sort((a, b) => a.name.localeCompare(b.name)));
+      setSortedData(
+        [...sortedData].sort((a, b) => a.name.localeCompare(b.name))
+      );
     } else {
       // setPage(1)
       setSortedData(DATA);
@@ -52,85 +54,89 @@ function App() {
   }, [isSorted]);
 
   useEffect(() => {
-    setPage(initialPage)
-  }, [selectedCategory])
+    setPage(initialPage);
+  }, [selectedCategory]);
 
   const uniqueData = DATA.filter((item, index) => {
-    return DATA.findIndex(obj => obj?.category === item.category) === index;
+    return DATA.findIndex((obj) => obj?.category === item.category) === index;
   });
 
-  const filteredData = selectedCategory ? DATA.filter(item => (item.category === selectedCategory)) : sortedData;
+  const filteredData = selectedCategory
+    ? DATA.filter((item) => item.category === selectedCategory)
+    : sortedData;
 
   const totalPages = Math.ceil(Object.keys(filteredData).length / 8);
 
   const handleRandom = () => {
-    setSortedData([...filteredData].sort(() => Math.random() - 0.5))
-    setRandom(true)
-  }
+    setSortedData([...filteredData].sort(() => Math.random() - 0.5));
+    setRandom(true);
+  };
 
   return (
     <HashRouter>
-
       <div className="App">
         <MyVerticallyCenteredModal
           show={modalShow}
           onHide={() => setModalShow(false)}
         />
         <ModalFeature show={show} setShow={setShow} />
-        <div style={{ position: 'fixed', width: '100%', zIndex: '1000', top: '-10px' }}>
+        <div
+          style={{
+            position: "fixed",
+            width: "100%",
+            zIndex: "1000",
+            top: "-10px",
+          }}
+        >
           {<AppNavBar />}
         </div>
-        <ModalRandom data={sortedData} show={random} onHide={() => setRandom(false)} />
-        <Dropdown
-          className='dropdown-cat'
-          drop='down-centered'
-        >
+        <ModalRandom
+          data={sortedData}
+          show={random}
+          onHide={() => setRandom(false)}
+        />
+        <Dropdown className="dropdown-cat" drop="down-centered">
           <button
-            className={`btn btn-${isSorted ? 'secondary' : 'success'}`}
+            className={`btn btn-${isSorted ? "secondary" : "success"}`}
             onClick={() => setIsSorted(!isSorted)}
           >
-            <box-icon name='sort-a-z' style={{ fill: 'white' }}></box-icon>
+            <box-icon name="sort-a-z" style={{ fill: "white" }}></box-icon>
           </button>
           <Dropdown.Toggle
             variant="success"
             id="dropdown-basic"
-            style={{ zIndex: '10' }}
+            style={{ zIndex: "10" }}
           >
-            {selectedCategory ? selectedCategory : 'Categoría'}
+            {selectedCategory ? selectedCategory : "Categoría"}
           </Dropdown.Toggle>
           <Dropdown.Menu>
             <Dropdown.Item
-              className='category-f'
+              className="category-f"
               onClick={() => setSelectedCategory(null)}
             >
               Todas
             </Dropdown.Item>
-            {
-              uniqueData.map((data) => (
-
+            {uniqueData
+              .sort((a, b) => a.category.localeCompare(b.category))
+              .map((data) => (
                 <Dropdown.Item
-                  className='category-f'
+                  className="category-f"
                   key={data.id}
-                  // onClick={() => setPage(1)}
                   onClick={() => setSelectedCategory(data.category)}
                 >
                   {data.category}
                 </Dropdown.Item>
-
-
-              ))
-            }
-
+              ))}
           </Dropdown.Menu>
           <button
-            className='btn btn-success'
-            style={{ fill: 'white', zIndex: '2' }}
+            className="btn btn-success"
+            style={{ fill: "white", zIndex: "2" }}
             onClick={handleRandom}
           >
-            <box-icon name='shuffle' animation='' ></box-icon>
+            <box-icon name="shuffle" animation=""></box-icon>
           </button>
         </Dropdown>
-        <div className='pag-item'>
+        <div className="pag-item">
           <Pagination>
             {Array.from({ length: totalPages }).map((_, index) => (
               <Pagination.Item
@@ -143,43 +149,63 @@ function App() {
             ))}
           </Pagination>
         </div>
-        <Card className='contact-box'>
-          <Card.Body className='contact'>
+        <Card className="contact-box">
+          <Card.Body className="contact">
             {/* <Card.Title
             className='info-title'
           >¡Contactanos para agregar a tu restaurante!</Card.Title> */}
-            <div className='div-socials' >
-              <Card.Link onClick={() => setModalShow(true)} >
-                <box-icon name='info-circle' animation="" size='md'></box-icon>
+            <div className="div-socials">
+              <Card.Link onClick={() => setModalShow(true)}>
+                <box-icon name="info-circle" animation="" size="md"></box-icon>
               </Card.Link>
-              <Card.Link className='socials-items' href="https://forms.gle/sFyGSV3ieQqFUhUx8">
-                <img src='images/formulario.png' alt="" />
+              <Card.Link
+                className="socials-items"
+                href="https://forms.gle/sFyGSV3ieQqFUhUx8"
+              >
+                <img src="images/formulario.png" alt="" />
               </Card.Link>
-              <Card.Link className='socials-items' href="https://www.instagram.com/foodguiasincelejo/">
-                <img src='images/instagram.png' alt="" />
+              <Card.Link
+                className="socials-items"
+                href="https://www.instagram.com/foodguiasincelejo/"
+              >
+                <img src="images/instagram.png" alt="" />
               </Card.Link>
 
-              <Card.Link className='socials-items' href="https://www.facebook.com/foodguiasincelejo/">
-                <img src='images/facebook.png' alt="" />
+              <Card.Link
+                className="socials-items"
+                href="https://www.facebook.com/foodguiasincelejo/"
+              >
+                <img src="images/facebook.png" alt="" />
               </Card.Link>
             </div>
           </Card.Body>
         </Card>
         <Routes>
-          <Route path='/' element={
-            <div className='div-need' style={{ position: 'relative', top: '80px' }}>
+          <Route
+            path="/"
+            element={
+              <div
+                className="div-need"
+                style={{ position: "relative", top: "80px" }}
+              >
+                <Link className="info-aboutme" as={Link} to="/about-us">
+                  <box-icon name="info-circle" size="md"></box-icon>
+                </Link>
 
-              <Link className='info-aboutme' as={Link} to='/about-us'>
-                <box-icon name='info-circle' size='md'></box-icon>
-              </Link>
+                {
+                  <Cards
+                    data={filteredData}
+                    pag={page}
+                    view={pantallaPequena}
+                  />
+                }
+              </div>
+            }
+          />
 
-              {<Cards data={filteredData} pag={page} view={pantallaPequena} />}
-            </div>} />
-
-          <Route path='/about-us' element={<AboutMe />} />
-
+          <Route path="/about-us" element={<AboutMe />} />
         </Routes>
-        <div className="pag-item" style={{ zIndex: '-1' }}>
+        <div className="pag-item" style={{ zIndex: "-1" }}>
           <Pagination>
             {Array.from({ length: totalPages }).map((_, index) => (
               <Pagination.Item
@@ -194,7 +220,7 @@ function App() {
         </div>
       </div>
     </HashRouter>
-  )
+  );
 }
 
 export default App;

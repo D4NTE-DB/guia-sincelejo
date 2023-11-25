@@ -337,16 +337,16 @@ const DATA = [
     },
   },
 
-//   {
-//     id: "0",
-//     name: "Mr.Limón",
-//     category: "Sándwiches",
-//     images: "images/4.jpg",
-//     contact: {
-//       instgram: "https://www.instagram.com/fonda_mrlimon/",
-//       phoneNum: "https://wa.link/qpxehq",
-//     },
-//   },
+  //   {
+  //     id: "0",
+  //     name: "Mr.Limón",
+  //     category: "Sándwiches",
+  //     images: "images/4.jpg",
+  //     contact: {
+  //       instgram: "https://www.instagram.com/fonda_mrlimon/",
+  //       phoneNum: "https://wa.link/qpxehq",
+  //     },
+  //   },
 
   {
     id: "12",
@@ -501,7 +501,8 @@ const DATA = [
     images: "images/45.png",
     contact: {
       instgram: "https://www.instagram.com/armonia_club/?hl=es",
-      phoneNum: "https://api.whatsapp.com/send?phone=573026219022&text=Hola%20Armonia%20Club%20%F0%9F%92%AB%20Soy%20.......%20quiero%20hacer%20una%20reserva%20por%20favor",
+      phoneNum:
+        "https://api.whatsapp.com/send?phone=573026219022&text=Hola%20Armonia%20Club%20%F0%9F%92%AB%20Soy%20.......%20quiero%20hacer%20una%20reserva%20por%20favor",
     },
   },
   {
@@ -521,7 +522,8 @@ const DATA = [
     images: "images/48.jpg",
     contact: {
       instgram: "https://www.instagram.com/lamontanita.co/?hl=es",
-      phoneNum: "https://api.whatsapp.com/send?phone=573017894838&text=Buenas...",
+      phoneNum:
+        "https://api.whatsapp.com/send?phone=573017894838&text=Buenas...",
     },
   },
   {
@@ -551,7 +553,8 @@ const DATA = [
     images: "images/51.jpg",
     contact: {
       instgram: "https://www.instagram.com/mana.arrozdelcielo_sincelejo/?hl=es",
-      phoneNum: "https://api.whatsapp.com/message/RROE23U64S43F1?autoload=1&app_absent=0",
+      phoneNum:
+        "https://api.whatsapp.com/message/RROE23U64S43F1?autoload=1&app_absent=0",
     },
   },
   {
@@ -561,7 +564,8 @@ const DATA = [
     images: "images/52.jpg",
     contact: {
       instgram: "https://www.instagram.com/doriesquites_sljo/?hl=es",
-      phoneNum: "https://api.whatsapp.com/message/RROE23U64S43F1?autoload=1&app_absent=0",
+      phoneNum:
+        "https://api.whatsapp.com/message/RROE23U64S43F1?autoload=1&app_absent=0",
     },
   },
   {
@@ -601,7 +605,8 @@ const DATA = [
     images: "images/56.jpg",
     contact: {
       instgram: "https://www.instagram.com/compadressljo/?hl=es",
-      phoneNum: "https://api.whatsapp.com/send?phone=573135499417&text=Hola%20me%20gustar%C3%ADa%20realizar%20un%20pedido!",
+      phoneNum:
+        "https://api.whatsapp.com/send?phone=573135499417&text=Hola%20me%20gustar%C3%ADa%20realizar%20un%20pedido!",
     },
   },
   {
@@ -615,7 +620,6 @@ const DATA = [
     },
   },
 ];
-
 
 DATA.sort((a, b) => {
   return a.id - b.id;

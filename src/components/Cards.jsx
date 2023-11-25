@@ -44,7 +44,8 @@ const Cards = ({ data, pag, view }) => {
                             width: '128px',
                             height: '50px',
                             position: 'relative',
-                            top: '10px'
+                            top: '10px',
+                            overflow: 'auto'
                         }}>{data.name}</Card.Title>
                         {/* <Card.Text>
                             Some quick example text to build on the card title and make up the

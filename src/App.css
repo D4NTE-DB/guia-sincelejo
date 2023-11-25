@@ -12,13 +12,14 @@
   /* justify-content: space-between; */
 }
 
-.App > .div-need {
+.div-need {
   display: flex;
+  max-width: 1280px;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: start;
   justify-content: right;
-  margin: 0.5rem;
+  margin: 0.5rem auto;
   gap: 0.1rem;
 }
 

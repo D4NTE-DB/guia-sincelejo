@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Modal } from "react-bootstrap";
+import { Button, Card, Modal } from "react-bootstrap";
 
 const MyVerticallyCenteredModal = (props) => {
   return (
@@ -20,6 +20,14 @@ const MyVerticallyCenteredModal = (props) => {
           Selecciona el icono de email📩 y llena el formulario para agregar a tu
           restaurante.
         </p>
+        <Card>
+        <Card.Link
+          className="socials-items"
+          href="https://forms.gle/sFyGSV3ieQqFUhUx8"
+        >
+          <img src="images/formulario.png" alt="" />
+        </Card.Link>
+        </Card>
       </Modal.Body>
       <Modal.Footer>
         <Button onClick={props.onHide}>Cerrar</Button>

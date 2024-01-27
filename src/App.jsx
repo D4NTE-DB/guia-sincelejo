@@ -22,6 +22,8 @@ function App() {
   const [page, setPage] = useState(initialPage);
   const [pantallaPequena, setPantallaPequena] = useState(false);
 
+  console.log(DATA)
+
   useEffect(() => {
     function verificarTamanoPantalla() {
       setPantallaPequena(window.innerWidth < 768); // Define el punto de corte para considerar una pantalla pequeña

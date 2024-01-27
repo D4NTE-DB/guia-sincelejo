@@ -250,16 +250,16 @@ const DATA = [
     },
   },
 
-  {
-    id: "4",
-    name: "BBH",
-    category: "Hamburguesas",
-    images: "images/6.jpg",
-    contact: {
-      instgram: "https://www.instagram.com/_labbh_/",
-      phoneNum: "https://wa.me/message/KHTKAOVZVZV3M1",
-    },
-  },
+  // {
+  //   id: "4",
+  //   name: "BBH",
+  //   category: "Hamburguesas",
+  //   images: "images/6.jpg",
+  //   contact: {
+  //     instgram: "https://www.instagram.com/_labbh_/",
+  //     phoneNum: "https://wa.me/message/KHTKAOVZVZV3M1",
+  //   },
+  // },
 
   {
     id: "8",
@@ -619,10 +619,214 @@ const DATA = [
       phoneNum: "https://linktr.ee/barrilbrothersjo",
     },
   },
+  {
+    id: "58",
+    name: "Poteito",
+    category: "Comida Rápida",
+    images: "https://scontent.fbaq1-1.fna.fbcdn.net/v/t51.2885-15/288874917_157029870192495_5827439288897974387_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=7d201b&_nc_eui2=AeF8afESbkAQxm0gY9tUBhPJNpy2BZy-EkI2nLYFnL4SQqaqoTJYRKSfRE5WJKSRSEE&_nc_ohc=ZnEh2Jo51ewAX9L_NbF&_nc_ht=scontent.fbaq1-1.fna&edm=AL-3X8kEAAAA&oh=00_AfA62fz0VB-FueESizG3BlfINbqRr56hb19LnAXHPk9ruw&oe=65BA87D4",
+    contact: {
+      instgram: "https://www.instagram.com/poteito.sincelejo/?hl=es",
+      phoneNum: "https://wa.me/message/MXKPJ2JKAKBNH1",
+    },
+  },
+  {
+    id: "59",
+    name: "Mi Sabor Express",
+    category: "Comida Rápida",
+    images: "https://scontent.fbaq1-1.fna.fbcdn.net/v/t51.2885-15/416009463_1783357132125707_2260323482537136254_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=7d201b&_nc_eui2=AeEyXMWhbLto-Xn6CEkp3Nl4jWFzkHOH5CaNYXOQc4fkJn01ir6tbbF4f2w9IcocI0k&_nc_ohc=mIaVwwKCe14AX8IJ4wr&_nc_ht=scontent.fbaq1-1.fna&edm=AL-3X8kEAAAA&oh=00_AfCYnMqmPfuFBIhDvUbcD2pOtFCZZQ-FjehhEAFaJtDAUQ&oe=65BA5C3A",
+    contact: {
+      instgram: "https://www.instagram.com/mi_saborexpress/?hl=es",
+      phoneNum: "https://linktr.ee/MI_SABOREXPRES",
+    },
+  },
+  {
+    id: "60",
+    name: "La Fabryka",
+    category: "Comida Rápida",
+    images: "https://cdn.static.linkr.bio/thumb/500x500/cover/85/upload/2dc6c6b3-622f-4098-9283-e4ea59d459ad.jpg?f=webp",
+    contact: {
+      instgram: "https://www.instagram.com/lafabryka_sincelejo/?hl=es",
+      phoneNum: "https://linkr.bio/LaFabryka",
+    },
+  },
+  {
+    id: "61",
+    name: "Maroma food & drinks",
+    category: "Comida Gourmet",
+    images: "https://scontent.fbaq1-1.fna.fbcdn.net/v/t51.2885-15/374535805_339670621818540_7547777002298726787_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=7d201b&_nc_eui2=AeG73MV1E69R7SzQgRXjLd0RPV52s96lqH49Xnaz3qWofpjaIiuVclT68d2GcZDFuBY&_nc_ohc=y4Whujvn-9YAX8LhT3H&_nc_ht=scontent.fbaq1-1.fna&edm=AL-3X8kEAAAA&oh=00_AfC5IFYsGP5PnImzh7tFscyudNsho8isMWh5DzbjgS2STw&oe=65BA727D",
+    contact: {
+      instgram: "https://www.instagram.com/maroma.foodrinks/?hl=es",
+      phoneNum: "http://bit.ly/menumaroma",
+    },
+  },
+  {
+    id: "62",
+    name: "FoodiesChips",
+    category: "Frítos",
+    images: "https://scontent.fbaq1-1.fna.fbcdn.net/v/t51.2885-15/402038423_381059007825373_6256217752476167799_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=7d201b&_nc_eui2=AeF3Zj7H72JPy04uyrWnfOFsze9JdHDrA2HN70l0cOsDYX06v-CFFHMcLtnxIDcJlyU&_nc_ohc=FPhVuAirZ0UAX-lAzfJ&_nc_ht=scontent.fbaq1-1.fna&edm=AL-3X8kEAAAA&oh=00_AfD9PUiAHCYPfEw59ctJ2a2WFm2x7KBmsrDlyBFLS24NZw&oe=65B95C15",
+    contact: {
+      instgram: "https://www.instagram.com/foodieschips/?hl=es",
+      phoneNum: "https://foodieschips.com",
+    },
+  },
+  {
+    id: "63",
+    name: "Pega'o",
+    category: "Hamburguesas",
+    images: "https://scontent.fbaq1-1.fna.fbcdn.net/v/t51.2885-15/404287584_1738649789880566_494544392633771024_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=7d201b&_nc_eui2=AeE9QpmqmamDH-a7cxO8FXrG2eYQYdRhJajZ5hBh1GElqALMi6gV7nqEiIRCEuLlZGQ&_nc_ohc=klt9QCKIGOwAX-OoSDz&_nc_ht=scontent.fbaq1-1.fna&edm=AL-3X8kEAAAA&oh=00_AfD3HKSCuIL_jEY5LiXe0ovvPI7W9dr4x7pTpglYspuijg&oe=65BA6F96",
+    contact: {
+      instgram: "https://www.instagram.com/_pegao/?hl=es",
+      phoneNum: "https://wa.me/573128100130?text=Buenas",
+    },
+  },
+  {
+    id: "64",
+    name: "Casa de Sándwiches",
+    category: "Sándwiches",
+    images: "https://scontent.fbaq1-1.fna.fbcdn.net/v/t51.2885-15/376918957_961469961615872_7053699596807755031_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=7d201b&_nc_eui2=AeFDL7Ay0e5JhCx3W3HwLbcq0PlpncE_L2PQ-WmdwT8vY5kzfXxt--8P8Wczlc8fEAk&_nc_ohc=i7arSkAiCdgAX8Fit-_&_nc_ht=scontent.fbaq1-1.fna&edm=AL-3X8kEAAAA&oh=00_AfCu0zBhUhiK_1ulkx7P5hcwPllRqZ5EXP7YF7ISKkFz8w&oe=65BA63C8",
+    contact: {
+      instgram: "https://www.instagram.com/la_sandwicheria_handexpress/?hl=es",
+      phoneNum: "https://linktr.ee/lasandwicheriahandexpress",
+    },
+  },
+  {
+    id: "65",
+    name: "La Clasica by Cosanostra",
+    category: "Sándwiches",
+    images: "https://scontent.fbaq1-1.fna.fbcdn.net/v/t51.2885-15/279900668_523262389202686_4387010718663474831_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=7d201b&_nc_eui2=AeFAwD1eUbHLRmwhnwWeVHN1gjhXHysZqMOCOFcfKxmowyIJgYBZtMiCiPyJuZ5KEPk&_nc_ohc=iC6yVKeEHDIAX8Km47x&_nc_ht=scontent.fbaq1-1.fna&edm=AL-3X8kEAAAA&oh=00_AfAsgB_tPZulfwTkn-kuEjj7BgEmrBqChTMlrjqewdTJ5w&oe=65B9DD43",
+    contact: {
+      instgram: "https://www.instagram.com/laclasica_by_cosanostra/?hl=es",
+      phoneNum: "https://linktr.ee/Laclasicabycosanostra",
+    },
+  },
+  {
+    id: "66",
+    name: "PIZZABROSA FAST FOOD",
+    category: "Pizzas",
+    images: "https://scontent.fbaq1-1.fna.fbcdn.net/v/t51.2885-15/314922663_647510503496918_636447328618296107_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=7d201b&_nc_eui2=AeFqQh584-NOfwJnyNkqhSdmzAfx6NREgRHMB_Ho1ESBEVIGwr7CMVzsLl5qqbMiD44&_nc_ohc=W-fNlaoHAtkAX-uauk6&_nc_ht=scontent.fbaq1-1.fna&edm=AL-3X8kEAAAA&oh=00_AfDuBDYPWP5jx98DgKkIHKx5D4M-IqfZYzovxTC6HAOzLQ&oe=65B9A6A1",
+    contact: {
+      instgram: "https://www.instagram.com/pizzabrosa_col/?hl=es",
+      phoneNum: "https://linktr.ee/pizzabrosa",
+    },
+  },
+  {
+    id: "67",
+    name: "El Huerto Pub",
+    category: "Hamburguesas",
+    images: "https://scontent.fbaq1-1.fna.fbcdn.net/v/t51.2885-15/370216965_668911665301550_1948086329814339490_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=7d201b&_nc_eui2=AeHlaiP9660MRgJY0qHH7JWs1SJMJckMjtfVIkwlyQyO1_jIaa-ssJgoSI8BLP2hRLI&_nc_ohc=DXTCQ2o4Qr0AX_OkXBt&_nc_ht=scontent.fbaq1-1.fna&edm=AL-3X8kEAAAA&oh=00_AfCE8wUzxD5UdXANxzshTNwxwtm2iDo36HCuBp9D3KnE7Q&oe=65B9A8DA",
+    contact: {
+      instgram: "https://www.instagram.com/elhuertopub/?hl=es",
+      phoneNum: "https://linktr.ee/elhuertopub",
+    },
+  },
+  {
+    id: "68",
+    name: "HAUS",
+    category: "Hamburguesas",
+    images: "https://scontent.fbaq1-1.fna.fbcdn.net/v/t51.2885-15/240748983_557673818991167_5103904144877405919_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=7d201b&_nc_eui2=AeFECBE1oyp4RmVloGfjpd-yphimQ3MK4SymGKZDcwrhLOi-uAg5aYlrI67qt811XsA&_nc_ohc=hTtVdnNelTAAX-pAG5J&_nc_ht=scontent.fbaq1-1.fna&edm=AL-3X8kEAAAA&oh=00_AfB7V_vDZULLKoTVle5AWJIhnVm9t2qNjAAL-HBfkysTLw&oe=65B9A642",
+    contact: {
+      instgram: "https://www.instagram.com/haus.gastrobar/?hl=es",
+      phoneNum: "https://linktr.ee/hausgastrobar_",
+    },
+  },
+  {
+    id: "69",
+    name: "La Verbena Restobar",
+    category: "Comida Regional",
+    images: "https://scontent.fbaq1-1.fna.fbcdn.net/v/t51.2885-15/332414064_1381809525939590_2542926702976313807_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=7d201b&_nc_eui2=AeEVdQznAD03m9lQVzdjO2hF2QFe4y4OdXHZAV7jLg51cbGafjoxaRyEfS2atWlI9EY&_nc_ohc=0w2srDfLx5IAX9S8nxv&_nc_ht=scontent.fbaq1-1.fna&edm=AL-3X8kEAAAA&oh=00_AfCQewzFRVd4SvN4km573ynFna3zEUqbmuqiWe0AvE-3fw&oe=65BA1441",
+    contact: {
+      instgram: "https://www.instagram.com/laverbenarestobar/?hl=es",
+      phoneNum: "https://linktr.ee/laverbenarestbar",
+    },
+  },
+  {
+    id: "70",
+    name: "Brunette cookies",
+    category: "Repostería y Heladería",
+    images: "https://scontent.fbaq1-1.fna.fbcdn.net/v/t51.2885-15/407421346_1732936983884629_540171646275944987_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=7d201b&_nc_eui2=AeFdsDLfidKcf4epLp__bbK_9Pp30_WwC-z0-nfT9bAL7C98HD-rtSuyrKLUu7uZ1uo&_nc_ohc=TWmlH727d_MAX_4s63N&_nc_ht=scontent.fbaq1-1.fna&edm=AL-3X8kEAAAA&oh=00_AfD3yYfGbL5uvNP-Vi0agTw1DE_gC1GzragXXEVs2Lo-6Q&oe=65BA6D21",
+    contact: {
+      instgram: "https://www.instagram.com/brunettcookies/?hl=es",
+      phoneNum: "http://bento.me/brunettecookies",
+    },
+  },
+  {
+    id: "71",
+    name: "Dimaria Bakery",
+    category: "Repostería y Heladería",
+    images: "https://scontent.fbaq1-1.fna.fbcdn.net/v/t51.2885-15/403749788_206727649136926_4009882323678060562_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=7d201b&_nc_eui2=AeGFHroeGt3SZ6zE6uPqV7g1ECn6euQCHcgQKfp65AIdyGNGNRTj-ViUWJdpxu8T0cM&_nc_ohc=TLKVEokovsgAX8XTVFi&_nc_ht=scontent.fbaq1-1.fna&edm=AL-3X8kEAAAA&oh=00_AfBh4DLALbwb3WTJk3IlUNs53pXV3mhEPkNbe2jaQU_WNA&oe=65BB2C0F",
+    contact: {
+      instgram: "https://www.instagram.com/bakerydimaria/?hl=es",
+      phoneNum: "https://api.whatsapp.com/send?phone=573002546707",
+    },
+  },
+  {
+    id: "72",
+    name: "La Terracita RestoBar",
+    category: "Comida Rápida",
+    images: "https://scontent.fbaq1-1.fna.fbcdn.net/v/t51.2885-15/419702322_1663371214388333_5948324981972710449_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=7d201b&_nc_eui2=AeFsGIySdq-YiFhGIWdhpNx7waBpy__n2EjBoGnL_-fYSMI9c91zEhdDmXU3vCPbSnE&_nc_ohc=HUgxWO34Z7sAX_O3DWG&_nc_ht=scontent.fbaq1-1.fna&edm=AL-3X8kEAAAA&oh=00_AfCknIFBXEATPzGS6HEzO1aOcL4uzPbGxsAaT0BGxQZqDg&oe=65BA5F5A",
+    contact: {
+      instgram: "https://www.instagram.com/barlaterracita/?hl=es",
+      phoneNum: "https://wa.link/fiygqi",
+    },
+  },
+  {
+    id: "73",
+    name: "Frappé Sabanero",
+    category: "Repostería y Heladería",
+    images: "https://scontent.fbaq1-1.fna.fbcdn.net/v/t51.2885-15/397332782_1050510586141413_5263849493447583657_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=7d201b&_nc_eui2=AeEvmLt_1qL3CpSNo0TImwe9x8ATHOGtayLHwBMc4a1rIknzIhqsE2AI1Ft5YDA2mt4&_nc_ohc=x8ZWfp349LIAX-DWfoC&_nc_ht=scontent.fbaq1-1.fna&edm=AL-3X8kEAAAA&oh=00_AfDWNTUQXjPZcDiCSplY10D-1rJFUyDp7DSV-Vldq9Ix5A&oe=65B97EE8",
+    contact: {
+      instgram: "https://www.instagram.com/frappesabanero/?hl=es",
+      phoneNum: "https://wa.link/euz0zk",
+    },
+  },
+  {
+    id: "74",
+    name: "Restaurante Góndola",
+    category: "Comida Gourmet",
+    images: "https://scontent.fbaq1-1.fna.fbcdn.net/v/t51.2885-15/378003406_1353019208637686_2963190674617754822_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=7d201b&_nc_eui2=AeGcc-St77b10jwHZEY2B1SpQJ_QKt3nf3lAn9Aq3ed_eQPDSq6Vu3t_DWT-55XQ_XA&_nc_ohc=0vTvEHxHWL0AX8V35n7&_nc_oc=AQmHwp0Tygep9Ji5jl-g53QIQ4QJQVqEWy7xx-ma9lx6M7qnW2DO2ecOBjRLKVrgu-_DE31i4zCkJ5mQWv5067MP&_nc_ht=scontent.fbaq1-1.fna&edm=AL-3X8kEAAAA&oh=00_AfBvQ2dENKwllmn86akRgrPKJ0ywbolkdd-OdG1B1E4N4A&oe=65BABC4A",
+    contact: {
+      instgram: "https://www.instagram.com/gondolarestobar/?hl=es",
+      phoneNum: "https://drive.google.com/file/d/1ydRMRZcIejzlNN9UbTn54QrmQfL2Dvgi/view?usp=sharing"
+    },
+  },
+  {
+    id: "75",
+    name: "Chino Chen",
+    category: "Arroz Chino",
+    images: "images/57.jpg",
+    contact: {
+      instgram: "https://www.instagram.com/chinochenexito/?hl=es",
+      phoneNum: "https://www.whatsapp.com/catalog/573164070706/?app_absent=0"
+    },
+  },
+  {
+    id: "76",
+    name: "WIPY | AREPAS RELLENAS 🫓",
+    category: "Arepas",
+    images: "https://scontent.fbaq1-1.fna.fbcdn.net/v/t51.2885-15/138915285_1322651514794715_3466015956675934007_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=7d201b&_nc_eui2=AeHi-eiHUid95o1ZuhxmWu6YODJa65sOpFI4Mlrrmw6kUhfctfiCVRF8G4S5pO6o6s0&_nc_ohc=k2hT4Y-nuhsAX9jl7KN&_nc_ht=scontent.fbaq1-1.fna&edm=AL-3X8kEAAAA&oh=00_AfDUoxNW5L5CSiAJgpjGOnryPNPSFMIQnqG2WvAS-WCATA&oe=65B9E87B",
+    contact: {
+      instgram: "https://www.instagram.com/wipyarepas/?hl=es",
+      phoneNum: "https://wa.link/kph4pf",
+    },
+  },
+  {
+    id: "76",
+    name: "Magros Carnes,Quesos& Vinos",
+    category: "Comida Gourmet",
+    images: "https://scontent.fbaq1-1.fna.fbcdn.net/v/t51.2885-15/67156956_333632417516897_8474904205193117696_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=7d201b&_nc_eui2=AeFks3wXCGvICFDMrYSs8FhnonUUzWotF-WidRTNai0X5XU4H0-gmoPuyjW3DCdDB4M&_nc_ohc=PkujnZ6uDXwAX9pAkoW&_nc_ht=scontent.fbaq1-1.fna&edm=AL-3X8kEAAAA&oh=00_AfCqAAk4D5SM9yxVYouI_W9VzdbKKGsg8Upt4xm2KUYXFA&oe=65BA177B",
+    contact: {
+      instgram: "https://www.instagram.com/magrosboutiquedecarnes/?hl=es",
+      phoneNum: "https://wa.me/573108625540",
+    },
+  },
 ];
 
-DATA.sort((a, b) => {
-  return a.id - b.id;
-});
+DATA.sort((a, b) => parseInt(a.id) - parseInt(b.id));
+
+const sortedDataString = JSON.stringify(DATA);
+
+// Paso 3: Guardar en LocalStorage
+localStorage.setItem('sortedData', sortedDataString);
+
 
 export default DATA;

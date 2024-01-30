@@ -810,7 +810,17 @@ const DATA = [
     },
   },
   {
-    id: "76",
+    id: "78",
+    name: "PUGLIA L' AUTORE DIO",
+    category: "Comida Gourmet",
+    images: "https://scontent.fbga3-1.fna.fbcdn.net/v/t51.2885-15/353483506_6083742515084432_7980171051063033546_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=7d201b&_nc_eui2=AeEX-KtU3kCXbzH79Z8r09MXzdqQdlXeUUrN2pB2Vd5RSt1RYoemjgPuceV5deuQDQc&_nc_ohc=QRq6KPOr88sAX-aqmfI&_nc_ht=scontent.fbga3-1.fna&edm=AL-3X8kEAAAA&oh=00_AfCNyrqAG7jH5-z4e5Ku8M03bW8CRrVLqEhqMNEu6ATWfg&oe=65BDDEBC",
+    contact: {
+      instgram: "https://www.instagram.com/pugliaristorante/?hl=es",
+      phoneNum: "https://wa.link/ackv02",
+    },
+  },
+  {
+    id: "79",
     name: "Magros Carnes,Quesos& Vinos",
     category: "Comida Gourmet",
     images: "https://scontent.fbaq1-1.fna.fbcdn.net/v/t51.2885-15/67156956_333632417516897_8474904205193117696_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=7d201b&_nc_eui2=AeFks3wXCGvICFDMrYSs8FhnonUUzWotF-WidRTNai0X5XU4H0-gmoPuyjW3DCdDB4M&_nc_ohc=PkujnZ6uDXwAX9pAkoW&_nc_ht=scontent.fbaq1-1.fna&edm=AL-3X8kEAAAA&oh=00_AfCqAAk4D5SM9yxVYouI_W9VzdbKKGsg8Upt4xm2KUYXFA&oe=65BA177B",

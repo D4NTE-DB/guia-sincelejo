@@ -28,10 +28,15 @@ const Cards = ({ data, pag, view }) => {
 
     const [show, setShow] = useState(false);
 
+    const handleCardClick = (cardData) => {
+        setSelectedData(cardData); // Set the selected card data
+        setShow(true); // Show the modal
+    };
+
     return (
         filteredData.map?.((data) => (
             <div key={data?.id} className='card-item'>
-                <ModalFeature show={show} setShow={setShow} />
+                <ModalFeature show={show} setShow={setShow} data={data}/>
                 <Card style={{ width: '10rem', height: '21rem' }}>
                     <Card.Img style={{
                         width: '160px',

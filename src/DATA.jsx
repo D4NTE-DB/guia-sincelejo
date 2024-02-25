@@ -142,9 +142,9 @@ const DATA = [
     category: "Comida Gourmet",
     images: "images/37.jpg",
     contact: {
-      instgram: "https://www.instagram.com/basan_aldisco/?hl=es",
+      instgram: "https://www.instagram.com/casabonita1921/?hl=es",
       phoneNum:
-        "https://linktr.ee/mariabonitapanaderia?fbclid=IwAR3rbCHsrnVUFQoLuDNaHFLW4rZRtwau7Sok4K81AN2_JJSsRTOx3pqJihU",
+        "https://wa.link/lhm40r",
     },
   },
 
@@ -511,8 +511,8 @@ const DATA = [
     category: "Comida Rápida",
     images: "images/47.jpg",
     contact: {
-      instgram: "https://www.instagram.com/buonapizzasincelejo/",
-      phoneNum: "https://bit.ly/DomiciliosBuonapizza",
+      instgram: "https://www.instagram.com/bemba.burger/?hl=es",
+      phoneNum: "https://linktr.ee/bembaburger",
     },
   },
   {

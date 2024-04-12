@@ -860,6 +860,16 @@ const DATA = [
     },
   },
   {
+    id: "83",
+    name: "Café Boscán",
+    category: "Comida Rápida",
+    images: "images/82.jpg",
+    contact: {
+      instgram: "https://www.instagram.com/cafeboscan/?hl=es",
+      phoneNum: "https://linktr.ee/libreriacafeboscan",
+    },
+  },
+  {
     id: "84",
     name: "Buendía Café del Caribe",
     category: "Comida Gourmet",

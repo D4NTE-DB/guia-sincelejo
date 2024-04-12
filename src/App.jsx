@@ -3,7 +3,7 @@ import "./App.css";
 import AppNavBar from "./components/AppNavBar";
 import Cards from "./components/Cards";
 import DATA from "./DATA";
-import { Card, Dropdown, Pagination } from "react-bootstrap";
+import { Button, Card, Dropdown, Pagination } from "react-bootstrap";
 import { HashRouter, Link, Route, Routes } from "react-router-dom";
 import AboutMe from "./components/AboutMe";
 import ModalFeature from "./components/ModalFeature";
@@ -15,7 +15,7 @@ const initialPage = 1;
 function App() {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [sortedData, setSortedData] = useState(DATA);
-  const [isSorted, setIsSorted] = useState(DATA);
+  const [isSorted, setIsSorted] = useState(false);
   const [show, setShow] = useState(false);
   const [random, setRandom] = useState(false);
   const [modalShow, setModalShow] = useState(false);
@@ -45,18 +45,28 @@ function App() {
 
   useEffect(() => {
     if (isSorted) {
-      // setPage(1)
-      setSortedData(
-        [...sortedData].sort((a, b) => a.name.localeCompare(b.name))
-      );
+      const sorted = [...DATA].sort((a, b) => a.name.localeCompare(b.name));
+      if (selectedCategory) {
+        setSortedData(sorted.filter((item) => item.category === selectedCategory));
+      } else {
+        setSortedData(sorted);
+      }
     } else {
-      // setPage(1)
-      setSortedData(DATA);
+      if (selectedCategory) {
+        setSortedData(DATA.filter((item) => item.category === selectedCategory));
+      } else {
+        setSortedData(DATA);
+      }
     }
-  }, [isSorted]);
+  }, [isSorted, selectedCategory]);
+  
+  const toggleSort = () => {
+    setIsSorted(!isSorted);
+  };
+  
 
   useEffect(() => {
-    setPage(initialPage);
+    setPage(initialPage); // Reset to the first page whenever the category changes
   }, [selectedCategory]);
 
   const uniqueData = DATA.filter((item, index) => {
@@ -64,15 +74,23 @@ function App() {
   });
 
   const filteredData = selectedCategory
-    ? DATA.filter((item) => item.category === selectedCategory)
-    : sortedData;
+  ? DATA.filter((item) => item.category === selectedCategory)
+  : DATA;
 
-  const totalPages = Math.ceil(Object.keys(filteredData).length / 8);
+    const totalPages = Math.ceil(Object.keys(filteredData).length / 8);
+
 
   const handleRandom = () => {
-    setSortedData([...filteredData].sort(() => Math.random() - 0.5));
-    setRandom(true);
-  };
+    if (!random) {
+        // If data is not currently randomized, randomize it
+        setSortedData([...filteredData].sort(() => Math.random() - 0.5));
+        setRandom(true);
+    } else {
+        // If data is currently randomized, reset it to original order
+        setSortedData(DATA);
+        setRandom(false);
+    }
+};
 
   return (
     <HashRouter>
@@ -98,16 +116,18 @@ function App() {
           onHide={() => setRandom(false)}
         />
         <Dropdown className="dropdown-cat" drop="down-centered">
-          <button
+          <Button
+            size="sm"
             className={`btn btn-${isSorted ? "secondary" : "success"}`}
-            onClick={() => setIsSorted(!isSorted)}
+            onClick={toggleSort}
           >
-            <box-icon name="sort-a-z" style={{ fill: "white" }}></box-icon>
-          </button>
+            <box-icon name="sort-a-z" className='box-icon-atoz' size='cssSize' style={{ fill: "white", width: '80%', marginTop: '5px' }}></box-icon>
+          </Button>
           <Dropdown.Toggle
             variant="success"
             id="dropdown-basic"
-            style={{ zIndex: "10" }}
+            style={{ zIndex: "10", fontSize: 'smaller'}}
+            fon
           >
             {selectedCategory ? selectedCategory : "Categoría"}
           </Dropdown.Toggle>
@@ -130,13 +150,14 @@ function App() {
                 </Dropdown.Item>
               ))}
           </Dropdown.Menu>
-          <button
+          <Button
+          size="sm"
             className="btn btn-success"
             style={{ fill: "white", zIndex: "2" }}
             onClick={handleRandom}
           >
-            <box-icon name="shuffle" animation=""></box-icon>
-          </button>
+            <box-icon name="shuffle" animation="" style={{ width: '80%', marginTop: '5px'}}></box-icon>
+          </Button>
         </Dropdown>
         <div className="pag-item">
           <Pagination>
@@ -191,7 +212,7 @@ function App() {
                 style={{ position: "relative", top: "80px" }}
               >
                 <Link className="info-aboutme" as={Link} to="/about-us">
-                  <box-icon name="info-circle" size="md"></box-icon>
+                  <box-icon name="info-circle" size="md"  style={{ width: '90%', marginTop: '1px'}} ></box-icon>
                 </Link>
 
                 {

@@ -115,7 +115,7 @@
   display: flex !important;
   flex-direction: column !important;
   position: relative;
-  gap: 20px;
+  gap: 5px;
   top: 5px;
   right: 5px;
   /* width: 100px; */
@@ -146,7 +146,7 @@
   .contact-box.card {
     position: fixed !important;
     width: 4rem;
-    height: 250px;
+    height: 175px;
     /* position: fixed; */
     right: -3% !important;
     top: 61%;
@@ -189,14 +189,18 @@
 /* test */
 
 .contact-box.card {
+  border: 1px  #41d7a7;
   position: fixed !important;
   width: 4rem;
-  height: 250px;
-  /* position: fixed; */
+  height: 175px;
   right: -1%;
   top: 61%;
   z-index: 800;
-  /* right: 700px !important; */
+}
+
+.box-icon-atoz{
+    width: 90%;
+  
 }
 
 .contact-box.card {
@@ -211,15 +215,9 @@
   color: black !important;
   font-weight: bold !important;
   text-align: center;
-  /* -webkit-animation: glow 1s ease-in-out infinite alternate; */
-  /* -moz-animation: glow 1s ease-in-out infinite alternate; */
-  /* animation: glow 1s ease-in-out infinite alternate; */
 }
 
 @-webkit-keyframes glow {
-  /* from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
-  } */
   to {
     text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6,
       0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;

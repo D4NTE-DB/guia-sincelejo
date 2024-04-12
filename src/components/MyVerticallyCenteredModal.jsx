@@ -24,6 +24,7 @@ const MyVerticallyCenteredModal = (props) => {
         <Card.Link
           className="socials-items"
           href="https://forms.gle/sFyGSV3ieQqFUhUx8"
+          style={{width: 'fit-content', padding: '5px'}}
         >
           <img src="images/formulario.png" alt="" />
         </Card.Link>

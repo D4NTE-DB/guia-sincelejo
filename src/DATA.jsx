@@ -829,6 +829,46 @@ const DATA = [
       phoneNum: "https://wa.me/573108625540",
     },
   },
+  {
+    id: "80",
+    name: "Dediyoyos",
+    category: "Frítos",
+    images: "images/78.jpg",
+    contact: {
+      instgram: "https://www.instagram.com/dediyoyos.oficial/?hl=es",
+      phoneNum: "https://wa.link/4rmofr",
+    },
+  },
+  {
+    id: "81",
+    name: "FUFOS | Restaurante | Bar | Cocina",
+    category: "Comida Gourmet",
+    images: "images/79.jpg",
+    contact: {
+      instgram: "https://www.instagram.com/fufosrestbar/?hl=es",
+      phoneNum: "https://linktr.ee/fufosrest",
+    },
+  },
+  {
+    id: "82",
+    name: "ACC’ Fast Food®️",
+    category: "Comida Rápida",
+    images: "images/80.jpg",
+    contact: {
+      instgram: "https://www.instagram.com/accfastfood/?hl=es",
+      phoneNum: "https://linktr.ee/accfastfood",
+    },
+  },
+  {
+    id: "84",
+    name: "Buendía Café del Caribe",
+    category: "Comida Gourmet",
+    images: "images/82.jpg",
+    contact: {
+      instgram: "https://www.instagram.com/buendiacafedelcaribe/?hl=es",
+      phoneNum: "https://api.whatsapp.com/send?phone=573052626335",
+    },
+  },
 ];
 
 DATA.sort((a, b) => parseInt(a.id) - parseInt(b.id));

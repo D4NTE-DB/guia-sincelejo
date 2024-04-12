@@ -8,7 +8,7 @@ const AppNavBar = () => {
       <Card>
         <Navbar bg="" expand="lg">
           <Container>
-            <img as={Link} to='/' style={{ width: '30px', margin: 0 }} src="images/icon.jpeg" alt="" />
+            <img as={Link} to='/' style={{ width: '30px', margin: 0, borderRadius: '15px' }} src="images/icon.jpeg" alt="" />
             <Navbar.Brand style={{ right: '300px', margin: 'initial' }} as={Link} to='/'>Food Guía Sincelejo</Navbar.Brand>
             <Nav className='about-us-info'>
               <Nav.Link as={Link} to='/about-us'>

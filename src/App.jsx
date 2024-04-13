@@ -10,6 +10,10 @@ import ModalFeature from "./components/ModalFeature";
 import MyVerticallyCenteredModal from "./components/MyVerticallyCenteredModal";
 import ModalRandom from "./components/ModalRandom";
 import CustomPagination from "./components/CustomPagination";
+import ReactGA from 'react-ga';
+
+const TRACKING_ID = "G-F48FSXXDME"; // OUR_TRACKING_ID
+ReactGA.initialize(TRACKING_ID);
 
 const initialPage = 1;
 
@@ -25,21 +29,13 @@ function App() {
 
   useEffect(() => {
     function verificarTamanoPantalla() {
-      setPantallaPequena(window.innerWidth < 768); // Define el punto de corte para considerar una pantalla pequeña
-      // const dDATA = DATA.slice(0,6)
+      setPantallaPequena(window.innerWidth < 768);
     }
-
-    // Verificar el tamaño de la pantalla al cargar el componente
     verificarTamanoPantalla();
-
-    // Agregar un event listener para verificar el tamaño de la pantalla cuando cambie
     window.addEventListener("resize", verificarTamanoPantalla);
-
-    // Limpiar el event listener al desmontar el componente
     return () => {
       window.removeEventListener("resize", verificarTamanoPantalla);
     };
-    // setPage(1)
   }, []);
 
   useEffect(() => {

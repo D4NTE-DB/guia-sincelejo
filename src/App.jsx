@@ -22,8 +22,6 @@ function App() {
   const [page, setPage] = useState(initialPage);
   const [pantallaPequena, setPantallaPequena] = useState(false);
 
-  console.log(DATA)
-
   useEffect(() => {
     function verificarTamanoPantalla() {
       setPantallaPequena(window.innerWidth < 768); // Define el punto de corte para considerar una pantalla pequeña
@@ -47,23 +45,26 @@ function App() {
     if (isSorted) {
       const sorted = [...DATA].sort((a, b) => a.name.localeCompare(b.name));
       if (selectedCategory) {
-        setSortedData(sorted.filter((item) => item.category === selectedCategory));
+        setSortedData(
+          sorted.filter((item) => item.category === selectedCategory)
+        );
       } else {
         setSortedData(sorted);
       }
     } else {
       if (selectedCategory) {
-        setSortedData(DATA.filter((item) => item.category === selectedCategory));
+        setSortedData(
+          DATA.filter((item) => item.category === selectedCategory)
+        );
       } else {
         setSortedData(DATA);
       }
     }
   }, [isSorted, selectedCategory]);
-  
+
   const toggleSort = () => {
     setIsSorted(!isSorted);
   };
-  
 
   useEffect(() => {
     setPage(initialPage); // Reset to the first page whenever the category changes
@@ -74,23 +75,22 @@ function App() {
   });
 
   const filteredData = selectedCategory
-  ? DATA.filter((item) => item.category === selectedCategory)
-  : DATA;
+    ? DATA.filter((item) => item.category === selectedCategory)
+    : DATA;
 
-    const totalPages = Math.ceil(Object.keys(filteredData).length / 8);
-
+  const totalPages = Math.ceil(Object.keys(filteredData).length / 8);
 
   const handleRandom = () => {
     if (!random) {
-        // If data is not currently randomized, randomize it
-        setSortedData([...filteredData].sort(() => Math.random() - 0.5));
-        setRandom(true);
+      // If data is not currently randomized, randomize it
+      setSortedData([...filteredData].sort(() => Math.random() - 0.5));
+      setRandom(true);
     } else {
-        // If data is currently randomized, reset it to original order
-        setSortedData(DATA);
-        setRandom(false);
+      // If data is currently randomized, reset it to original order
+      setSortedData(DATA);
+      setRandom(false);
     }
-};
+  };
 
   return (
     <HashRouter>
@@ -121,12 +121,17 @@ function App() {
             className={`btn btn-${isSorted ? "secondary" : "success"}`}
             onClick={toggleSort}
           >
-            <box-icon name="sort-a-z" className='box-icon-atoz' size='cssSize' style={{ fill: "white", width: '80%', marginTop: '5px' }}></box-icon>
+            <box-icon
+              name="sort-a-z"
+              className="box-icon-atoz"
+              size="cssSize"
+              style={{ fill: "white", width: "80%", marginTop: "5px" }}
+            ></box-icon>
           </Button>
           <Dropdown.Toggle
             variant="success"
             id="dropdown-basic"
-            style={{ zIndex: "10", fontSize: 'smaller'}}
+            style={{ zIndex: "10", fontSize: "smaller" }}
             fon
           >
             {selectedCategory ? selectedCategory : "Categoría"}
@@ -151,26 +156,20 @@ function App() {
               ))}
           </Dropdown.Menu>
           <Button
-          size="sm"
+            size="sm"
             className="btn btn-success"
             style={{ fill: "white", zIndex: "2" }}
             onClick={handleRandom}
           >
-            <box-icon name="shuffle" animation="" style={{ width: '80%', marginTop: '5px'}}></box-icon>
+            <box-icon
+              name="shuffle"
+              animation=""
+              style={{ width: "80%", marginTop: "5px" }}
+            ></box-icon>
           </Button>
         </Dropdown>
         <div className="pag-item">
-          <Pagination>
-            {Array.from({ length: totalPages }).map((_, index) => (
-              <Pagination.Item
-                key={index + 1}
-                active={page === index + 1}
-                onClick={() => setPage(index + 1)}
-              >
-                {index + 1}
-              </Pagination.Item>
-            ))}
-          </Pagination>
+          <CustomPagination totalPages={totalPages} page={page} setPage={setPage}/>
         </div>
         <Card className="contact-box">
           <Card.Body className="contact">
@@ -212,7 +211,11 @@ function App() {
                 style={{ position: "relative", top: "80px" }}
               >
                 <Link className="info-aboutme" as={Link} to="/about-us">
-                  <box-icon name="info-circle" size="md"  style={{ width: '90%', marginTop: '1px'}} ></box-icon>
+                  <box-icon
+                    name="info-circle"
+                    size="md"
+                    style={{ width: "90%", marginTop: "1px" }}
+                  ></box-icon>
                 </Link>
 
                 {
@@ -229,17 +232,7 @@ function App() {
           <Route path="/about-us" element={<AboutMe />} />
         </Routes>
         <div className="pag-item" style={{ zIndex: "-1" }}>
-          <Pagination>
-            {Array.from({ length: totalPages }).map((_, index) => (
-              <Pagination.Item
-                key={index + 1}
-                active={page === index + 1}
-                onClick={() => setPage(index + 1)}
-              >
-                {index + 1}
-              </Pagination.Item>
-            ))}
-          </Pagination>
+        <CustomPagination totalPages={totalPages} page={page} setPage={setPage}/>
         </div>
       </div>
     </HashRouter>

@@ -878,7 +878,7 @@ const DATA = [
       instgram: "https://www.instagram.com/buendiacafedelcaribe/?hl=es",
       phoneNum: "https://api.whatsapp.com/send?phone=573052626335",
     },
-  },
+  }
 ];
 
 DATA.sort((a, b) => parseInt(a.id) - parseInt(b.id));

@@ -9,6 +9,7 @@ import AboutMe from "./components/AboutMe";
 import ModalFeature from "./components/ModalFeature";
 import MyVerticallyCenteredModal from "./components/MyVerticallyCenteredModal";
 import ModalRandom from "./components/ModalRandom";
+import CustomPagination from "./components/CustomPagination";
 
 const initialPage = 1;
 

@@ -11,6 +11,7 @@ import MyVerticallyCenteredModal from "./components/MyVerticallyCenteredModal";
 import ModalRandom from "./components/ModalRandom";
 import CustomPagination from "./components/CustomPagination";
 import ReactGA from 'react-ga';
+import styles from './CSS/Cards.module.css'
 
 const TRACKING_ID = "G-F48FSXXDME"; // OUR_TRACKING_ID
 ReactGA.initialize(TRACKING_ID);
@@ -59,10 +60,6 @@ function App() {
     }
   }, [isSorted, selectedCategory]);
 
-  const toggleSort = () => {
-    setIsSorted(!isSorted);
-  };
-
   useEffect(() => {
     setPage(initialPage); // Reset to the first page whenever the category changes
   }, [selectedCategory]);
@@ -88,6 +85,18 @@ function App() {
       setRandom(false);
     }
   };
+
+  const [festData, setFestData] = useState([]);
+  const [showFestItems, setShowFestItems] = useState(false);
+
+  function renderFestItems() {
+    // Filter data to get only items with fest: true
+    const festData = DATA.filter(item => item.fest);
+    setFestData(festData);
+  
+    // You could also set this data to a state and render it in your component like this:
+    setShowFestItems(!showFestItems);
+  }
 
   return (
     <HashRouter>
@@ -116,14 +125,15 @@ function App() {
           <Button
             size="sm"
             className={`btn btn-${isSorted ? "secondary" : "success"}`}
-            onClick={toggleSort}
+            onClick={renderFestItems}
           >
-            <box-icon
+            {/* <box-icon
               name="sort-a-z"
               className="box-icon-atoz"
               size="cssSize"
               style={{ fill: "white", width: "80%", marginTop: "5px" }}
-            ></box-icon>
+            ></box-icon> */}
+            <img style={{ width: '50px' }} src='images/HotDogFest.png' alt='Hot Dog Fest' ></img>
           </Button>
           <Dropdown.Toggle
             variant="success"
@@ -166,7 +176,7 @@ function App() {
           </Button>
         </Dropdown>
         <div className="pag-item">
-          <CustomPagination totalPages={totalPages} page={page} setPage={setPage}/>
+          <CustomPagination totalPages={!showFestItems ? totalPages : 2} page={page} setPage={setPage}/>
         </div>
         <Card className="contact-box">
           <Card.Body className="contact">
@@ -217,7 +227,7 @@ function App() {
 
                 {
                   <Cards
-                    data={filteredData}
+                    data={showFestItems ? festData : filteredData}
                     pag={page}
                     view={pantallaPequena}
                   />
@@ -229,7 +239,7 @@ function App() {
           <Route path="/about-us" element={<AboutMe />} />
         </Routes>
         <div className="pag-item" style={{ zIndex: "-1" }}>
-        <CustomPagination totalPages={totalPages} page={page} setPage={setPage}/>
+        <CustomPagination totalPages={!showFestItems ? totalPages : 2} page={page} setPage={setPage}/>
         </div>
       </div>
     </HashRouter>

@@ -54,28 +54,25 @@ const DATA = [
       phoneNum: "https://linktr.ee/la.b.hamburgers.sincelejo",
     },
   },
-
-  {
-    id: "29",
-    name: `Wepa Express`,
-    category: "Arepas",
-    images: "images/30.jpg",
-    contact: {
-      instgram: "https://www.instagram.com/wepaexpress/?hl=es",
-      phoneNum:
-        "https://api.whatsapp.com/send?phone=573245679516&text=Hola%F0%9F%96%90Wepa%20Express%20%2C%20Deseo%20ordenar%20%E2%80%A6.",
-    },
-  },
-
+  // {
+  //   id: "29",
+  //   name: `Wepa Express`,
+  //   category: "Arepas",
+  //   images: "images/30.jpg",
+  //   contact: {
+  //     instgram: "https://www.instagram.com/wepaexpress/?hl=es",
+  //     phoneNum:
+  //       "https://api.whatsapp.com/send?phone=573245679516&text=Hola%F0%9F%96%90Wepa%20Express%20%2C%20Deseo%20ordenar%20%E2%80%A6.",
+  //   },
+  // },
   {
     id: "30",
-    name: `Curramba Express`,
+    name: `Curramba Fast Food`,
     category: "Comida Rápida",
     images: "images/31.jpg",
     contact: {
-      instgram: "https://www.instagram.com/currambaexpress/?hl=es",
-      phoneNum:
-        "https://api.whatsapp.com/send/?phone=573016158966&text&type=phone_number&app_absent=0",
+      instgram: "https://www.instagram.com/curramba_fastfood/?hl=es",
+      phoneNum: "http://wa.me/573016158966/",
     },
   },
 
@@ -86,8 +83,7 @@ const DATA = [
     images: "images/32.jpg",
     contact: {
       instgram: "https://www.instagram.com/sierra_nevado/?hl=es",
-      phoneNum:
-        "https://api.whatsapp.com/message/Z7WH33UZEH35G1?autoload=1&app_absent=0",
+      phoneNum: "https://wa.me/message/Z7WH33UZEH35G1",
     },
   },
 
@@ -143,8 +139,7 @@ const DATA = [
     images: "images/37.jpg",
     contact: {
       instgram: "https://www.instagram.com/casabonita1921/?hl=es",
-      phoneNum:
-        "https://wa.link/lhm40r",
+      phoneNum: "https://wa.link/lhm40r",
     },
   },
 
@@ -155,20 +150,18 @@ const DATA = [
     images: "images/39.jpg",
     contact: {
       instgram: "https://www.instagram.com/la_baguette_gourmet/?hl=es",
-      phoneNum:
-        "https://api.whatsapp.com/send/?phone=573113570648&text=Hola%2C+Quiero+hacer+un+pedido+%21&type=phone_number&app_absent=0",
+      phoneNum: "https://walink.co/8dbcf3",
     },
   },
 
   {
     id: "38",
-    name: `El Palacio Fastfood`,
+    name: `El PALACIO DE LA SALCHIPAPA`,
     category: "Comida Rápida",
     images: "images/38.jpg",
     contact: {
       instgram: "https://www.instagram.com/elpalaciofastfood/?hl=es",
-      phoneNum:
-        "https://linktr.ee/mariabonitapanaderia?fbclid=IwAR3rbCHsrnVUFQoLuDNaHFLW4rZRtwau7Sok4K81AN2_JJSsRTOx3pqJihU",
+      phoneNum: "https://wa.link/2r6bhe",
     },
   },
 
@@ -196,13 +189,12 @@ const DATA = [
 
   {
     id: "41",
-    name: `Pollos Pombo`,
+    name: `𝗔𝗦𝗔𝗗𝗢𝗦 𝗣𝗢𝗠𝗕𝗢`,
     category: "Pollo",
     images: "images/42.jpg",
     contact: {
       instgram: "https://www.instagram.com/pollospombo/?hl=es",
-      phoneNum:
-        "https://api.whatsapp.com/message/PU3LJWZLC3EVN1?autoload=1&app_absent=0",
+      phoneNum: "https://wa.me/message/PU3LJWZLC3EVN1",
     },
   },
 
@@ -300,18 +292,18 @@ const DATA = [
     images: "images/18.jpg",
     contact: {
       instgram: "https://www.instagram.com/hot_dog_la_bendicion/",
-      phoneNum: "https://wa.me/message/ZAIIWXKNJCXIH1",
+      phoneNum: "https://wa.link/u3z0ff",
     },
   },
 
   {
     id: "9",
-    name: "Mr.Burger",
+    name: "Mr. Burger",
     category: "Hamburguesas",
     images: "images/11.enc",
     contact: {
       instgram: "https://www.instagram.com/mrburgersjo/",
-      phoneNum: "https://bio.site/lamondiu",
+      phoneNum: "https://linktr.ee/mrburgersjo",
     },
   },
 
@@ -319,6 +311,7 @@ const DATA = [
     id: "5",
     name: "Taco y Chela",
     category: "Comida Mexicana",
+    fest: true,
     images: "images/5.jpeg",
     contact: {
       instgram: "https://www.instagram.com/tacoychela.co/",
@@ -396,7 +389,7 @@ const DATA = [
     images: "images/8.jfif",
     contact: {
       instgram: "https://www.instagram.com/kfvrestaurante/",
-      phoneNum: "https://wa.link/47em9zhttps://wa.link/47em9z",
+      phoneNum: "https://wa.link/47em9z",
     },
   },
   {
@@ -553,8 +546,7 @@ const DATA = [
     images: "images/51.jpg",
     contact: {
       instgram: "https://www.instagram.com/mana.arrozdelcielo_sincelejo/?hl=es",
-      phoneNum:
-        "https://api.whatsapp.com/message/RROE23U64S43F1?autoload=1&app_absent=0",
+      phoneNum: "https://wa.me/message/RROE23U64S43F1",
     },
   },
   {
@@ -564,8 +556,7 @@ const DATA = [
     images: "images/52.jpg",
     contact: {
       instgram: "https://www.instagram.com/doriesquites_sljo/?hl=es",
-      phoneNum:
-        "https://api.whatsapp.com/message/RROE23U64S43F1?autoload=1&app_absent=0",
+      phoneNum: "https://wa.link/9d4r4t",
     },
   },
   {
@@ -600,13 +591,12 @@ const DATA = [
   },
   {
     id: "56",
-    name: "Compadres",
+    name: "•COMPADRES•",
     category: "Comida Rápida",
     images: "images/56.jpg",
     contact: {
-      instgram: "https://www.instagram.com/compadressljo/?hl=es",
-      phoneNum:
-        "https://api.whatsapp.com/send?phone=573135499417&text=Hola%20me%20gustar%C3%ADa%20realizar%20un%20pedido!",
+      instgram: "https://www.instagram.com/compadres.oficial/?hl=es",
+      phoneNum: "https://linktr.ee/compadressjo",
     },
   },
   {
@@ -623,6 +613,7 @@ const DATA = [
     id: "58",
     name: "Poteito",
     category: "Comida Rápida",
+    fest: true,
     images: "images/58.jpg",
     contact: {
       instgram: "https://www.instagram.com/poteito.sincelejo/?hl=es",
@@ -733,6 +724,7 @@ const DATA = [
     id: "69",
     name: "La Verbena Restobar",
     category: "Comida Regional",
+    fest: true,
     images: "images/69.jpg",
     contact: {
       instgram: "https://www.instagram.com/laverbenarestobar/?hl=es",
@@ -786,7 +778,8 @@ const DATA = [
     images: "images/74.jpg",
     contact: {
       instgram: "https://www.instagram.com/gondolarestobar/?hl=es",
-      phoneNum: "https://drive.google.com/file/d/1ydRMRZcIejzlNN9UbTn54QrmQfL2Dvgi/view?usp=sharing"
+      phoneNum:
+        "https://drive.google.com/file/d/1ydRMRZcIejzlNN9UbTn54QrmQfL2Dvgi/view?usp=sharing",
     },
   },
   {
@@ -796,7 +789,7 @@ const DATA = [
     images: "images/57.jpg",
     contact: {
       instgram: "https://www.instagram.com/chinochenexito/?hl=es",
-      phoneNum: "https://www.whatsapp.com/catalog/573164070706/?app_absent=0"
+      phoneNum: "https://www.whatsapp.com/catalog/573164070706/?app_absent=0",
     },
   },
   {
@@ -862,8 +855,8 @@ const DATA = [
   {
     id: "83",
     name: "Café Boscán",
-    category: "Comida Rápida",
-    images: "images/82.jpg",
+    category: "Comida Gourmet",
+    images: "images/81.jpg",
     contact: {
       instgram: "https://www.instagram.com/cafeboscan/?hl=es",
       phoneNum: "https://linktr.ee/libreriacafeboscan",
@@ -878,7 +871,85 @@ const DATA = [
       instgram: "https://www.instagram.com/buendiacafedelcaribe/?hl=es",
       phoneNum: "https://api.whatsapp.com/send?phone=573052626335",
     },
-  }
+  },
+  {
+    id: "85",
+    name: "La Sincelejana",
+    category: "Comida Rápida",
+    fest: true,
+    images: "images/83.jpg",
+    contact: {
+      instgram: "https://www.instagram.com/lasincelejana_/?hl=es",
+      phoneNum: "https://linktr.ee/lasincelejana",
+    },
+  },
+  {
+    id: "86",
+    name: "Nestoodies_🍔🌭🍕🥃",
+    category: "Comida Rápida",
+    fest: true,
+    images: "images/84.jpg",
+    contact: {
+      instgram: "https://www.instagram.com/nestoodies_/?hl=es",
+      phoneNum: "https://bit.ly/WhatsAppNestoodies",
+    },
+  },
+  {
+    id: "87",
+    name: "burgerbirra.co",
+    category: "Comida Rápida",
+    fest: true,
+    images: "images/85.jpg",
+    contact: {
+      instgram: "https://www.instagram.com/burgerbirra.co/?hl=es",
+      phoneNum: "https://linktr.ee/burgerbirra.co",
+    },
+  },
+  {
+    id: "88",
+    name: "El Patio",
+    category: "Comida Rápida",
+    fest: true,
+    images: "images/86.jpg",
+    contact: {
+      instgram: "https://www.instagram.com/elpatio_sincelejo/?hl=es",
+      phoneNum: "https://linktr.ee/elpatiosincelejo",
+    },
+  },
+  {
+    id: "89",
+    name: "Doggy Pizza",
+    category: "Comida Rápida",
+    fest: true,
+    images: "images/87.jpg",
+    contact: {
+      instgram: "https://www.instagram.com/doggypizza_sincelejo/?hl=es",
+      phoneNum: "https://w.app/doggypizza",
+    },
+  },
+  {
+    id: "90",
+    name: "A L M A S    R E B E L D E S",
+    category: "Comida Rápida",
+    fest: true,
+    images: "images/88.jpg",
+    contact: {
+      instgram: "https://www.instagram.com/pardocasual/?hl=es",
+      phoneNum:  "https://linktr.ee/pardogastrobar",
+    },
+  },
+  {
+    id: "91",
+    name: "  Adicto | Hamburguesas ADICTIVAS 🔥",
+    category: "Comida Rápida",
+    fest: true,
+    images: "images/89.jpg",
+    contact: {
+      instgram: "https://www.instagram.com/adicto.burger/?hl=es",
+      phoneNum:  "https://linktr.ee/adictoburger",
+    },
+  },
+ 
 ];
 
 DATA.sort((a, b) => parseInt(a.id) - parseInt(b.id));
@@ -886,7 +957,6 @@ DATA.sort((a, b) => parseInt(a.id) - parseInt(b.id));
 const sortedDataString = JSON.stringify(DATA);
 
 // Paso 3: Guardar en LocalStorage
-localStorage.setItem('sortedData', sortedDataString);
-
+localStorage.setItem("sortedData", sortedDataString);
 
 export default DATA;

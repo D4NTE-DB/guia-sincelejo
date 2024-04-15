@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Card } from 'react-bootstrap';
 import 'boxicons'
 import ModalFeature from './ModalFeature';
-
+import styles from "../CSS/Cards.module.css"
 
 
 const Cards = ({ data, pag, view }) => {
@@ -44,6 +44,8 @@ const Cards = ({ data, pag, view }) => {
                     }}
                         variant="top"
                         src={data?.images} />
+                        <img src="" alt="" />
+                        {data?.fest && <img className={styles['img-fest']} src='images/HotDogFest.png' alt='Hot Dog Fest' ></img>}
                     <Card.Body>
                         <Card.Title style={{
                             width: '128px',

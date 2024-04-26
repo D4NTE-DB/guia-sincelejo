@@ -95,6 +95,7 @@ function App() {
     setFestData(festData);
   
     // You could also set this data to a state and render it in your component like this:
+    setPage('1')
     setShowFestItems(!showFestItems);
   }
 
@@ -124,7 +125,7 @@ function App() {
         <Dropdown className="dropdown-cat" drop="down-centered">
           <Button
             size="sm"
-            className={`btn btn-${isSorted ? "secondary" : "success"}`}
+            className={`btn btn-${showFestItems ? "secondary" : "success"}`}
             onClick={renderFestItems}
           >
             {/* <box-icon

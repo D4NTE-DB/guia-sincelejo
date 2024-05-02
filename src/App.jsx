@@ -28,7 +28,15 @@ function App() {
   const [page, setPage] = useState(initialPage);
   const [pantallaPequena, setPantallaPequena] = useState(false);
 
+  const sortDataByName = () => {
+    const sorted = [...DATA].sort((a, b) => a.name.localeCompare(b.name));
+    setSortedData(sorted);
+    setPage('1')
+    setShowA2Z(!showA2Z);
+  };
+
   useEffect(() => {
+    sortDataByName();
     function verificarTamanoPantalla() {
       setPantallaPequena(window.innerWidth < 768);
     }
@@ -38,6 +46,8 @@ function App() {
       window.removeEventListener("resize", verificarTamanoPantalla);
     };
   }, []);
+
+  
 
   useEffect(() => {
     if (isSorted) {
@@ -88,6 +98,7 @@ function App() {
 
   const [festData, setFestData] = useState([]);
   const [showFestItems, setShowFestItems] = useState(false);
+  const [showA2Z, setShowA2Z] = useState(false)
 
   function renderFestItems() {
     // Filter data to get only items with fest: true
@@ -125,16 +136,16 @@ function App() {
         <Dropdown className="dropdown-cat" drop="down-centered">
           <Button
             size="sm"
-            className={`btn btn-${showFestItems ? "secondary" : "success"}`}
-            onClick={renderFestItems}
+            className={`btn btn-${showA2Z ? "secondary" : "success"}`}
+            onClick={sortDataByName}
           >
-            {/* <box-icon
+            <box-icon
               name="sort-a-z"
               className="box-icon-atoz"
               size="cssSize"
               style={{ fill: "white", width: "80%", marginTop: "5px" }}
-            ></box-icon> */}
-            <img style={{ width: '50px' }} src='images/HotDogFest.png' alt='Hot Dog Fest' ></img>
+            ></box-icon>
+            {/* <img style={{ width: '50px' }} src='images/HotDogFest.png' alt='Hot Dog Fest' ></img> */}
           </Button>
           <Dropdown.Toggle
             variant="success"
@@ -228,7 +239,7 @@ function App() {
 
                 {
                   <Cards
-                    data={showFestItems ? festData : filteredData}
+                    data={showA2Z ? sortedData : filteredData}
                     pag={page}
                     view={pantallaPequena}
                   />

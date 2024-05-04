@@ -35,7 +35,7 @@ const Cards = ({ data, pag, view }) => {
           variant="top"
           src={data?.images}
         />
-        {/* //*<Button
+        {/* <Button
           size="sm"
           variant="primary"
           style={{
@@ -57,7 +57,7 @@ const Cards = ({ data, pag, view }) => {
               top: "-1px",
             }}
           />
-          {data?.location ?? "Sincelejo"}
+          {"Sincelejo"}
         </Button>  */}
         {data?.fest && (
           <img

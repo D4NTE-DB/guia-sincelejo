@@ -29,14 +29,24 @@ function App() {
   const [pantallaPequena, setPantallaPequena] = useState(false);
 
   const sortDataByName = () => {
-    const sorted = [...DATA].sort((a, b) => a.name.localeCompare(b.name));
-    setSortedData(sorted);
-    setPage('1')
+     // Toggle the sorting state to update UI appropriately
+  
+    const newData = [...DATA]; // Clone the original data array to prevent mutating the original data
+    let filteredData = newData;
+  
+    if (selectedCategory) {
+      // Filter the data first if a category is selected
+      filteredData = newData.filter((item) => item.category === selectedCategory);
+    }
+  
+    const sorted = filteredData.sort((a, b) => a.name.localeCompare(b.name)); // Sort the potentially filtered array by name
+    setSortedData(sorted); // Set the state with the sorted (and possibly filtered) data
+    setPage(1); // Reset to the first page whenever sorting is done
     setShowA2Z(!showA2Z);
   };
+  
 
   useEffect(() => {
-    sortDataByName();
     function verificarTamanoPantalla() {
       setPantallaPequena(window.innerWidth < 768);
     }
@@ -136,7 +146,7 @@ function App() {
         <Dropdown className="dropdown-cat" drop="down-centered">
           <Button
             size="sm"
-            className={`btn btn-${showA2Z ? "secondary" : "success"}`}
+            className={showA2Z ? "btn btn-secondary" : "btn btn-success"}
             onClick={sortDataByName}
           >
             <box-icon
@@ -151,7 +161,6 @@ function App() {
             variant="success"
             id="dropdown-basic"
             style={{ zIndex: "10", fontSize: "smaller" }}
-            fon
           >
             {selectedCategory ? selectedCategory : "Categoría"}
           </Dropdown.Toggle>

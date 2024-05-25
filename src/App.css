@@ -109,6 +109,22 @@
   top: 55%;
   right: 130%;
   fill: goldenrod;
+  svg > path{
+    stroke: black;
+    stroke-width: 1;
+  }
+}
+
+.info-coupon {
+  position: fixed;
+  z-index: 5000;
+  top: 2%;
+  right: 85%;
+  fill: goldenrod;
+  box-icon > svg > path{
+    stroke: black;
+    stroke-width: 1;
+  }
 }
 
 .div-socials {
@@ -172,9 +188,13 @@
   .info-aboutme {
     position: fixed;
     z-index: 1000;
-    top: 1%;
+    top: 2%;
     right: 5% !important;
     fill: goldenrod;
+    svg > path{
+      stroke: black;
+      stroke-width: 1;
+    }
   }
 
   .pag-item {

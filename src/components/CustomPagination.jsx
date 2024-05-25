@@ -55,7 +55,7 @@ const CustomPagination = ({ totalPages, page, setPage }) => {
   };
 
   return (
-    <Pagination>
+    window.innerWidth <= 1000 && <Pagination>
       {getPaginationItems()}
     </Pagination>
   );

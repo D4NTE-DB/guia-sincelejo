@@ -10,7 +10,8 @@ import ModalFeature from "./components/ModalFeature";
 import MyVerticallyCenteredModal from "./components/MyVerticallyCenteredModal";
 import ModalRandom from "./components/ModalRandom";
 import CustomPagination from "./components/CustomPagination";
-import ReactGA from 'react-ga';
+import ReactGA from "react-ga";
+import addNotification from "react-push-notification";
 
 const TRACKING_ID = "G-F48FSXXDME"; // OUR_TRACKING_ID
 ReactGA.initialize(TRACKING_ID);
@@ -26,6 +27,33 @@ function App() {
   const [modalShow, setModalShow] = useState(false);
   const [page, setPage] = useState(initialPage);
   const [pantallaPequena, setPantallaPequena] = useState(false);
+  const [winSize, setWinSize] = useState(false)
+
+  const clickToNotify = () => {
+    console.log("scroll", window.scrollY, "-", winSize);
+    addNotification({
+      title: "Nuevas Promociones",
+      message: "¡Tenemos nuevas promociones para ti!",
+      theme: "darkblue",
+      native: true, // when using native, your OS will handle theming.
+      onClick: () => console.log("Notification"),
+    });
+    setWinSize(true)
+  };
+
+  const sortDataByName = () => {
+    const newData = [...DATA];
+    let filteredData = newData;
+    if (selectedCategory) {
+      filteredData = newData.filter(
+        (item) => item.category === selectedCategory
+      );
+    }
+    const sorted = filteredData.sort((a, b) => a.name.localeCompare(b.name));
+    setSortedData(sorted);
+    setPage(1);
+    setShowA2Z(!showA2Z);
+  };
 
   useEffect(() => {
     function verificarTamanoPantalla() {
@@ -59,10 +87,6 @@ function App() {
     }
   }, [isSorted, selectedCategory]);
 
-  const toggleSort = () => {
-    setIsSorted(!isSorted);
-  };
-
   useEffect(() => {
     setPage(initialPage); // Reset to the first page whenever the category changes
   }, [selectedCategory]);
@@ -88,6 +112,20 @@ function App() {
       setRandom(false);
     }
   };
+
+  const [festData, setFestData] = useState([]);
+  const [showFestItems, setShowFestItems] = useState(false);
+  const [showA2Z, setShowA2Z] = useState(false);
+
+  function renderFestItems() {
+    // Filter data to get only items with fest: true
+    const festData = DATA.filter((item) => item.fest);
+    setFestData(festData);
+
+    // You could also set this data to a state and render it in your component like this:
+    setPage("1");
+    setShowFestItems(!showFestItems);
+  }
 
   return (
     <HashRouter>
@@ -115,8 +153,8 @@ function App() {
         <Dropdown className="dropdown-cat" drop="down-centered">
           <Button
             size="sm"
-            className={`btn btn-${isSorted ? "secondary" : "success"}`}
-            onClick={toggleSort}
+            className={showA2Z ? "btn btn-secondary" : "btn btn-success"}
+            onClick={sortDataByName}
           >
             <box-icon
               name="sort-a-z"
@@ -124,12 +162,12 @@ function App() {
               size="cssSize"
               style={{ fill: "white", width: "80%", marginTop: "5px" }}
             ></box-icon>
+            {/* <img style={{ width: '50px' }} src='images/HotDogFest.png' alt='Hot Dog Fest' ></img> */}
           </Button>
           <Dropdown.Toggle
             variant="success"
             id="dropdown-basic"
             style={{ zIndex: "10", fontSize: "smaller" }}
-            fon
           >
             {selectedCategory ? selectedCategory : "Categoría"}
           </Dropdown.Toggle>
@@ -166,7 +204,11 @@ function App() {
           </Button>
         </Dropdown>
         <div className="pag-item">
-          <CustomPagination totalPages={totalPages} page={page} setPage={setPage}/>
+          <CustomPagination
+            totalPages={!showFestItems ? totalPages : 2}
+            page={page}
+            setPage={setPage}
+          />
         </div>
         <Card className="contact-box">
           <Card.Body className="contact">
@@ -214,10 +256,21 @@ function App() {
                     style={{ width: "90%", marginTop: "1px" }}
                   ></box-icon>
                 </Link>
-
+                <Link
+                  className="info-coupon"
+                  variant="link"
+                  onClick={clickToNotify}
+                >
+                  <box-icon
+                    name="discount"
+                    size="md"
+                    type="solid"
+                    animation={winSize ? false : "tada"}
+                  ></box-icon>
+                </Link>
                 {
                   <Cards
-                    data={filteredData}
+                    data={showA2Z ? sortedData : filteredData}
                     pag={page}
                     view={pantallaPequena}
                   />
@@ -229,7 +282,11 @@ function App() {
           <Route path="/about-us" element={<AboutMe />} />
         </Routes>
         <div className="pag-item" style={{ zIndex: "-1" }}>
-        <CustomPagination totalPages={totalPages} page={page} setPage={setPage}/>
+          <CustomPagination
+            totalPages={!showFestItems ? totalPages : 2}
+            page={page}
+            setPage={setPage}
+          />
         </div>
       </div>
     </HashRouter>

@@ -55,6 +55,23 @@ function App() {
     setShowA2Z(!showA2Z);
   };
 
+  const sortDataByFest = () => {
+    const newData = [...DATA];
+    let filteredData = newData.filter(item => item.fest); // Filter items with fest: true
+
+    if (selectedCategory) {
+      filteredData = filteredData.filter(
+        (item) => item.category === selectedCategory
+      );
+    }
+
+    const sorted = filteredData.sort((a, b) => a.name.localeCompare(b.name));
+    setSortedData(sorted);
+    setPage(1);
+    setShowA2Z(!showA2Z);
+};
+
+
   useEffect(() => {
     function verificarTamanoPantalla() {
       setPantallaPequena(window.innerWidth < 768);
@@ -154,15 +171,15 @@ function App() {
           <Button
             size="sm"
             className={showA2Z ? "btn btn-secondary" : "btn btn-success"}
-            onClick={sortDataByName}
+            onClick={sortDataByFest}
           >
-            <box-icon
+            {/* <box-icon
               name="sort-a-z"
               className="box-icon-atoz"
               size="cssSize"
               style={{ fill: "white", width: "80%", marginTop: "5px" }}
-            ></box-icon>
-            {/* <img style={{ width: '50px' }} src='images/HotDogFest.png' alt='Hot Dog Fest' ></img> */}
+            ></box-icon> */}
+            <img style={{ width: '50px' }} src='images/BurgerFestPrime.png' alt='Burger Fest Prime' ></img>
           </Button>
           <Dropdown.Toggle
             variant="success"

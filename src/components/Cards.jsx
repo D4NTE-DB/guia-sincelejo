@@ -62,7 +62,7 @@ const Cards = ({ data, pag, view }) => {
         {data?.fest && (
           <img
             className={styles["img-fest"]}
-            src="images/HotDogFest.png"
+            src="images/BurgerFestPrime.png"
             alt="Hot Dog Fest"
           ></img>
         )}

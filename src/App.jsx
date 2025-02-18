@@ -112,12 +112,6 @@ function App() {
     return DATA.findIndex((obj) => obj?.category === item.category) === index;
   });
 
-  const filteredData = selectedCategory
-    ? DATA.filter((item) => item.category === selectedCategory)
-    : DATA;
-
-  const totalPages = Math.ceil(Object.keys(filteredData).length / 8);
-
   const handleRandom = () => {
     if (!random) {
       // If data is not currently randomized, randomize it
@@ -133,6 +127,13 @@ function App() {
   const [festData, setFestData] = useState([]);
   const [showFestItems, setShowFestItems] = useState(false);
   const [showA2Z, setShowA2Z] = useState(false);
+
+  const filteredData = selectedCategory
+  ? DATA.filter((item) => item.category === selectedCategory)
+  : DATA;
+
+const displayedData = showA2Z ? sortedData : filteredData;
+const totalPages = Math.ceil(displayedData.length / 8);
 
   function renderFestItems() {
     // Filter data to get only items with fest: true
@@ -222,7 +223,7 @@ function App() {
         </Dropdown>
         <div className="pag-item">
           <CustomPagination
-            totalPages={!showFestItems ? totalPages : 2}
+            totalPages={ totalPages }
             page={page}
             setPage={setPage}
           />
@@ -300,7 +301,7 @@ function App() {
         </Routes>
         <div className="pag-item" style={{ zIndex: "-1" }}>
           <CustomPagination
-            totalPages={!showFestItems ? totalPages : 2}
+            totalPages={ totalPages }
             page={page}
             setPage={setPage}
           />

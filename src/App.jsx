@@ -273,7 +273,7 @@ function App() {
                     style={{ width: "90%", marginTop: "1px" }}
                   ></box-icon>
                 </Link>
-                <Link
+                {/* <Link
                   className="info-coupon"
                   variant="link"
                   onClick={clickToNotify}
@@ -284,7 +284,7 @@ function App() {
                     type="solid"
                     animation={winSize ? false : "tada"}
                   ></box-icon>
-                </Link>
+                </Link> PROMOTION NOTIFICATIONS FOR THE FUTURE*/}
                 {
                   <Cards
                     data={showA2Z ? sortedData : filteredData}

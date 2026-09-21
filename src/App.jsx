@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
 import "./App.css";
+import "./Ads.css";
 import AppNavBar from "./components/AppNavBar";
 import Cards from "./components/Cards";
 import DATA from "./DATA";
-import { Button, Card, Dropdown, Pagination } from "react-bootstrap";
+import { Button, Card, Dropdown } from "react-bootstrap";
 import { HashRouter, Link, Route, Routes } from "react-router-dom";
 import AboutMe from "./components/AboutMe";
 import ModalFeature from "./components/ModalFeature";
-import MyVerticallyCenteredModal from "./components/MyVerticallyCenteredModal";
+import MyVerticallyCenteredModal from "./components/ads/MyVerticallyCenteredModal";
 import ModalRandom from "./components/ModalRandom";
 import CustomPagination from "./components/CustomPagination";
 import ReactGA from "react-ga";
@@ -24,10 +25,10 @@ function App() {
   const [isSorted, setIsSorted] = useState(false);
   const [show, setShow] = useState(false);
   const [random, setRandom] = useState(false);
-  const [modalShow, setModalShow] = useState(false);
+  const [modalShow, setModalShow] = useState(true);
   const [page, setPage] = useState(initialPage);
   const [pantallaPequena, setPantallaPequena] = useState(false);
-  const [winSize, setWinSize] = useState(false)
+  const [winSize, setWinSize] = useState(false);
 
   const clickToNotify = () => {
     console.log("scroll", window.scrollY, "-", winSize);
@@ -38,7 +39,7 @@ function App() {
       native: true, // when using native, your OS will handle theming.
       onClick: () => console.log("Notification"),
     });
-    setWinSize(true)
+    setWinSize(true);
   };
 
   const sortDataByName = () => {
@@ -69,8 +70,7 @@ function App() {
     setSortedData(sorted);
     setPage(1);
     setShowA2Z(!showA2Z);
-};
-
+  };
 
   useEffect(() => {
     function verificarTamanoPantalla() {
@@ -112,12 +112,6 @@ function App() {
     return DATA.findIndex((obj) => obj?.category === item.category) === index;
   });
 
-  const filteredData = selectedCategory
-    ? DATA.filter((item) => item.category === selectedCategory)
-    : DATA;
-
-  const totalPages = Math.ceil(Object.keys(filteredData).length / 8);
-
   const handleRandom = () => {
     if (!random) {
       // If data is not currently randomized, randomize it
@@ -134,6 +128,13 @@ function App() {
   const [showFestItems, setShowFestItems] = useState(false);
   const [showA2Z, setShowA2Z] = useState(false);
 
+  const filteredData = selectedCategory
+    ? DATA.filter((item) => item.category === selectedCategory)
+    : DATA;
+
+  const displayedData = showA2Z ? sortedData : filteredData;
+  const totalPages = Math.ceil(displayedData.length / 8);
+
   function renderFestItems() {
     // Filter data to get only items with fest: true
     const festData = DATA.filter((item) => item.fest);
@@ -148,18 +149,11 @@ function App() {
     <HashRouter>
       <div className="App">
         <MyVerticallyCenteredModal
-          show={modalShow}
+          show={false}
           onHide={() => setModalShow(false)}
         />
-        <ModalFeature show={show} setShow={setShow} />
-        <div
-          style={{
-            position: "fixed",
-            width: "100%",
-            zIndex: "1000",
-            top: "-10px",
-          }}
-        >
+        <ModalFeature show={false} setShow={false} />
+        <div className="navbar-container">
           {<AppNavBar />}
         </div>
         <ModalRandom
@@ -170,21 +164,19 @@ function App() {
         <Dropdown className="dropdown-cat" drop="down-centered">
           <Button
             size="sm"
-            className={showA2Z ? "btn btn-secondary" : "btn btn-success"}
-            onClick={sortDataByFest}
+            className={showA2Z ? "btn btn-secondary btn-sort" : "btn btn-success btn-sort"}
+            onClick={sortDataByName}
           >
-            {/* <box-icon
+            <box-icon
               name="sort-a-z"
               className="box-icon-atoz"
               size="cssSize"
-              style={{ fill: "white", width: "80%", marginTop: "5px" }}
-            ></box-icon> */}
-            <img style={{ width: '50px' }} src='images/BurgerFestPrime.png' alt='Burger Fest Prime' ></img>
+            ></box-icon>
           </Button>
           <Dropdown.Toggle
             variant="success"
             id="dropdown-basic"
-            style={{ zIndex: "10", fontSize: "smaller" }}
+            className="dropdown-toggle-custom"
           >
             {selectedCategory ? selectedCategory : "Categoría"}
           </Dropdown.Toggle>
@@ -209,29 +201,25 @@ function App() {
           </Dropdown.Menu>
           <Button
             size="sm"
-            className="btn btn-success"
-            style={{ fill: "white", zIndex: "2" }}
+            className="btn btn-success btn-shuffle"
             onClick={handleRandom}
           >
             <box-icon
               name="shuffle"
               animation=""
-              style={{ width: "80%", marginTop: "5px" }}
+              className="box-icon-shuffle"
             ></box-icon>
           </Button>
         </Dropdown>
         <div className="pag-item">
           <CustomPagination
-            totalPages={!showFestItems ? totalPages : 2}
+            totalPages={totalPages}
             page={page}
             setPage={setPage}
           />
         </div>
         <Card className="contact-box">
           <Card.Body className="contact">
-            {/* <Card.Title
-            className='info-title'
-          >¡Contactanos para agregar a tu restaurante!</Card.Title> */}
             <div className="div-socials">
               <Card.Link onClick={() => setModalShow(true)}>
                 <box-icon name="info-circle" animation="" size="md"></box-icon>
@@ -240,20 +228,20 @@ function App() {
                 className="socials-items"
                 href="https://forms.gle/sFyGSV3ieQqFUhUx8"
               >
-                <img src="images/formulario.png" alt="" />
+                <img src="images/formulario.png" alt="Formulario" />
               </Card.Link>
               <Card.Link
                 className="socials-items"
                 href="https://www.instagram.com/foodguiasincelejo/"
               >
-                <img src="images/instagram.png" alt="" />
+                <img src="images/instagram.png" alt="Instagram" />
               </Card.Link>
 
               <Card.Link
                 className="socials-items"
                 href="https://www.facebook.com/foodguiasincelejo/"
               >
-                <img src="images/facebook.png" alt="" />
+                <img src="images/facebook.png" alt="Facebook" />
               </Card.Link>
             </div>
           </Card.Body>
@@ -262,27 +250,12 @@ function App() {
           <Route
             path="/"
             element={
-              <div
-                className="div-need"
-                style={{ position: "relative", top: "80px" }}
-              >
+              <div className="div-need main-content">
                 <Link className="info-aboutme" as={Link} to="/about-us">
                   <box-icon
                     name="info-circle"
                     size="md"
-                    style={{ width: "90%", marginTop: "1px" }}
-                  ></box-icon>
-                </Link>
-                <Link
-                  className="info-coupon"
-                  variant="link"
-                  onClick={clickToNotify}
-                >
-                  <box-icon
-                    name="discount"
-                    size="md"
-                    type="solid"
-                    animation={winSize ? false : "tada"}
+                    className="info-icon"
                   ></box-icon>
                 </Link>
                 {
@@ -298,9 +271,9 @@ function App() {
 
           <Route path="/about-us" element={<AboutMe />} />
         </Routes>
-        <div className="pag-item" style={{ zIndex: "-1" }}>
+        <div className="pag-item pag-item-bottom">
           <CustomPagination
-            totalPages={!showFestItems ? totalPages : 2}
+            totalPages={totalPages}
             page={page}
             setPage={setPage}
           />

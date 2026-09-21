@@ -40,7 +40,7 @@ const DATA = [
     id: "5",
     name: "Taco y Chela",
     category: categories[6],
-    fest: true,
+    fest: false,
     images: "images/5.jpeg",
     contact: {
       instgram: "https://www.instagram.com/tacoychela.co/",
@@ -63,7 +63,7 @@ const DATA = [
     id: "8",
     name: "La Mondiú Burger",
     category: categories[10],
-    fest: true,
+    fest: false,
     images: "images/10.jpg",
     contact: {
       instgram: "https://www.instagram.com/lamondiu.burger/",
@@ -97,7 +97,7 @@ const DATA = [
     id: "11",
     name: "Hunter & Butcher",
     category: categories[10],
-    fest: true,
+    fest: false,
     images: "images/13.png",
     contact: {
       instgram: "https://www.instagram.com/hunterbutcher.co/",
@@ -576,7 +576,7 @@ const DATA = [
     id: "58",
     name: "Poteito",
     category: categories[7],
-    fest: true,
+    fest: false,
     images: "images/58.jpg",
     contact: {
       instgram: "https://www.instagram.com/poteito.sincelejo/?hl=es",
@@ -643,7 +643,7 @@ const DATA = [
     id: "64",
     name: "Casa de Sándwiches",
     category: categories[14],
-    fest: true,
+    fest: false,
     images: "images/64.jpg",
     contact: {
       instgram: "https://www.instagram.com/la_sandwicheria_handexpress/?hl=es",
@@ -886,7 +886,7 @@ const DATA = [
     id: "87",
     name: "burgerbirra.co",
     category: categories[7],
-    fest: true,
+    fest: false,
     images: "images/85.jpg",
     contact: {
       instgram: "https://www.instagram.com/burgerbirra.co/?hl=es",
@@ -920,7 +920,7 @@ const DATA = [
     id: "90",
     name: "A L M A S    R E B E L D E S",
     category: categories[7],
-    fest: true,
+    fest: false,
     images: "images/88.jpg",
     contact: {
       instgram: "https://www.instagram.com/pardocasual/?hl=es",
@@ -932,7 +932,7 @@ const DATA = [
     id: "91",
     name: "Adicto | Hamburguesas ADICTIVAS 🔥",
     category: categories[7],
-    fest: true,
+    fest: false,
     images: "images/89.jpg",
     contact: {
       instgram: "https://www.instagram.com/adicto.burger/?hl=es",
@@ -1280,7 +1280,7 @@ const DATA = [
     id: "126",
     name: "Burgery",
     category: categories[10],
-    fest: true,
+    fest: false,
     images: "images/123.jpg",
     contact: {
       instgram: "https://www.instagram.com/burgery.col/?hl=es",
@@ -1291,7 +1291,7 @@ const DATA = [
     id: "127",
     name: "Full Foods Sincelejo",
     category: categories[10],
-    fest: true,
+    fest: false,
     images: "images/124.png",
     contact: {
       instgram: "https://www.instagram.com/full_foods_sincelejo/?hl=es",
@@ -1302,7 +1302,7 @@ const DATA = [
     id: "128",
     name: "Burgo | Comida Rápida.",
     category: categories[10],
-    fest: true,
+    fest: false,
     images: "images/125.png",
     contact: {
       instgram: "https://www.instagram.com/burgo.col/?hl=es",
@@ -1313,7 +1313,7 @@ const DATA = [
     id: "129",
     name: "Delirio Restaurante",
     category: categories[4],
-    fest: true,
+    fest: false,
     images: "images/126.jpg",
     contact: {
       instgram: "https://www.instagram.com/delirio.rest/?hl=es",
@@ -1324,7 +1324,7 @@ const DATA = [
     id: "130",
     name: "Provenza | Cocina Fusión",
     category: categories[4],
-    fest: true,
+    fest: false,
     images: "images/127.jpg",
     contact: {
       instgram: "https://www.instagram.com/provenza.rest/?hl=es",
@@ -1335,7 +1335,7 @@ const DATA = [
     id: "131",
     name: "P!XEL Games + Food",
     category: categories[10],
-    fest: true,
+    fest: false,
     images: "images/128.jpg",
     contact: {
       instgram: "https://www.instagram.com/pixelsincelejo/?hl=es",

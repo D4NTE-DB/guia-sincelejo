@@ -15,3 +15,13 @@
     width: 20px;
     overflow: hidden;
 }
+
+.img-socials:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease;
+}
+
+.img-socials:focus-visible {
+    outline: 2px solid rgba(0, 0, 0, 0.603);
+    border-radius: 20px;
+}

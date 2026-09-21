@@ -110,17 +110,22 @@ const Cards = ({ data, pag, view }) => {
                 Contáctanos
               </Card.Title>
               <div
+                onMouseOver={"this.style.color='red'"}
                 style={{ position: "relative", right: "14px", top: "-40px" }}
               >
-                <Card.Link href={data.contact?.instgram}>
+                <Card.Link tabIndex={-1} href={data.contact?.instgram}>
                   <img
+                    className={styles["img-socials"]}
+                    tabIndex={0}
                     style={{ width: "35px", position: "absolute", top: "52px" }}
                     src="images/instagram.png"
                     alt=""
                   />
                 </Card.Link>
-                <Card.Link href={data.contact?.phoneNum}>
+                <Card.Link tabIndex={-1} href={data.contact?.phoneNum}>
                   <img
+                    className={styles["img-socials"]}
+                    tabIndex={0}
                     style={{
                       width: "35px",
                       position: "absolute",
